@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP File Upload Basics</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .upload-form-container, #form {
+            height: 250px;
+            width: 400px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .upload-form-container h2, #form h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .upload-form-container input[type="file"], #form input[type="file"] {
+            margin-bottom: 20px;
+        }
+        .upload-form-container input[type="submit"], #form input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .upload-form-container input[type="submit"]:hover, #form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-form-container">
+        <h2>PHP File Upload</h2>
+    <!--entype is used for uploading files-->
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" enctype="multipart/form-data">
+            <input type="file" name="files" required>
+            <input type="submit" name="upload" value="Upload">
+        </form>
+    </div>
+
+    <?php
+echo '<div id="form">';
+if (isset($_POST['upload'])) {
+    // Allowed MIME types
+    $allowed = array(
+        "pdf" => "application/pdf",
+        "docx" => "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    );
+
+    // File details
+    $file_name = $_FILES["files"]["name"];
+    $file_type = $_FILES["files"]["type"];
+    $file_tmp = $_FILES["files"]["tmp_name"];
+    $file_error = $_FILES["files"]["error"];
+    $file_size = $_FILES["files"]["size"];
+
+    // Get file extension
+    $ext = pathinfo($file_name, PATHINFO_EXTENSION);
+
+    // Check if file extension is allowed
+    if (!array_key_exists($ext, $allowed)) {
+        die('Please select a PDF or DOCX format only.');
+    }
+
+    // Check if MIME type is valid
+    if (!in_array($file_type, $allowed)) {
+        die('Invalid file type.');
+    }
+
+    // Check if file size exceeds 2MB
+    if ($file_size > 2 * 1024 * 1024) {
+        die('File size exceeds 2MB.');
+    }
+
+    // Check if file already exists
+    if (file_exists("save/" . $file_name)) {
+        echo "File already exists.";
+    } else {
+        // Move uploaded file to destination
+        if (move_uploaded_file($file_tmp, "save/" . $file_name)) {
+            echo "<b>File uploaded successfully</b><br><br>";
+
+            // Database connection
+            $con = mysqli_connect("localhost", "root", "", "test");
+            if (!$con) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+
+            // Insert file information into database
+            $sql = "INSERT INTO upload (files) VALUES ('$file_name')";
+            if (mysqli_query($con, $sql)) {
+                echo "Inserted successfully into the database.";
+            } else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($con);
+            }
+
+            // Close the database connection
+            mysqli_close($con);
+        } else {
+            echo "Failed to upload file.";
+        }
+    }
+}
+echo '</div>';
+?>
+
+</body>
+</html>
+<?php
+    
+  /*  --A Basic File Upload Without Validation
+  if(isset($_POST['upload']))
+ {
+    echo "<pre>";
+  -- about the file details like name, type,size etc.
+   var_dump($_FILES);
+   echo "</pre>";
+   $fname=$_FILES['files']['name'];
+
+   var_dump(pathinfo($_FILES['files']['tmp_name']));
+
+    // --save is the folder name where files want to store
+
+   if(move_uploaded_file($_FILES["files"]["tmp_name"],"save/".$_FILES["files"]["name"]))
+   {
+    echo "uploaded successfully";
+   }
+   else{
+    echo "Uploading Failed";
+   }
+
+ */
+?>
