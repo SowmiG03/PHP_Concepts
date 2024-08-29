@@ -1,0 +1,41 @@
+<?php
+--A Basic File Upload Without Validation
+  if(isset($_POST['upload']))
+ {
+    echo "<pre>";
+  -- about the file details like name, type,size etc.
+   var_dump($_FILES);
+   echo "</pre>";
+   $fname=$_FILES['files']['name'];
+
+   var_dump(pathinfo($_FILES['files']['tmp_name']));
+
+    // --`save` is the folder name where files  to be store
+
+   if(move_uploaded_file($_FILES["files"]["tmp_name"],"save/".$_FILES["files"]["name"]))
+   {
+    echo "uploaded successfully";
+   }
+   else{
+    echo"Uploading Failed";
+   }
+echo '</div>';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP File Upload without validation</title>
+ <link rel="stylesheet" href="style.css">
+    <body>
+    <div class="upload-form-container">
+        <h2>PHP File Upload</h2>
+    <!--entype is used for uploading files-->
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" enctype="multipart/form-data">
+            <input type="file" name="files" required>
+            <input type="submit" name="upload" value="Upload">
+        </form>
+    </div>
+</body>
+</html>
