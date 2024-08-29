@@ -4,50 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP File Upload Basics</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-        }
-        .upload-form-container, #form {
-            height: 250px;
-            width: 400px;
-            border: 2px solid #333;
-            border-radius: 10px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-        .upload-form-container h2, #form h2 {
-            margin-bottom: 20px;
-            color: #333;
-        }
-        .upload-form-container input[type="file"], #form input[type="file"] {
-            margin-bottom: 20px;
-        }
-        .upload-form-container input[type="submit"], #form input[type="submit"] {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007BFF;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .upload-form-container input[type="submit"]:hover, #form input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-    </style>
+
 </head>
 <body>
     <div class="upload-form-container">
