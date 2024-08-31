@@ -1,6 +1,6 @@
-//saravanan
+
 <?php
-session_start(); // Start the session
+session_start(); // Start the Session
 
 if (!isset($_SESSION['username'])) {
     header('Location: login.php');
