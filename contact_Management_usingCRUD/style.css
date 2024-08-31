@@ -1,0 +1,215 @@
+/* body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+.upload-form-container {
+    width: 400px;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.upload-form-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+.upload-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+.upload-form-container form input[type="text"],
+.upload-form-container form input[type="tel"],
+.upload-form-container form input[type="email"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.upload-form-container form input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.upload-form-container form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.upload-form-container .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.upload-form-container .button-group button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.upload-form-container .button-group button:hover {
+    background-color: #c82333;
+}
+.upload-form-container .button-group a {
+    color: white;
+    text-decoration: none;
+} */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+   
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group textarea,
+.form-group select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+/* Style for the table */
+
+/* Style for the table */
+.contact-table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto; /* Center the table horizontally */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-table th, .contact-table td {
+    border: 1px solid #ddd; /* Lighter border for better contrast */
+    padding: 12px; /* Slightly larger padding */
+    text-align: left;
+}
+
+.contact-table th {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+}
+
+.contact-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Slightly different shade for better readability */
+}
+
+.contact-table tr:hover {
+    background-color: #e9ecef; /* Hover effect for rows */
+}
+
+/* Style for links */
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style for button container */
+.button-container {
+    text-align: center; /* Center buttons horizontally */
+    margin-top: 20px; /* Space above buttons */
+}
+
+.button-container button {
+    display: inline-block; /* Align buttons in a row */
+    margin: 10px; /* Add margin for spacing between buttons */
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for button effect */
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.button-container button a {
+    color: white;
+    text-decoration: none;
+}
+
+#errorMessages {
+    color: red;
+    font-weight: bold;
+}
