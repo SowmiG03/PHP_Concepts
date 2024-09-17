@@ -9,7 +9,7 @@ if(isset($_GET['id']))
     $query="select id,name from CRUD where id=$id";
     $result=mysqli_query($connection,$query);
     $no_of_rows=mysqli_num_rows($result);
-    if($no_of_rows)
+    if($no_of_rows>0)
     {
 
     while($row=mysqli_fetch_assoc($result))
