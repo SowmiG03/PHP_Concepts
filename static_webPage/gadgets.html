@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroEase Services</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body, html {
+                   margin: 0;
+                   padding: 0;
+                   overflow-x: hidden; /* Prevent horizontal scrolling */
+                   box-sizing: border-box;
+               }
+               body {
+                   background-color: #f7f7f7;
+                   font-family: Arial, sans-serif;
+                   position: relative; 
+               }
+              
+       
+       
+              /*--footer*/
+               footer {
+                   height: 100%;
+                   display: flex;
+                   flex-direction: column;
+                   justify-content: space-between;
+                   background-color: whitesmoke;
+               }
+               footer .container {
+                   height: 100%;
+               }
+               .text-light a {
+                   color:#B20A26; /* Ensures links are white */
+               }
+               .text-light a:hover {
+                   color:black; /* Lighten on hover for better visibility */
+               }
+               
+       .navbar-inverse {
+         background-color:#F5F5F5; /* Dark background color */
+        
+       }
+       
+       .navbar-inverse .navbar-brand, 
+       .navbar-inverse .navbar-nav > li > a {
+         color:#B20A26; 
+       }
+       
+       /* Change text color on hover */
+       .navbar-inverse .navbar-nav > li > a:hover {
+         color: grey; 
+       }
+       
+       /* Change background color of active menu item */
+       .navbar-inverse .navbar-nav > .active > a {
+         background-color:#B20A26 ; /* Background color for active item */
+         color:white
+         ; /* Text color for active item */
+       }
+       
+       @keyframes pulse {
+           0% {
+               transform: scale(1);
+               opacity: 0.8;
+           }
+           50% {
+               transform: scale(1.05);
+               opacity: 1;
+           }
+           100% {
+               transform: scale(1);
+               opacity: 0.8;
+           }
+       }
+       
+       .navbar-brand {
+           font-size: 30px;
+           font-weight: bold;
+           text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+           animation: pulse 2s infinite; /* Apply the animation */
+       }
+       
+       .btn {
+                   background-color: #B20A26;
+                   color: white;
+                   /* Removed display and width to make the button inline */
+                   text-align: center;
+                   padding: 10px 20px; /* Adjust padding for height and width */
+               }
+       
+               .btn:hover {
+                   background-color: white;
+                   color: #B20A26;
+               }
+       
+               .form-inline .form-control {
+                   margin-right: 10px; /* Space between input and button */
+               }
+       
+               .form-inline .btn {
+                   margin: 0; /* Remove default margin if needed */
+               }
+       
+               .img-responsive{
+                   width: 100%;
+                   height: 150px;
+                   object-fit: contain;
+               }
+               .bgcol{
+                   background-color: #B20A26;
+               }
+               .txt{
+                   color: white;
+               }
+               
+           </style>
+           
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<!-- Navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">ElectroEase Services</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <form class="form-inline navbar-form navbar-right">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-- Main content -->
+<div class="row" style="margin-top: 70px; margin-bottom: 20px;">
+    <!-- Sidebar -->
+    <div class="col-md-3 p-0 bgcol">
+        <div class="container-fluid text-center">
+            <h4 class="txt">Brands</h4>
+            <div class="list-group">
+                <a href="#" class="list-group-item">Apple</a>
+                <a href="#" class="list-group-item">Dell</a>
+                <a href="#" class="list-group-item">Lenovo</a>
+                <a href="#" class="list-group-item">Asus</a>
+                <a href="#" class="list-group-item">Amazon</a>
+            </div>
+            <h4 class="txt">Devices</h4>
+            <div class="list-group">
+                <a href="#" class="list-group-item">iPad series</a>
+                <a href="#" class="list-group-item">Fire Tablets</a>
+                <a href="#" class="list-group-item">VivoBook</a>
+                <a href="#" class="list-group-item">Mac Mini</a>
+                <a href="#" class="list-group-item">ThinkCentre</a>
+                <a href="#" class="list-group-item">iMac</a> <!-- Fixed closing tag -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Product listings -->
+    <div class="col-md-9">
+        <div class="row">
+            <div class="col-md-4"> 
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <img src="images/rent.jpeg" class="img-responsive" alt="Product Image">
+                        <h5 class="panel-title">D7500 (DSLR)</h5>
+                        <p>Features: Image sensor,</p>
+                        <p>Price: $10000</p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"> 
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <img src="images/rent.jpeg" class="img-responsive" alt="Product Image">
+                        <h5 class="panel-title">D7500 (DSLR)</h5>
+                        <p>Features: Image sensor,</p>
+                        <p>Price: $10000</p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"> 
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <img src="images/rent.jpeg" class="img-responsive" alt="Product Image">
+                        <h5 class="panel-title">D7500 (DSLR)</h5>
+                        <p>Features: Image sensor,</p>
+                        <p>Price: $10000</p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"> 
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <img src="images/rent.jpeg" class="img-responsive" alt="Product Image">
+                        <h5 class="panel-title">D7500 (DSLR)</h5>
+                        <p>Features: Image sensor,</p>
+                        <p>Price: $10000</p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"> 
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <img src="images/rent.jpeg" class="img-responsive" alt="Product Image">
+                        <h5 class="panel-title">D7500 (DSLR)</h5>
+                        <p>Features: Image sensor,</p>
+                        <p>Price: $10000</p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"> 
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <img src="images/rent.jpeg" class="img-responsive" alt="Product Image">
+                        <h5 class="panel-title">D7500 (DSLR)</h5>
+                        <p>Features: Image sensor,</p>
+                        <p>Price: $10000</p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat similar blocks for other products -->
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-light py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>About Us</h4>
+                <p>ElectroEase Services is dedicated to providing top-quality electronic gadgets for rent. Our commitment to customer satisfaction and reliable service makes us your go-to choice for all your rental needs.</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gadgets.html">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Follow Us</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#" class="text-light"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#" class="text-light"><i class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <p>&copy;2024 ElectroEase Services. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

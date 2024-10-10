@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroEase Services</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+         #errorMessages {
+            color: red;
+            font-weight: bold;
+        }
+      /*basic settings */
+         body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+            position: relative; 
+        }
+       
+
+
+       /*--footer*/
+        footer {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: whitesmoke;
+        }
+        footer .container {
+            height: 100%;
+        }
+        .text-light a {
+            color:#B20A26; /* Ensures links are white */
+        }
+        .text-light a:hover {
+            color:black; /* Lighten on hover for better visibility */
+        }
+        
+.navbar-inverse {
+  background-color:#F5F5F5; /* Dark background color */
+ 
+}
+
+.navbar-inverse .navbar-brand, 
+.navbar-inverse .navbar-nav > li > a {
+  color:#B20A26; 
+}
+
+/* Change text color on hover */
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: grey; 
+}
+
+/* Change background color of active menu item */
+.navbar-inverse .navbar-nav > .active > a {
+  background-color:#B20A26 ; /* Background color for active item */
+  color:white
+  ; /* Text color for active item */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+.navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: pulse 2s infinite; /* Apply the animation */
+}
+
+        .register-form {
+            max-width: 400px;
+            margin: 100px auto;
+            margin-bottom: 30px;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .form-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #B20A26;
+        }
+        .btn {
+    background-color: #B20A26;
+    color: white;
+    display: block; /* Makes the button take up the full width */
+    width: 100%; /* Button width */
+    margin: 20px auto; /* Center the button horizontally and add margin */
+    text-align: center; /* Center the text inside the button */
+    padding: 10px 0; /* Add padding to make the button height larger */
+}
+        .btn:hover{
+            background-color:white;
+            color:#B20A26 ;
+        }
+   
+
+
+
+          /*--end of footer*/
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">ElectroEase Services</a>
+        </div>
+        <div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <!-- <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="login.php">Login <span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                            <li><a href="">Sign Out</a></li>
+                            <li><a href=""></a></li>
+                        </ul> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav> 
+<div class="container">
+<div class="register-form">
+    
+            <div class="form-title">Login</div>
+            <form id="loginForm"   action="#" method="POST">
+            <div id="errorMessages"></div>
+            <div class="mb-3">
+                    <label for="uname" class="form-label">UserName</label>
+                    <input type="text" class="form-control" id="uname" name="uname" required>
+                </div>
+                <div class="mb-3">
+                    <label for="pwd" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="pwd" name="pwd" required>
+                </div>
+                <input type="submit" name="loginbtn" value="Login" class="btn w-100">
+            </form>
+            <div class="card-footer text-center">
+                       <p>Already have an account?<a href="register.html"> Login here</a></p> 
+                    </div>
+        </div>  
+        </div> 
+        <footer class=" text-light py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4>About Us</h4>
+                        <p>ElectroEase Services is dedicated to providing top-quality electronic gadgets for rent. Our commitment to customer satisfaction and reliable service makes us your go-to choice for all your rental needs.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html" >Home</a></li>
+                            <li><a href="gadgets.html" >Products</a></li>
+                            <li><a href="#" >About</a></li>
+                            <li><a href="contact.html" >Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Follow Us</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-light"><i class="fab fa-facebook"></i> Facebook</a></li>
+                            <li><a href="#" class="text-light"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#" class="text-light"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <p>&copy;2024 ElectroEase Services. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+</body>
+</html>
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get form values
+    const uname = document.getElementById("uname").value;
+
+    const pwd = document.getElementById("pwd").value;
+    const errorMessages = document.getElementById("errorMessages");
+
+    // Clear any previous error messages
+    errorMessages.innerHTML = "";
+
+    // Validate uname: Must contain both uppercase and lowercase letters and be at least 6 characters long
+    const unamePattern = /^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]{6,}$/;
+    if (!unamePattern.test(uname)) {
+        errorMessages.innerHTML += "<p>Username must be at least 6 characters long and contain both uppercase and lowercase letters.</p>";
+    }
+
+    
+
+    // Validate pwd: Exactly 8 characters long
+    const pwdPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8}$/;
+    if (!pwdPattern.test(pwd)) {
+        errorMessages.innerHTML += "<p>Password must be exactly 8 characters long.</p>";
+    }
+
+    // If no error messages, form is valid
+    if (errorMessages.innerHTML === "") {
+        // Create a hidden input to include the submit button name
+        const hiddenInput = document.createElement("input");
+        hiddenInput.setAttribute("type", "hidden");
+        hiddenInput.setAttribute("name", "loginbtn");
+        hiddenInput.setAttribute("value", "Login");
+
+        // Append hidden input to form
+        document.getElementById("loginForm").appendChild(hiddenInput);
+
+        // Programmatically submit the form
+        document.getElementById("loginForm").submit();
+    }
+});
+</script>

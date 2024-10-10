@@ -1,0 +1,506 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rams Impex</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      /*basic settings */
+         body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            box-sizing: border-box;
+        }
+        body {
+            position: relative; 
+        }
+        /* --end of basic settings */
+
+
+      /* all about carousel settings*/
+      #section42{
+        margin-top:10px;
+        margin-bottom: 20px;
+      }
+       #myCarousel {
+        
+        background-color: white;
+            height: 100%; /* Make sure the carousel container takes full height */
+        }
+        #myCarousel .carousel-inner {
+          display: flex;
+          align-items: center; /* Center items vertically */
+          justify-content: center; /* Center items horizontally */
+          height: 100%; 
+              }
+        #myCarousel .carousel-inner .item img {
+            max-height: 300px; 
+          width: 100%;
+          height: auto; /* Adjust height automatically to maintain aspect ratio */
+         /* Ensure the image does not overflow its container */
+          object-fit: cover; /* Ensures image covers the entire container */
+        }
+        /* end of --carousel settings*/
+     
+        /* each section set up */
+        #section1 {padding-top:50px;height:500px;}
+        #section2 {padding-top:50px;height:300px; }
+       
+        
+
+
+
+        /* start image set up */
+        .full-screen-image {
+            background-image: url('images/22.jpeg');
+            background-size: cover; /* Ensures the image covers the entire area */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+        }
+
+        .carousel-inner img {
+    width: 100%; /* Full width for responsiveness */
+   /* Set a max height to maintain uniformity */
+    object-fit: cover; /* Ensures images cover the set height without distortion */
+}
+.footer {
+    
+    background-color: whitesmoke; /* Light background for the footer */
+   
+    text-align: center; /* Center align the content */
+    width: 100%; /* Ensure the footer takes full width */
+    box-sizing: border-box;
+}
+
+.footer-brand {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.footer-logo {
+    
+    display: inline-block;
+    width: 90px; /* Adjust logo size as needed */
+    height: 70px; /* Adjust logo size as needed */
+    transition: none; /* No transition effect */
+    animation: none; /* No animation for the logo */
+}
+
+.footer .col-md-3 {
+    padding: 0 10px; /* Adjust spacing between columns */
+}
+
+            
+    
+        .text-light a {
+            color: rgb(14, 137, 14);; /* Ensures links are white */
+        }
+        .text-light a:hover {
+            color:black; /* Lighten on hover for better visibility */
+        }
+        .image-section {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.image-section .btn-link a {
+    left: 60%; /* Position the button 70% from the left side of the section */
+  top: 50%; /* Position the button vertically at the middle */
+  transform: translate(-50%,-50%);
+  position: absolute;
+padding:20px;
+ left: 70%;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  border:none;
+  background-color: rgb(14, 137, 14);
+  text-decoration: none;
+  display: block;
+}
+.image-section .btn-link a:hover {
+  background-color: white; /* Change background color on hover */
+  color: rgb(14, 137, 14);; /* Change text color on hover */
+ 
+}
+.navbar-inverse {
+  background-color:#F5F5F5; /* Dark background color */
+
+}
+
+
+.navbar-inverse .navbar-nav > li > a {
+    color: rgb(14, 137, 14);
+  font-style: bold;
+  font-size: 18px;
+ 
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-color: white; /* Default background color */
+  border: 2px solid transparent; /* No visible border by default */
+  padding: 15px; /* Add some padding */
+  transition: all 0.3s ease; /
+
+}
+
+/* Change text color on hover */
+.navbar-inverse .navbar-nav > li > a:hover {
+background-color: green; /* Change background color on hover */
+  border-color: green; /* Apply green border on hover */
+  color: white; 
+}
+
+
+/* Change background color of active menu item */
+.navbar-inverse .navbar-nav > .active > a {
+  background-color: rgb(14, 137, 14); /* Background color for active item */
+  color:white
+  ; /* Text color for active item */
+}
+
+/* animatin for the logo */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+.navbar-header {
+    float: left; /* Ensures brand stays aligned to the left */
+}
+
+.navbar-nav.navbar-right {
+    float: right; /* Keeps navigation menu aligned to the right */
+}
+
+.navbar-brand {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Vertically center the logo and text */
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: pulse 2s infinite; /* Apply the animation */
+    margin: 0; /* Reset margin if needed */
+    padding-left: 20px; /* Remove extra padding on the left */
+}
+
+.navbar-logo {
+    padding-left: 20px;
+    margin-right: 10px; /* Space between logo and text */
+    height: 50px; /* Adjust as needed */
+}
+
+#section2 {
+    padding: 40px 30px;
+    background-color: #f0f0f0; /* Light grey background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 800px;
+    margin: 10px auto;
+    line-height: 2;
+    text-indent: 5em;
+}
+.marquee-container {
+    background-color: rgb(14, 137, 14);/* Soft orange background */
+    padding: 10px 0; /* Padding for top and bottom */
+    overflow: hidden; /* Hides overflow */
+    position: relative; /* Positioned relative for absolute children */
+}
+
+.marquee {
+    color: rgb(14, 137, 14); /* White text color */
+    font-size: 1.5em; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+    white-space: nowrap; /* Prevent line breaks */
+}
+#section1 {
+      text-align: center;
+      font-size: 0px;
+      font-family: 'Arial', sans-serif;
+      color: #ffffff;
+      font-weight: bold;
+      padding-top: 20vh;
+    }
+
+    .typing-animation {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(30, end) infinite, pause 6s;
+      animation-delay: 0s, 2s;
+      font-size: 45px; /* Increase font size */
+      font-weight: bold;
+      color: #ffffff;
+      text-shadow: 8px 2px 6px green; /* Light orange text shadow */
+    }
+
+    /* Keyframe for typing animation */
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    /* Keyframe for pause */
+    @keyframes pause {
+      from {
+        width: 100%;
+      }
+      to {
+        width: 100%;
+      }
+    } 
+    body, h1, h2, h3, h4, h5, h6, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container styling */
+        #section3 {
+            padding: 20px; /* Add padding around the container */
+            background-color: #f9f9f9; /* Light background color */
+        }
+
+        .product {
+            text-align: center; /* Center text */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to product boxes */
+            border-radius: 10px; /* Round corners */
+            background-color: white; /* Background for each product */
+            margin-bottom: 20px; /* Space between rows */
+        }
+
+        .product img {
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px 10px 0 0; /* Round top corners */
+        }
+
+        .btn-link a {
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: rgb(14, 137, 14); /* Button color */
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        .btn-link a:hover {
+            background-color: white;
+            color:rgb(14, 137, 14); /* Darker shade on hover */
+        }   /*--end of footer*/
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" style="font-family: 'Lucida Console', monospace; color: rgb(14, 137, 14); background: url('images/spa.jpeg') no-repeat center center; background-size: cover; padding: 10px 20px; border-radius: 10px; box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); display: inline-flex; align-items: center;">
+                <img src="images/logo.png" alt="Logo" style="display: inline-block; width: 50px; height: 50px; margin-right: 10px; transition: none; animation: none;">
+                Rams Impex
+            </a>
+            
+            
+        </div>
+        <div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#section2">About</a></li>
+                    <li><a href="#section3">Our Products</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="register.html">Register</a></li>
+                  
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>    
+
+<!-- Image rental -->
+<div id="section1" class="container-fluid full-screen-image" >
+    <span class="typing-animation">We care! Your Needs!!</span>
+  </div>
+  
+<div id="section2" class="container-fluid justified-text">
+    <h3 class="left-align" style="padding-bottom: 10px;">About Us:</h3>
+        <p>
+            RAMS IMPEX is a dynamic and innovative textile company dedicated to <b>quality, sustainability, and craftsmanship</b>. With roots grounded in excellence, we specialize in producing and exporting a wide range of textiles that cater to the diverse needs of our clients across the globe. 
+            Our portfolio includes an array of textiles designed for both functionality and fashion, meeting the highest industry standards and expectations.
+        </p>  
+    
+</div>
+<div id="section42" class="container">
+    <marquee class="marquee" behavior="scroll" direction="left" scrollamount="10">
+     Exclusive Designs and Offers!!
+    </marquee>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+           
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="images/d1.jpeg" alt="Textile Quality">
+                <div class="carousel-caption">
+                    <h5>Exceptional Quality</h5>
+                   
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/d2.jpeg" alt="Sustainable Fabrics">
+                <div class="carousel-caption">
+                    <h5>Sustainable Fabrics</h5>
+                 
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/d3.jpeg" alt="Innovative Designs">
+                <div class="carousel-caption">
+                    <h5>Innovative Designs</h5>
+                   
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+
+<div id="section3" class="container-fluid">
+  <div class="row">
+      <!-- Product 1 -->
+      <div class="col-md-3 col-sm-6">
+          <div class="product">
+              <img src="images/p1.jpeg" alt="Product 1">
+              <div class="btn-link"><a href="gadgets.html">View Product</a></div>
+          </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-md-3 col-sm-6">
+          <div class="product">
+              <img src="images/p2.jpeg" alt="Product 2">
+              <div class="btn-link"><a href="gadgets.html">View Product</a></div>
+          </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-md-3 col-sm-6">
+          <div class="product">
+              <img src="images/p3.jpeg" alt="Product 3">
+              <div class="btn-link"><a href="gadgets.html">View Product</a></div>
+          </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-md-3 col-sm-6">
+          <div class="product">
+              <img src="images/p4.jpeg" alt="Product 4">
+              <div class="btn-link"><a href="gadgets.html">View Product</a></div>
+          </div>
+      </div>
+  </div>
+</div>
+
+  
+
+<footer class=" text-light py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <a class="footer-brand" style="font-family: 'Lucida Console', monospace; color: rgb(14, 137, 14);background: url('images/spa.jpeg') no-repeat center center; background-size: cover;  border-radius: 10px; box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); display: inline-flex; align-items: left;">
+                    <img src="images/logo.png" alt="Logo" class="footer-logo" />
+                    <br> <!-- Line break to move text below logo -->
+                    Rams Impex
+                </a>
+            </div>
+            
+            <div class="col-md-5 justified-text" style=" text-indent: 5em;padding-bottom: 2px; line-height: 2;">
+               
+                <p><b>RAMS IMPEX</b> is dedicated to providing top-quality textiles for various needs. Our commitment to quality, sustainability, and craftsmanship makes us your go-to choice for reliable, innovative textile solutions across the globe.</p>
+            </div>
+            <div class="col-md-2">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="gadgets.html" >Products</a></li>
+                    <li><a href="#" >About</a></li>
+                    <li><a href="contact.html" >Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h5>Follow Us</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#" class="text-light"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#" class="text-light"><i class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-3" style=" height: 60px;">
+            <p>&copy;2024 Rams Impex. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
