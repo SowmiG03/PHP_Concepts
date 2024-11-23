@@ -19,34 +19,36 @@ if (isset($_POST['hall_id']) && isset($_POST['start_date']) && isset($_POST['end
 
     // Function to check availability based on slots
     function checkSlotsAvailability($conn, $hall_id, $start_date, $end_date, $slots_to_check) {
-        $slots_string = implode(",", $slots_to_check);
         $query = "SELECT * FROM bookings 
                   WHERE hall_id = ? 
-                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
-                  AND status IN ('approved', 'booked')";  // Check for approved or booked status
-
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')";
+    
         $stmt = $conn->prepare($query);
         if ($stmt === false) {
             logDebug("Prepare failed: " . $conn->error);
             return false;
         }
-
-        $stmt->bind_param("sssss", $hall_id, $start_date, $end_date, $start_date, $end_date);
-
+    
+        $stmt->bind_param("sssssss", $hall_id, $start_date, $end_date, $start_date, $end_date, $start_date, $end_date);
+    
         if (!$stmt->execute()) {
             logDebug("Execute failed: " . $stmt->error);
             return false;
         }
-
+    
         $result = $stmt->get_result();
         $is_booked = false;
-
+    
         while ($row = $result->fetch_assoc()) {
-            // Split slot_or_session by comma
             $booked_slots = explode(',', $row['slot_or_session']);
-            $booked_slots = array_map('intval', $booked_slots);  // Convert to integers
+            $booked_slots = array_map('intval', $booked_slots);
             
-            // Check for overlapping slots
             $overlap = array_intersect($slots_to_check, $booked_slots);
             
             logDebug("Booked slots: " . implode(',', $booked_slots));
@@ -58,15 +60,14 @@ if (isset($_POST['hall_id']) && isset($_POST['start_date']) && isset($_POST['end
                 break;
             }
         }
-
+    
         logDebug("Query: " . $query);
         logDebug("Params: $hall_id, $start_date, $end_date");
         logDebug("Result rows: " . $result->num_rows);
         logDebug("Is booked: " . ($is_booked ? 'Yes' : 'No'));
-
+    
         return $is_booked;
     }
-
     // If booking type is 'session' (FN, AN, or BOTH)
     if ($booking_type == 'session') {
         $session_choice = $_POST['session_choice'];  // 'fn', 'an', or 'both'

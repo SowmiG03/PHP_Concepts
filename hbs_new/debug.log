@@ -207,3 +207,1714 @@
 [2024-10-19 03:43:01] Booking Type: session
 [2024-10-19 03:43:01] Slots to Check: 5,6,7,8
 [2024-10-19 03:43:01] Availability Result: available
+[2024-10-19 05:28:17] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-10-19 05:28:17] Params: 1, 2024-11-04, 2024-11-04
+[2024-10-19 05:28:17] Result rows: 0
+[2024-10-19 05:28:17] Is booked: No
+[2024-10-19 05:28:17] Hall ID: 1
+[2024-10-19 05:28:17] Start Date: 2024-11-04
+[2024-10-19 05:28:17] End Date: 2024-11-04
+[2024-10-19 05:28:17] Booking Type: session
+[2024-10-19 05:28:17] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-10-19 05:28:17] Availability Result: available
+[2024-10-19 05:28:34] Booked slots: 1
+[2024-10-19 05:28:34] Requested slots: 1,2,3,4,5,6,7,8
+[2024-10-19 05:28:34] Overlap: 1
+[2024-10-19 05:28:34] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-10-19 05:28:34] Params: 1, 2024-11-01, 2024-11-01
+[2024-10-19 05:28:34] Result rows: 1
+[2024-10-19 05:28:34] Is booked: Yes
+[2024-10-19 05:28:34] Hall ID: 1
+[2024-10-19 05:28:34] Start Date: 2024-11-01
+[2024-10-19 05:28:34] End Date: 2024-11-01
+[2024-10-19 05:28:34] Booking Type: session
+[2024-10-19 05:28:34] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-10-19 05:28:34] Availability Result: booked
+[2024-10-19 05:29:23] Booked slots: 1
+[2024-10-19 05:29:23] Requested slots: 5,6,7,8
+[2024-10-19 05:29:23] Overlap: 
+[2024-10-19 05:29:23] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-10-19 05:29:23] Params: 1, 2024-11-01, 2024-11-01
+[2024-10-19 05:29:23] Result rows: 1
+[2024-10-19 05:29:23] Is booked: No
+[2024-10-19 05:29:23] Hall ID: 1
+[2024-10-19 05:29:23] Start Date: 2024-11-01
+[2024-10-19 05:29:23] End Date: 2024-11-01
+[2024-10-19 05:29:23] Booking Type: session
+[2024-10-19 05:29:23] Slots to Check: 5,6,7,8
+[2024-10-19 05:29:23] Availability Result: available
+[2024-10-19 11:31:41] Booked slots: 1
+[2024-10-19 11:31:41] Requested slots: 1,2,3,4
+[2024-10-19 11:31:41] Overlap: 1
+[2024-10-19 11:31:41] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-10-19 11:31:41] Params: 1, 2024-11-01, 2024-11-01
+[2024-10-19 11:31:41] Result rows: 1
+[2024-10-19 11:31:41] Is booked: Yes
+[2024-10-19 11:31:41] Hall ID: 1
+[2024-10-19 11:31:41] Start Date: 2024-11-01
+[2024-10-19 11:31:41] End Date: 2024-11-01
+[2024-10-19 11:31:41] Booking Type: session
+[2024-10-19 11:31:41] Slots to Check: 1,2,3,4
+[2024-10-19 11:31:41] Availability Result: booked
+[2024-10-19 11:31:45] Booked slots: 1
+[2024-10-19 11:31:45] Requested slots: 5,6,7,8
+[2024-10-19 11:31:45] Overlap: 
+[2024-10-19 11:31:45] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-10-19 11:31:45] Params: 1, 2024-11-01, 2024-11-01
+[2024-10-19 11:31:45] Result rows: 1
+[2024-10-19 11:31:45] Is booked: No
+[2024-10-19 11:31:45] Hall ID: 1
+[2024-10-19 11:31:45] Start Date: 2024-11-01
+[2024-10-19 11:31:45] End Date: 2024-11-01
+[2024-10-19 11:31:45] Booking Type: session
+[2024-10-19 11:31:45] Slots to Check: 5,6,7,8
+[2024-10-19 11:31:45] Availability Result: available
+[2024-10-19 11:31:55] Booked slots: 1
+[2024-10-19 11:31:55] Requested slots: 1,2,3,4
+[2024-10-19 11:31:55] Overlap: 1
+[2024-10-19 11:31:55] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-10-19 11:31:55] Params: 1, 2024-11-01, 2024-11-01
+[2024-10-19 11:31:55] Result rows: 1
+[2024-10-19 11:31:55] Is booked: Yes
+[2024-10-19 11:31:55] Hall ID: 1
+[2024-10-19 11:31:55] Start Date: 2024-11-01
+[2024-10-19 11:31:55] End Date: 2024-11-01
+[2024-10-19 11:31:55] Booking Type: session
+[2024-10-19 11:31:55] Slots to Check: 1,2,3,4
+[2024-10-19 11:31:55] Availability Result: booked
+[2024-10-19 11:32:00] Booked slots: 1
+[2024-10-19 11:32:00] Requested slots: 5,6,7,8
+[2024-10-19 11:32:00] Overlap: 
+[2024-10-19 11:32:00] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-10-19 11:32:00] Params: 1, 2024-11-01, 2024-11-01
+[2024-10-19 11:32:00] Result rows: 1
+[2024-10-19 11:32:00] Is booked: No
+[2024-10-19 11:32:00] Hall ID: 1
+[2024-10-19 11:32:00] Start Date: 2024-11-01
+[2024-10-19 11:32:00] End Date: 2024-11-01
+[2024-10-19 11:32:00] Booking Type: session
+[2024-10-19 11:32:00] Slots to Check: 5,6,7,8
+[2024-10-19 11:32:00] Availability Result: available
+[2024-10-19 11:41:04] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-10-19 11:41:04] Params: 5, 2024-10-29, 2024-10-29
+[2024-10-19 11:41:04] Result rows: 0
+[2024-10-19 11:41:04] Is booked: No
+[2024-10-19 11:41:04] Hall ID: 5
+[2024-10-19 11:41:04] Start Date: 2024-10-29
+[2024-10-19 11:41:04] End Date: 2024-10-29
+[2024-10-19 11:41:04] Booking Type: session
+[2024-10-19 11:41:04] Slots to Check: 1,2,3,4
+[2024-10-19 11:41:04] Availability Result: available
+[2024-10-28 06:41:16] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-10-28 06:41:16] Params: 1, 2024-12-31, 2024-12-31
+[2024-10-28 06:41:16] Result rows: 0
+[2024-10-28 06:41:16] Is booked: No
+[2024-10-28 06:41:16] Hall ID: 1
+[2024-10-28 06:41:16] Start Date: 2024-12-31
+[2024-10-28 06:41:16] End Date: 2024-12-31
+[2024-10-28 06:41:16] Booking Type: session
+[2024-10-28 06:41:16] Slots to Check: 5,6,7,8
+[2024-10-28 06:41:16] Availability Result: available
+[2024-11-04 07:06:03] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:06:03] Params: 1, 2024-11-04, 2024-11-04
+[2024-11-04 07:06:03] Result rows: 0
+[2024-11-04 07:06:03] Is booked: No
+[2024-11-04 07:06:03] Hall ID: 1
+[2024-11-04 07:06:03] Start Date: 2024-11-04
+[2024-11-04 07:06:03] End Date: 2024-11-04
+[2024-11-04 07:06:03] Booking Type: session
+[2024-11-04 07:06:03] Slots to Check: 5,6,7,8
+[2024-11-04 07:06:03] Availability Result: available
+[2024-11-04 07:06:29] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-04 07:06:29] Requested slots: 5,6,7,8
+[2024-11-04 07:06:29] Overlap: 5,6,7,8
+[2024-11-04 07:06:29] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:06:29] Params: 1, 2024-11-15, 2024-11-15
+[2024-11-04 07:06:29] Result rows: 1
+[2024-11-04 07:06:29] Is booked: Yes
+[2024-11-04 07:06:29] Hall ID: 1
+[2024-11-04 07:06:29] Start Date: 2024-11-15
+[2024-11-04 07:06:29] End Date: 2024-11-15
+[2024-11-04 07:06:29] Booking Type: session
+[2024-11-04 07:06:29] Slots to Check: 5,6,7,8
+[2024-11-04 07:06:29] Availability Result: booked
+[2024-11-04 07:06:34] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-04 07:06:34] Requested slots: 5,6,7,8
+[2024-11-04 07:06:34] Overlap: 5,6,7,8
+[2024-11-04 07:06:34] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:06:34] Params: 1, 2024-11-05, 2024-11-15
+[2024-11-04 07:06:34] Result rows: 1
+[2024-11-04 07:06:34] Is booked: Yes
+[2024-11-04 07:06:34] Hall ID: 1
+[2024-11-04 07:06:34] Start Date: 2024-11-05
+[2024-11-04 07:06:34] End Date: 2024-11-15
+[2024-11-04 07:06:34] Booking Type: session
+[2024-11-04 07:06:34] Slots to Check: 5,6,7,8
+[2024-11-04 07:06:34] Availability Result: booked
+[2024-11-04 07:06:43] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-04 07:06:43] Requested slots: 5,6,7,8
+[2024-11-04 07:06:43] Overlap: 5,6,7,8
+[2024-11-04 07:06:43] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:06:43] Params: 1, 2024-11-04, 2024-11-15
+[2024-11-04 07:06:43] Result rows: 1
+[2024-11-04 07:06:43] Is booked: Yes
+[2024-11-04 07:06:43] Hall ID: 1
+[2024-11-04 07:06:43] Start Date: 2024-11-04
+[2024-11-04 07:06:43] End Date: 2024-11-15
+[2024-11-04 07:06:43] Booking Type: session
+[2024-11-04 07:06:43] Slots to Check: 5,6,7,8
+[2024-11-04 07:06:43] Availability Result: booked
+[2024-11-04 07:06:46] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:06:46] Params: 1, 2024-11-04, 2024-11-04
+[2024-11-04 07:06:46] Result rows: 0
+[2024-11-04 07:06:46] Is booked: No
+[2024-11-04 07:06:46] Hall ID: 1
+[2024-11-04 07:06:46] Start Date: 2024-11-04
+[2024-11-04 07:06:46] End Date: 2024-11-04
+[2024-11-04 07:06:46] Booking Type: session
+[2024-11-04 07:06:46] Slots to Check: 5,6,7,8
+[2024-11-04 07:06:46] Availability Result: available
+[2024-11-04 07:07:02] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:07:02] Params: 1, 2024-11-05, 2024-11-05
+[2024-11-04 07:07:02] Result rows: 0
+[2024-11-04 07:07:02] Is booked: No
+[2024-11-04 07:07:02] Hall ID: 1
+[2024-11-04 07:07:02] Start Date: 2024-11-05
+[2024-11-04 07:07:02] End Date: 2024-11-05
+[2024-11-04 07:07:02] Booking Type: session
+[2024-11-04 07:07:02] Slots to Check: 5,6,7,8
+[2024-11-04 07:07:02] Availability Result: available
+[2024-11-04 07:07:03] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:07:03] Params: 1, 2024-11-05, 2024-11-05
+[2024-11-04 07:07:03] Result rows: 0
+[2024-11-04 07:07:03] Is booked: No
+[2024-11-04 07:07:03] Hall ID: 1
+[2024-11-04 07:07:03] Start Date: 2024-11-05
+[2024-11-04 07:07:03] End Date: 2024-11-05
+[2024-11-04 07:07:03] Booking Type: session
+[2024-11-04 07:07:03] Slots to Check: 5,6,7,8
+[2024-11-04 07:07:03] Availability Result: available
+[2024-11-04 07:07:03] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:07:03] Params: 1, 2024-11-05, 2024-11-05
+[2024-11-04 07:07:03] Result rows: 0
+[2024-11-04 07:07:03] Is booked: No
+[2024-11-04 07:07:03] Hall ID: 1
+[2024-11-04 07:07:03] Start Date: 2024-11-05
+[2024-11-04 07:07:03] End Date: 2024-11-05
+[2024-11-04 07:07:03] Booking Type: session
+[2024-11-04 07:07:03] Slots to Check: 5,6,7,8
+[2024-11-04 07:07:03] Availability Result: available
+[2024-11-04 07:07:03] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:07:03] Params: 1, 2024-11-05, 2024-11-05
+[2024-11-04 07:07:03] Result rows: 0
+[2024-11-04 07:07:03] Is booked: No
+[2024-11-04 07:07:03] Hall ID: 1
+[2024-11-04 07:07:03] Start Date: 2024-11-05
+[2024-11-04 07:07:03] End Date: 2024-11-05
+[2024-11-04 07:07:03] Booking Type: session
+[2024-11-04 07:07:03] Slots to Check: 5,6,7,8
+[2024-11-04 07:07:03] Availability Result: available
+[2024-11-04 07:07:08] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:07:08] Params: 1, 2024-11-14, 2024-11-14
+[2024-11-04 07:07:08] Result rows: 0
+[2024-11-04 07:07:08] Is booked: No
+[2024-11-04 07:07:08] Hall ID: 1
+[2024-11-04 07:07:08] Start Date: 2024-11-14
+[2024-11-04 07:07:08] End Date: 2024-11-14
+[2024-11-04 07:07:08] Booking Type: session
+[2024-11-04 07:07:08] Slots to Check: 5,6,7,8
+[2024-11-04 07:07:08] Availability Result: available
+[2024-11-04 07:07:08] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:07:08] Params: 1, 2024-11-14, 2024-11-14
+[2024-11-04 07:07:08] Result rows: 0
+[2024-11-04 07:07:08] Is booked: No
+[2024-11-04 07:07:08] Hall ID: 1
+[2024-11-04 07:07:08] Start Date: 2024-11-14
+[2024-11-04 07:07:08] End Date: 2024-11-14
+[2024-11-04 07:07:08] Booking Type: session
+[2024-11-04 07:07:08] Slots to Check: 5,6,7,8
+[2024-11-04 07:07:08] Availability Result: available
+[2024-11-04 07:07:08] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:07:08] Params: 1, 2024-11-14, 2024-11-14
+[2024-11-04 07:07:08] Result rows: 0
+[2024-11-04 07:07:08] Is booked: No
+[2024-11-04 07:07:08] Hall ID: 1
+[2024-11-04 07:07:08] Start Date: 2024-11-14
+[2024-11-04 07:07:08] End Date: 2024-11-14
+[2024-11-04 07:07:08] Booking Type: session
+[2024-11-04 07:07:08] Slots to Check: 5,6,7,8
+[2024-11-04 07:07:08] Availability Result: available
+[2024-11-04 07:07:09] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:07:09] Params: 1, 2024-11-14, 2024-11-14
+[2024-11-04 07:07:09] Result rows: 0
+[2024-11-04 07:07:09] Is booked: No
+[2024-11-04 07:07:09] Hall ID: 1
+[2024-11-04 07:07:09] Start Date: 2024-11-14
+[2024-11-04 07:07:09] End Date: 2024-11-14
+[2024-11-04 07:07:09] Booking Type: session
+[2024-11-04 07:07:09] Slots to Check: 5,6,7,8
+[2024-11-04 07:07:09] Availability Result: available
+[2024-11-04 07:07:15] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-04 07:07:15] Requested slots: 5,6,7,8
+[2024-11-04 07:07:15] Overlap: 5,6,7,8
+[2024-11-04 07:07:15] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:07:15] Params: 1, 2024-11-15, 2024-11-15
+[2024-11-04 07:07:15] Result rows: 1
+[2024-11-04 07:07:15] Is booked: Yes
+[2024-11-04 07:07:15] Hall ID: 1
+[2024-11-04 07:07:15] Start Date: 2024-11-15
+[2024-11-04 07:07:15] End Date: 2024-11-15
+[2024-11-04 07:07:15] Booking Type: session
+[2024-11-04 07:07:15] Slots to Check: 5,6,7,8
+[2024-11-04 07:07:15] Availability Result: booked
+[2024-11-04 07:07:18] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-04 07:07:18] Requested slots: 1,2,3,4
+[2024-11-04 07:07:18] Overlap: 1,2,3,4
+[2024-11-04 07:07:18] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:07:18] Params: 1, 2024-11-15, 2024-11-15
+[2024-11-04 07:07:18] Result rows: 1
+[2024-11-04 07:07:18] Is booked: Yes
+[2024-11-04 07:07:18] Hall ID: 1
+[2024-11-04 07:07:18] Start Date: 2024-11-15
+[2024-11-04 07:07:18] End Date: 2024-11-15
+[2024-11-04 07:07:18] Booking Type: session
+[2024-11-04 07:07:18] Slots to Check: 1,2,3,4
+[2024-11-04 07:07:18] Availability Result: booked
+[2024-11-04 07:07:24] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:07:24] Params: 1, 2024-11-04, 2024-11-04
+[2024-11-04 07:07:24] Result rows: 0
+[2024-11-04 07:07:24] Is booked: No
+[2024-11-04 07:07:24] Hall ID: 1
+[2024-11-04 07:07:24] Start Date: 2024-11-04
+[2024-11-04 07:07:24] End Date: 2024-11-04
+[2024-11-04 07:07:24] Booking Type: session
+[2024-11-04 07:07:24] Slots to Check: 5,6,7,8
+[2024-11-04 07:07:24] Availability Result: available
+[2024-11-04 07:09:23] Booked slots: 1,2,3,4
+[2024-11-04 07:09:23] Requested slots: 5,6,7,8
+[2024-11-04 07:09:23] Overlap: 
+[2024-11-04 07:09:23] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:09:23] Params: 1, 2024-11-16, 2024-11-16
+[2024-11-04 07:09:23] Result rows: 1
+[2024-11-04 07:09:23] Is booked: No
+[2024-11-04 07:09:23] Hall ID: 1
+[2024-11-04 07:09:23] Start Date: 2024-11-16
+[2024-11-04 07:09:23] End Date: 2024-11-16
+[2024-11-04 07:09:23] Booking Type: session
+[2024-11-04 07:09:23] Slots to Check: 5,6,7,8
+[2024-11-04 07:09:23] Availability Result: available
+[2024-11-04 07:09:30] Booked slots: 1,2,3,4
+[2024-11-04 07:09:30] Requested slots: 1,2,3,4
+[2024-11-04 07:09:30] Overlap: 1,2,3,4
+[2024-11-04 07:09:30] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:09:30] Params: 1, 2024-11-16, 2024-11-16
+[2024-11-04 07:09:30] Result rows: 1
+[2024-11-04 07:09:30] Is booked: Yes
+[2024-11-04 07:09:30] Hall ID: 1
+[2024-11-04 07:09:30] Start Date: 2024-11-16
+[2024-11-04 07:09:30] End Date: 2024-11-16
+[2024-11-04 07:09:30] Booking Type: session
+[2024-11-04 07:09:30] Slots to Check: 1,2,3,4
+[2024-11-04 07:09:30] Availability Result: booked
+[2024-11-04 07:09:45] Booked slots: 1,2,3,4
+[2024-11-04 07:09:45] Requested slots: 1,2,3,4
+[2024-11-04 07:09:45] Overlap: 1,2,3,4
+[2024-11-04 07:09:45] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:09:45] Params: 1, 2024-11-16, 2024-11-16
+[2024-11-04 07:09:45] Result rows: 1
+[2024-11-04 07:09:45] Is booked: Yes
+[2024-11-04 07:09:45] Hall ID: 1
+[2024-11-04 07:09:45] Start Date: 2024-11-16
+[2024-11-04 07:09:45] End Date: 2024-11-16
+[2024-11-04 07:09:45] Booking Type: session
+[2024-11-04 07:09:45] Slots to Check: 1,2,3,4
+[2024-11-04 07:09:45] Availability Result: booked
+[2024-11-04 07:09:46] Booked slots: 1,2,3,4
+[2024-11-04 07:09:46] Requested slots: 5,6,7,8
+[2024-11-04 07:09:46] Overlap: 
+[2024-11-04 07:09:46] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-04 07:09:46] Params: 1, 2024-11-16, 2024-11-16
+[2024-11-04 07:09:46] Result rows: 1
+[2024-11-04 07:09:46] Is booked: No
+[2024-11-04 07:09:46] Hall ID: 1
+[2024-11-04 07:09:46] Start Date: 2024-11-16
+[2024-11-04 07:09:46] End Date: 2024-11-16
+[2024-11-04 07:09:46] Booking Type: session
+[2024-11-04 07:09:46] Slots to Check: 5,6,7,8
+[2024-11-04 07:09:46] Availability Result: available
+[2024-11-08 07:02:34] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 07:02:34] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 07:02:34] Result rows: 0
+[2024-11-08 07:02:34] Is booked: No
+[2024-11-08 07:02:34] Hall ID: 1
+[2024-11-08 07:02:34] Start Date: 2024-11-12
+[2024-11-08 07:02:34] End Date: 2024-11-12
+[2024-11-08 07:02:34] Booking Type: session
+[2024-11-08 07:02:34] Slots to Check: 5,6,7,8
+[2024-11-08 07:02:34] Availability Result: available
+[2024-11-08 07:02:45] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 07:02:45] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 07:02:45] Result rows: 0
+[2024-11-08 07:02:45] Is booked: No
+[2024-11-08 07:02:45] Hall ID: 1
+[2024-11-08 07:02:45] Start Date: 2024-11-12
+[2024-11-08 07:02:45] End Date: 2024-11-12
+[2024-11-08 07:02:45] Booking Type: slot
+[2024-11-08 07:02:45] Slots to Check: 5
+[2024-11-08 07:02:45] Availability Result: available
+[2024-11-08 07:03:24] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 07:03:24] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 07:03:24] Result rows: 0
+[2024-11-08 07:03:24] Is booked: No
+[2024-11-08 07:03:24] Hall ID: 1
+[2024-11-08 07:03:24] Start Date: 2024-11-12
+[2024-11-08 07:03:24] End Date: 2024-11-12
+[2024-11-08 07:03:24] Booking Type: session
+[2024-11-08 07:03:24] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-11-08 07:03:24] Availability Result: available
+[2024-11-08 07:03:50] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 07:03:50] Params: 1, 2024-11-11, 2024-11-12
+[2024-11-08 07:03:50] Result rows: 0
+[2024-11-08 07:03:50] Is booked: No
+[2024-11-08 07:03:50] Hall ID: 1
+[2024-11-08 07:03:50] Start Date: 2024-11-11
+[2024-11-08 07:03:50] End Date: 2024-11-12
+[2024-11-08 07:03:50] Booking Type: session
+[2024-11-08 07:03:50] Slots to Check: 5,6,7,8
+[2024-11-08 07:03:50] Availability Result: available
+[2024-11-08 07:03:50] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 07:03:50] Params: 1, 2024-11-11, 2024-11-12
+[2024-11-08 07:03:50] Result rows: 0
+[2024-11-08 07:03:50] Is booked: No
+[2024-11-08 07:03:50] Hall ID: 1
+[2024-11-08 07:03:50] Start Date: 2024-11-11
+[2024-11-08 07:03:50] End Date: 2024-11-12
+[2024-11-08 07:03:50] Booking Type: session
+[2024-11-08 07:03:50] Slots to Check: 5,6,7,8
+[2024-11-08 07:03:50] Availability Result: available
+[2024-11-08 07:03:51] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 07:03:51] Params: 1, 2024-11-11, 2024-11-12
+[2024-11-08 07:03:51] Result rows: 0
+[2024-11-08 07:03:51] Is booked: No
+[2024-11-08 07:03:51] Hall ID: 1
+[2024-11-08 07:03:51] Start Date: 2024-11-11
+[2024-11-08 07:03:51] End Date: 2024-11-12
+[2024-11-08 07:03:51] Booking Type: session
+[2024-11-08 07:03:51] Slots to Check: 5,6,7,8
+[2024-11-08 07:03:51] Availability Result: available
+[2024-11-08 07:18:53] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 07:18:53] Params: 5, 2024-11-12, 2024-11-12
+[2024-11-08 07:18:53] Result rows: 0
+[2024-11-08 07:18:53] Is booked: No
+[2024-11-08 07:18:53] Hall ID: 5
+[2024-11-08 07:18:53] Start Date: 2024-11-12
+[2024-11-08 07:18:53] End Date: 2024-11-12
+[2024-11-08 07:18:53] Booking Type: slot
+[2024-11-08 07:18:53] Slots to Check: 1
+[2024-11-08 07:18:53] Availability Result: available
+[2024-11-08 16:22:37] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:22:37] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 16:22:37] Result rows: 0
+[2024-11-08 16:22:37] Is booked: No
+[2024-11-08 16:22:37] Hall ID: 1
+[2024-11-08 16:22:37] Start Date: 2024-11-12
+[2024-11-08 16:22:37] End Date: 2024-11-12
+[2024-11-08 16:22:37] Booking Type: session
+[2024-11-08 16:22:37] Slots to Check: 5,6,7,8
+[2024-11-08 16:22:37] Availability Result: available
+[2024-11-08 16:22:43] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:22:43] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 16:22:43] Result rows: 0
+[2024-11-08 16:22:43] Is booked: No
+[2024-11-08 16:22:43] Hall ID: 1
+[2024-11-08 16:22:43] Start Date: 2024-11-12
+[2024-11-08 16:22:43] End Date: 2024-11-12
+[2024-11-08 16:22:43] Booking Type: session
+[2024-11-08 16:22:43] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-11-08 16:22:43] Availability Result: available
+[2024-11-08 16:22:43] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:22:43] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 16:22:43] Result rows: 0
+[2024-11-08 16:22:43] Is booked: No
+[2024-11-08 16:22:43] Hall ID: 1
+[2024-11-08 16:22:43] Start Date: 2024-11-12
+[2024-11-08 16:22:43] End Date: 2024-11-12
+[2024-11-08 16:22:43] Booking Type: session
+[2024-11-08 16:22:43] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-11-08 16:22:43] Availability Result: available
+[2024-11-08 16:22:43] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:22:43] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 16:22:43] Result rows: 0
+[2024-11-08 16:22:43] Is booked: No
+[2024-11-08 16:22:43] Hall ID: 1
+[2024-11-08 16:22:43] Start Date: 2024-11-12
+[2024-11-08 16:22:43] End Date: 2024-11-12
+[2024-11-08 16:22:43] Booking Type: session
+[2024-11-08 16:22:43] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-11-08 16:22:43] Availability Result: available
+[2024-11-08 16:22:44] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:22:44] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 16:22:44] Result rows: 0
+[2024-11-08 16:22:44] Is booked: No
+[2024-11-08 16:22:44] Hall ID: 1
+[2024-11-08 16:22:44] Start Date: 2024-11-12
+[2024-11-08 16:22:44] End Date: 2024-11-12
+[2024-11-08 16:22:44] Booking Type: session
+[2024-11-08 16:22:44] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-11-08 16:22:44] Availability Result: available
+[2024-11-08 16:22:45] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:22:45] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 16:22:45] Result rows: 0
+[2024-11-08 16:22:45] Is booked: No
+[2024-11-08 16:22:45] Hall ID: 1
+[2024-11-08 16:22:45] Start Date: 2024-11-12
+[2024-11-08 16:22:45] End Date: 2024-11-12
+[2024-11-08 16:22:45] Booking Type: session
+[2024-11-08 16:22:45] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-11-08 16:22:45] Availability Result: available
+[2024-11-08 16:22:45] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:22:45] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 16:22:45] Result rows: 0
+[2024-11-08 16:22:45] Is booked: No
+[2024-11-08 16:22:45] Hall ID: 1
+[2024-11-08 16:22:45] Start Date: 2024-11-12
+[2024-11-08 16:22:45] End Date: 2024-11-12
+[2024-11-08 16:22:45] Booking Type: session
+[2024-11-08 16:22:45] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-11-08 16:22:45] Availability Result: available
+[2024-11-08 16:22:45] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:22:45] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 16:22:45] Result rows: 0
+[2024-11-08 16:22:45] Is booked: No
+[2024-11-08 16:22:45] Hall ID: 1
+[2024-11-08 16:22:45] Start Date: 2024-11-12
+[2024-11-08 16:22:45] End Date: 2024-11-12
+[2024-11-08 16:22:45] Booking Type: session
+[2024-11-08 16:22:45] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-11-08 16:22:45] Availability Result: available
+[2024-11-08 16:22:46] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:22:46] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 16:22:46] Result rows: 0
+[2024-11-08 16:22:46] Is booked: No
+[2024-11-08 16:22:46] Hall ID: 1
+[2024-11-08 16:22:46] Start Date: 2024-11-12
+[2024-11-08 16:22:46] End Date: 2024-11-12
+[2024-11-08 16:22:46] Booking Type: session
+[2024-11-08 16:22:46] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-11-08 16:22:46] Availability Result: available
+[2024-11-08 16:22:53] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-08 16:22:53] Requested slots: 1,2,3,4,5,6,7,8
+[2024-11-08 16:22:53] Overlap: 1,2,3,4,5,6,7,8
+[2024-11-08 16:22:53] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:22:53] Params: 1, 2024-11-15, 2024-11-15
+[2024-11-08 16:22:53] Result rows: 1
+[2024-11-08 16:22:53] Is booked: Yes
+[2024-11-08 16:22:53] Hall ID: 1
+[2024-11-08 16:22:53] Start Date: 2024-11-15
+[2024-11-08 16:22:53] End Date: 2024-11-15
+[2024-11-08 16:22:53] Booking Type: session
+[2024-11-08 16:22:53] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-11-08 16:22:53] Availability Result: booked
+[2024-11-08 16:23:00] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-08 16:23:00] Requested slots: 1,2,3,4,5,6,7,8
+[2024-11-08 16:23:00] Overlap: 1,2,3,4,5,6,7,8
+[2024-11-08 16:23:00] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:23:00] Params: 1, 2024-11-13, 2024-11-15
+[2024-11-08 16:23:00] Result rows: 1
+[2024-11-08 16:23:00] Is booked: Yes
+[2024-11-08 16:23:00] Hall ID: 1
+[2024-11-08 16:23:00] Start Date: 2024-11-13
+[2024-11-08 16:23:00] End Date: 2024-11-15
+[2024-11-08 16:23:00] Booking Type: session
+[2024-11-08 16:23:00] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-11-08 16:23:00] Availability Result: booked
+[2024-11-08 16:23:01] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-08 16:23:01] Requested slots: 1,2,3,4,5,6,7,8
+[2024-11-08 16:23:01] Overlap: 1,2,3,4,5,6,7,8
+[2024-11-08 16:23:01] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:23:01] Params: 1, 2024-11-13, 2024-11-15
+[2024-11-08 16:23:01] Result rows: 1
+[2024-11-08 16:23:01] Is booked: Yes
+[2024-11-08 16:23:01] Hall ID: 1
+[2024-11-08 16:23:01] Start Date: 2024-11-13
+[2024-11-08 16:23:01] End Date: 2024-11-15
+[2024-11-08 16:23:01] Booking Type: session
+[2024-11-08 16:23:01] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-11-08 16:23:01] Availability Result: booked
+[2024-11-08 16:23:01] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-08 16:23:01] Requested slots: 1,2,3,4,5,6,7,8
+[2024-11-08 16:23:01] Overlap: 1,2,3,4,5,6,7,8
+[2024-11-08 16:23:01] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:23:01] Params: 1, 2024-11-13, 2024-11-15
+[2024-11-08 16:23:01] Result rows: 1
+[2024-11-08 16:23:01] Is booked: Yes
+[2024-11-08 16:23:01] Hall ID: 1
+[2024-11-08 16:23:01] Start Date: 2024-11-13
+[2024-11-08 16:23:01] End Date: 2024-11-15
+[2024-11-08 16:23:01] Booking Type: session
+[2024-11-08 16:23:01] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-11-08 16:23:01] Availability Result: booked
+[2024-11-08 16:23:01] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-08 16:23:01] Requested slots: 1,2,3,4,5,6,7,8
+[2024-11-08 16:23:01] Overlap: 1,2,3,4,5,6,7,8
+[2024-11-08 16:23:01] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:23:01] Params: 1, 2024-11-13, 2024-11-15
+[2024-11-08 16:23:01] Result rows: 1
+[2024-11-08 16:23:01] Is booked: Yes
+[2024-11-08 16:23:01] Hall ID: 1
+[2024-11-08 16:23:01] Start Date: 2024-11-13
+[2024-11-08 16:23:01] End Date: 2024-11-15
+[2024-11-08 16:23:01] Booking Type: session
+[2024-11-08 16:23:01] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-11-08 16:23:01] Availability Result: booked
+[2024-11-08 16:23:06] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:23:06] Params: 1, 2024-11-13, 2024-11-13
+[2024-11-08 16:23:06] Result rows: 0
+[2024-11-08 16:23:06] Is booked: No
+[2024-11-08 16:23:06] Hall ID: 1
+[2024-11-08 16:23:06] Start Date: 2024-11-13
+[2024-11-08 16:23:06] End Date: 2024-11-13
+[2024-11-08 16:23:06] Booking Type: session
+[2024-11-08 16:23:06] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-11-08 16:23:06] Availability Result: available
+[2024-11-08 16:28:01] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:28:01] Params: 1, 2024-11-13, 2024-11-13
+[2024-11-08 16:28:01] Result rows: 0
+[2024-11-08 16:28:01] Is booked: No
+[2024-11-08 16:28:01] Hall ID: 1
+[2024-11-08 16:28:01] Start Date: 2024-11-13
+[2024-11-08 16:28:01] End Date: 2024-11-13
+[2024-11-08 16:28:01] Booking Type: session
+[2024-11-08 16:28:01] Slots to Check: 5,6,7,8
+[2024-11-08 16:28:01] Availability Result: available
+[2024-11-08 16:30:54] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:30:54] Params: 1, 2024-11-13, 2024-11-13
+[2024-11-08 16:30:54] Result rows: 0
+[2024-11-08 16:30:54] Is booked: No
+[2024-11-08 16:30:54] Hall ID: 1
+[2024-11-08 16:30:54] Start Date: 2024-11-13
+[2024-11-08 16:30:54] End Date: 2024-11-13
+[2024-11-08 16:30:54] Booking Type: session
+[2024-11-08 16:30:54] Slots to Check: 5,6,7,8
+[2024-11-08 16:30:54] Availability Result: available
+[2024-11-08 16:32:14] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-08 16:32:14] Requested slots: 5,6,7,8
+[2024-11-08 16:32:14] Overlap: 5,6,7,8
+[2024-11-08 16:32:14] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:32:14] Params: 1, 2024-11-15, 2024-11-15
+[2024-11-08 16:32:14] Result rows: 1
+[2024-11-08 16:32:14] Is booked: Yes
+[2024-11-08 16:32:14] Hall ID: 1
+[2024-11-08 16:32:14] Start Date: 2024-11-15
+[2024-11-08 16:32:14] End Date: 2024-11-15
+[2024-11-08 16:32:14] Booking Type: session
+[2024-11-08 16:32:14] Slots to Check: 5,6,7,8
+[2024-11-08 16:32:14] Availability Result: booked
+[2024-11-08 16:32:21] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-08 16:32:21] Requested slots: 5,6,7,8
+[2024-11-08 16:32:21] Overlap: 5,6,7,8
+[2024-11-08 16:32:21] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:32:21] Params: 1, 2024-11-12, 2024-11-15
+[2024-11-08 16:32:21] Result rows: 1
+[2024-11-08 16:32:21] Is booked: Yes
+[2024-11-08 16:32:21] Hall ID: 1
+[2024-11-08 16:32:21] Start Date: 2024-11-12
+[2024-11-08 16:32:21] End Date: 2024-11-15
+[2024-11-08 16:32:21] Booking Type: session
+[2024-11-08 16:32:21] Slots to Check: 5,6,7,8
+[2024-11-08 16:32:21] Availability Result: booked
+[2024-11-08 16:32:24] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:32:24] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 16:32:24] Result rows: 0
+[2024-11-08 16:32:24] Is booked: No
+[2024-11-08 16:32:24] Hall ID: 1
+[2024-11-08 16:32:24] Start Date: 2024-11-12
+[2024-11-08 16:32:24] End Date: 2024-11-12
+[2024-11-08 16:32:24] Booking Type: session
+[2024-11-08 16:32:24] Slots to Check: 5,6,7,8
+[2024-11-08 16:32:24] Availability Result: available
+[2024-11-08 16:36:30] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:36:30] Params: 1, 2024-11-14, 2024-11-14
+[2024-11-08 16:36:30] Result rows: 0
+[2024-11-08 16:36:30] Is booked: No
+[2024-11-08 16:36:30] Hall ID: 1
+[2024-11-08 16:36:30] Start Date: 2024-11-14
+[2024-11-08 16:36:30] End Date: 2024-11-14
+[2024-11-08 16:36:30] Booking Type: session
+[2024-11-08 16:36:30] Slots to Check: 5,6,7,8
+[2024-11-08 16:36:30] Availability Result: available
+[2024-11-08 16:36:37] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-08 16:36:37] Requested slots: 5,6,7,8
+[2024-11-08 16:36:37] Overlap: 5,6,7,8
+[2024-11-08 16:36:37] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:36:37] Params: 1, 2024-11-15, 2024-11-15
+[2024-11-08 16:36:37] Result rows: 1
+[2024-11-08 16:36:37] Is booked: Yes
+[2024-11-08 16:36:37] Hall ID: 1
+[2024-11-08 16:36:37] Start Date: 2024-11-15
+[2024-11-08 16:36:37] End Date: 2024-11-15
+[2024-11-08 16:36:37] Booking Type: session
+[2024-11-08 16:36:37] Slots to Check: 5,6,7,8
+[2024-11-08 16:36:37] Availability Result: booked
+[2024-11-08 16:39:06] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:39:06] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 16:39:06] Result rows: 0
+[2024-11-08 16:39:06] Is booked: No
+[2024-11-08 16:39:06] Hall ID: 1
+[2024-11-08 16:39:06] Start Date: 2024-11-12
+[2024-11-08 16:39:06] End Date: 2024-11-12
+[2024-11-08 16:39:06] Booking Type: session
+[2024-11-08 16:39:06] Slots to Check: 5,6,7,8
+[2024-11-08 16:39:06] Availability Result: available
+[2024-11-08 16:40:11] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:40:11] Params: 1, 2024-12-31, 2024-12-31
+[2024-11-08 16:40:11] Result rows: 0
+[2024-11-08 16:40:11] Is booked: No
+[2024-11-08 16:40:11] Hall ID: 1
+[2024-11-08 16:40:11] Start Date: 2024-12-31
+[2024-11-08 16:40:11] End Date: 2024-12-31
+[2024-11-08 16:40:11] Booking Type: session
+[2024-11-08 16:40:11] Slots to Check: 5,6,7,8
+[2024-11-08 16:40:11] Availability Result: available
+[2024-11-08 16:48:56] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:48:56] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 16:48:56] Result rows: 0
+[2024-11-08 16:48:56] Is booked: No
+[2024-11-08 16:48:56] Hall ID: 1
+[2024-11-08 16:48:56] Start Date: 2024-11-12
+[2024-11-08 16:48:56] End Date: 2024-11-12
+[2024-11-08 16:48:56] Booking Type: session
+[2024-11-08 16:48:56] Slots to Check: 5,6,7,8
+[2024-11-08 16:48:56] Availability Result: available
+[2024-11-08 16:49:40] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:49:40] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 16:49:40] Result rows: 0
+[2024-11-08 16:49:40] Is booked: No
+[2024-11-08 16:49:40] Hall ID: 1
+[2024-11-08 16:49:40] Start Date: 2024-11-12
+[2024-11-08 16:49:40] End Date: 2024-11-12
+[2024-11-08 16:49:40] Booking Type: session
+[2024-11-08 16:49:40] Slots to Check: 5,6,7,8
+[2024-11-08 16:49:40] Availability Result: available
+[2024-11-08 16:49:48] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-08 16:49:48] Requested slots: 5,6,7,8
+[2024-11-08 16:49:48] Overlap: 5,6,7,8
+[2024-11-08 16:49:48] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:49:48] Params: 1, 2024-11-15, 2024-11-15
+[2024-11-08 16:49:48] Result rows: 1
+[2024-11-08 16:49:48] Is booked: Yes
+[2024-11-08 16:49:48] Hall ID: 1
+[2024-11-08 16:49:48] Start Date: 2024-11-15
+[2024-11-08 16:49:48] End Date: 2024-11-15
+[2024-11-08 16:49:48] Booking Type: session
+[2024-11-08 16:49:48] Slots to Check: 5,6,7,8
+[2024-11-08 16:49:48] Availability Result: booked
+[2024-11-08 16:51:33] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:51:33] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 16:51:33] Result rows: 0
+[2024-11-08 16:51:33] Is booked: No
+[2024-11-08 16:51:33] Hall ID: 1
+[2024-11-08 16:51:33] Start Date: 2024-11-12
+[2024-11-08 16:51:33] End Date: 2024-11-12
+[2024-11-08 16:51:33] Booking Type: session
+[2024-11-08 16:51:33] Slots to Check: 5,6,7,8
+[2024-11-08 16:51:33] Availability Result: available
+[2024-11-08 16:54:08] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:54:08] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 16:54:08] Result rows: 0
+[2024-11-08 16:54:08] Is booked: No
+[2024-11-08 16:54:08] Hall ID: 1
+[2024-11-08 16:54:08] Start Date: 2024-11-12
+[2024-11-08 16:54:08] End Date: 2024-11-12
+[2024-11-08 16:54:08] Booking Type: session
+[2024-11-08 16:54:08] Slots to Check: 5,6,7,8
+[2024-11-08 16:54:08] Availability Result: available
+[2024-11-08 16:55:42] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:55:42] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 16:55:42] Result rows: 0
+[2024-11-08 16:55:42] Is booked: No
+[2024-11-08 16:55:42] Hall ID: 1
+[2024-11-08 16:55:42] Start Date: 2024-11-12
+[2024-11-08 16:55:42] End Date: 2024-11-12
+[2024-11-08 16:55:42] Booking Type: session
+[2024-11-08 16:55:42] Slots to Check: 5,6,7,8
+[2024-11-08 16:55:42] Availability Result: available
+[2024-11-08 16:59:51] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 16:59:51] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 16:59:51] Result rows: 0
+[2024-11-08 16:59:51] Is booked: No
+[2024-11-08 16:59:51] Hall ID: 1
+[2024-11-08 16:59:51] Start Date: 2024-11-12
+[2024-11-08 16:59:51] End Date: 2024-11-12
+[2024-11-08 16:59:51] Booking Type: session
+[2024-11-08 16:59:51] Slots to Check: 5,6,7,8
+[2024-11-08 16:59:51] Availability Result: available
+[2024-11-08 17:00:11] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-08 17:00:11] Requested slots: 5,6,7,8
+[2024-11-08 17:00:11] Overlap: 5,6,7,8
+[2024-11-08 17:00:11] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 17:00:11] Params: 1, 2024-11-12, 2024-11-15
+[2024-11-08 17:00:11] Result rows: 1
+[2024-11-08 17:00:11] Is booked: Yes
+[2024-11-08 17:00:11] Hall ID: 1
+[2024-11-08 17:00:11] Start Date: 2024-11-12
+[2024-11-08 17:00:11] End Date: 2024-11-15
+[2024-11-08 17:00:11] Booking Type: session
+[2024-11-08 17:00:11] Slots to Check: 5,6,7,8
+[2024-11-08 17:00:11] Availability Result: booked
+[2024-11-08 17:02:19] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 17:02:19] Params: 1, 2024-11-12, 2024-11-12
+[2024-11-08 17:02:19] Result rows: 0
+[2024-11-08 17:02:19] Is booked: No
+[2024-11-08 17:02:19] Hall ID: 1
+[2024-11-08 17:02:19] Start Date: 2024-11-12
+[2024-11-08 17:02:19] End Date: 2024-11-12
+[2024-11-08 17:02:19] Booking Type: session
+[2024-11-08 17:02:19] Slots to Check: 1,2,3,4
+[2024-11-08 17:02:19] Availability Result: available
+[2024-11-08 17:03:08] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-08 17:03:08] Params: 1, 2024-11-12, 2024-11-13
+[2024-11-08 17:03:08] Result rows: 0
+[2024-11-08 17:03:08] Is booked: No
+[2024-11-08 17:03:08] Hall ID: 1
+[2024-11-08 17:03:08] Start Date: 2024-11-12
+[2024-11-08 17:03:08] End Date: 2024-11-13
+[2024-11-08 17:03:08] Booking Type: session
+[2024-11-08 17:03:08] Slots to Check: 5,6,7,8
+[2024-11-08 17:03:08] Availability Result: available
+[2024-11-11 05:50:32] Booked slots: 5,6,7,8
+[2024-11-11 05:50:32] Requested slots: 5,6,7,8
+[2024-11-11 05:50:32] Overlap: 5,6,7,8
+[2024-11-11 05:50:32] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-11 05:50:32] Params: 1, 2024-11-01, 2024-11-01
+[2024-11-11 05:50:32] Result rows: 1
+[2024-11-11 05:50:32] Is booked: Yes
+[2024-11-11 05:50:32] Hall ID: 1
+[2024-11-11 05:50:32] Start Date: 2024-11-01
+[2024-11-11 05:50:32] End Date: 2024-11-01
+[2024-11-11 05:50:32] Booking Type: session
+[2024-11-11 05:50:32] Slots to Check: 5,6,7,8
+[2024-11-11 05:50:32] Availability Result: booked
+[2024-11-11 05:50:45] Booked slots: 5,6,7,8
+[2024-11-11 05:50:45] Requested slots: 1,2,3,4
+[2024-11-11 05:50:45] Overlap: 
+[2024-11-11 05:50:45] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-11 05:50:45] Params: 1, 2024-11-01, 2024-11-01
+[2024-11-11 05:50:45] Result rows: 1
+[2024-11-11 05:50:45] Is booked: No
+[2024-11-11 05:50:45] Hall ID: 1
+[2024-11-11 05:50:45] Start Date: 2024-11-01
+[2024-11-11 05:50:45] End Date: 2024-11-01
+[2024-11-11 05:50:45] Booking Type: session
+[2024-11-11 05:50:45] Slots to Check: 1,2,3,4
+[2024-11-11 05:50:45] Availability Result: available
+[2024-11-11 05:50:47] Booked slots: 5,6,7,8
+[2024-11-11 05:50:47] Requested slots: 5,6,7,8
+[2024-11-11 05:50:47] Overlap: 5,6,7,8
+[2024-11-11 05:50:47] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-11 05:50:47] Params: 1, 2024-11-01, 2024-11-01
+[2024-11-11 05:50:47] Result rows: 1
+[2024-11-11 05:50:47] Is booked: Yes
+[2024-11-11 05:50:47] Hall ID: 1
+[2024-11-11 05:50:47] Start Date: 2024-11-01
+[2024-11-11 05:50:47] End Date: 2024-11-01
+[2024-11-11 05:50:47] Booking Type: session
+[2024-11-11 05:50:47] Slots to Check: 5,6,7,8
+[2024-11-11 05:50:47] Availability Result: booked
+[2024-11-18 14:17:38] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:17:38] Params: 1, 2024-11-19, 2024-11-19
+[2024-11-18 14:17:38] Result rows: 0
+[2024-11-18 14:17:38] Is booked: No
+[2024-11-18 14:17:38] Hall ID: 1
+[2024-11-18 14:17:38] Start Date: 2024-11-19
+[2024-11-18 14:17:38] End Date: 2024-11-19
+[2024-11-18 14:17:38] Booking Type: session
+[2024-11-18 14:17:38] Slots to Check: 5,6,7,8
+[2024-11-18 14:17:38] Availability Result: available
+[2024-11-18 14:17:42] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:17:42] Params: 1, 2024-11-19, 2024-11-19
+[2024-11-18 14:17:42] Result rows: 0
+[2024-11-18 14:17:42] Is booked: No
+[2024-11-18 14:17:42] Hall ID: 1
+[2024-11-18 14:17:42] Start Date: 2024-11-19
+[2024-11-18 14:17:42] End Date: 2024-11-19
+[2024-11-18 14:17:42] Booking Type: session
+[2024-11-18 14:17:42] Slots to Check: 1,2,3,4
+[2024-11-18 14:17:42] Availability Result: available
+[2024-11-18 14:18:02] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:18:02] Params: 1, 2024-11-19, 2024-11-20
+[2024-11-18 14:18:02] Result rows: 0
+[2024-11-18 14:18:02] Is booked: No
+[2024-11-18 14:18:02] Hall ID: 1
+[2024-11-18 14:18:02] Start Date: 2024-11-19
+[2024-11-18 14:18:02] End Date: 2024-11-20
+[2024-11-18 14:18:02] Booking Type: session
+[2024-11-18 14:18:02] Slots to Check: 1,2,3,4
+[2024-11-18 14:18:02] Availability Result: available
+[2024-11-18 14:18:03] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:18:03] Params: 1, 2024-11-19, 2024-11-20
+[2024-11-18 14:18:03] Result rows: 0
+[2024-11-18 14:18:03] Is booked: No
+[2024-11-18 14:18:03] Hall ID: 1
+[2024-11-18 14:18:03] Start Date: 2024-11-19
+[2024-11-18 14:18:03] End Date: 2024-11-20
+[2024-11-18 14:18:03] Booking Type: session
+[2024-11-18 14:18:03] Slots to Check: 1,2,3,4
+[2024-11-18 14:18:03] Availability Result: available
+[2024-11-18 14:18:03] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:18:03] Params: 1, 2024-11-19, 2024-11-20
+[2024-11-18 14:18:03] Result rows: 0
+[2024-11-18 14:18:03] Is booked: No
+[2024-11-18 14:18:03] Hall ID: 1
+[2024-11-18 14:18:03] Start Date: 2024-11-19
+[2024-11-18 14:18:03] End Date: 2024-11-20
+[2024-11-18 14:18:03] Booking Type: session
+[2024-11-18 14:18:03] Slots to Check: 1,2,3,4
+[2024-11-18 14:18:03] Availability Result: available
+[2024-11-18 14:18:03] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:18:03] Params: 1, 2024-11-19, 2024-11-20
+[2024-11-18 14:18:03] Result rows: 0
+[2024-11-18 14:18:03] Is booked: No
+[2024-11-18 14:18:03] Hall ID: 1
+[2024-11-18 14:18:03] Start Date: 2024-11-19
+[2024-11-18 14:18:03] End Date: 2024-11-20
+[2024-11-18 14:18:03] Booking Type: session
+[2024-11-18 14:18:03] Slots to Check: 1,2,3,4
+[2024-11-18 14:18:03] Availability Result: available
+[2024-11-18 14:18:05] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:18:05] Params: 1, 2024-11-19, 2024-11-20
+[2024-11-18 14:18:05] Result rows: 0
+[2024-11-18 14:18:05] Is booked: No
+[2024-11-18 14:18:05] Hall ID: 1
+[2024-11-18 14:18:05] Start Date: 2024-11-19
+[2024-11-18 14:18:05] End Date: 2024-11-20
+[2024-11-18 14:18:05] Booking Type: session
+[2024-11-18 14:18:05] Slots to Check: 5,6,7,8
+[2024-11-18 14:18:05] Availability Result: available
+[2024-11-18 14:18:06] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:18:06] Params: 1, 2024-11-19, 2024-11-20
+[2024-11-18 14:18:06] Result rows: 0
+[2024-11-18 14:18:06] Is booked: No
+[2024-11-18 14:18:06] Hall ID: 1
+[2024-11-18 14:18:06] Start Date: 2024-11-19
+[2024-11-18 14:18:06] End Date: 2024-11-20
+[2024-11-18 14:18:06] Booking Type: session
+[2024-11-18 14:18:06] Slots to Check: 5,6,7,8
+[2024-11-18 14:18:06] Availability Result: available
+[2024-11-18 14:18:06] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:18:06] Params: 1, 2024-11-19, 2024-11-20
+[2024-11-18 14:18:06] Result rows: 0
+[2024-11-18 14:18:06] Is booked: No
+[2024-11-18 14:18:06] Hall ID: 1
+[2024-11-18 14:18:06] Start Date: 2024-11-19
+[2024-11-18 14:18:06] End Date: 2024-11-20
+[2024-11-18 14:18:06] Booking Type: session
+[2024-11-18 14:18:06] Slots to Check: 5,6,7,8
+[2024-11-18 14:18:06] Availability Result: available
+[2024-11-18 14:18:07] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:18:07] Params: 1, 2024-11-19, 2024-11-20
+[2024-11-18 14:18:07] Result rows: 0
+[2024-11-18 14:18:07] Is booked: No
+[2024-11-18 14:18:07] Hall ID: 1
+[2024-11-18 14:18:07] Start Date: 2024-11-19
+[2024-11-18 14:18:07] End Date: 2024-11-20
+[2024-11-18 14:18:07] Booking Type: session
+[2024-11-18 14:18:07] Slots to Check: 5,6,7,8
+[2024-11-18 14:18:07] Availability Result: available
+[2024-11-18 14:18:11] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:18:11] Params: 1, 2024-11-20, 2024-11-20
+[2024-11-18 14:18:11] Result rows: 0
+[2024-11-18 14:18:11] Is booked: No
+[2024-11-18 14:18:11] Hall ID: 1
+[2024-11-18 14:18:11] Start Date: 2024-11-20
+[2024-11-18 14:18:11] End Date: 2024-11-20
+[2024-11-18 14:18:11] Booking Type: session
+[2024-11-18 14:18:11] Slots to Check: 5,6,7,8
+[2024-11-18 14:18:11] Availability Result: available
+[2024-11-18 14:18:12] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:18:12] Params: 1, 2024-11-20, 2024-11-20
+[2024-11-18 14:18:12] Result rows: 0
+[2024-11-18 14:18:12] Is booked: No
+[2024-11-18 14:18:12] Hall ID: 1
+[2024-11-18 14:18:12] Start Date: 2024-11-20
+[2024-11-18 14:18:12] End Date: 2024-11-20
+[2024-11-18 14:18:12] Booking Type: session
+[2024-11-18 14:18:12] Slots to Check: 5,6,7,8
+[2024-11-18 14:18:12] Availability Result: available
+[2024-11-18 14:18:12] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:18:12] Params: 1, 2024-11-20, 2024-11-20
+[2024-11-18 14:18:12] Result rows: 0
+[2024-11-18 14:18:12] Is booked: No
+[2024-11-18 14:18:12] Hall ID: 1
+[2024-11-18 14:18:12] Start Date: 2024-11-20
+[2024-11-18 14:18:12] End Date: 2024-11-20
+[2024-11-18 14:18:12] Booking Type: session
+[2024-11-18 14:18:12] Slots to Check: 5,6,7,8
+[2024-11-18 14:18:12] Availability Result: available
+[2024-11-18 14:18:29] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:18:29] Params: 1, 2024-11-20, 2024-11-20
+[2024-11-18 14:18:29] Result rows: 0
+[2024-11-18 14:18:29] Is booked: No
+[2024-11-18 14:18:29] Hall ID: 1
+[2024-11-18 14:18:29] Start Date: 2024-11-20
+[2024-11-18 14:18:29] End Date: 2024-11-20
+[2024-11-18 14:18:29] Booking Type: session
+[2024-11-18 14:18:29] Slots to Check: 5,6,7,8
+[2024-11-18 14:18:29] Availability Result: available
+[2024-11-18 14:20:02] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-18 14:20:02] Requested slots: 5,6,7,8
+[2024-11-18 14:20:02] Overlap: 5,6,7,8
+[2024-11-18 14:20:02] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:20:02] Params: 1, 2024-11-20, 2024-11-20
+[2024-11-18 14:20:02] Result rows: 1
+[2024-11-18 14:20:02] Is booked: Yes
+[2024-11-18 14:20:02] Hall ID: 1
+[2024-11-18 14:20:02] Start Date: 2024-11-20
+[2024-11-18 14:20:02] End Date: 2024-11-20
+[2024-11-18 14:20:02] Booking Type: session
+[2024-11-18 14:20:02] Slots to Check: 5,6,7,8
+[2024-11-18 14:20:02] Availability Result: booked
+[2024-11-18 14:20:10] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:20:10] Params: 1, 2024-11-22, 2024-11-22
+[2024-11-18 14:20:10] Result rows: 0
+[2024-11-18 14:20:10] Is booked: No
+[2024-11-18 14:20:10] Hall ID: 1
+[2024-11-18 14:20:10] Start Date: 2024-11-22
+[2024-11-18 14:20:10] End Date: 2024-11-22
+[2024-11-18 14:20:10] Booking Type: session
+[2024-11-18 14:20:10] Slots to Check: 5,6,7,8
+[2024-11-18 14:20:10] Availability Result: available
+[2024-11-18 14:20:20] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-18 14:20:20] Requested slots: 5,6,7,8
+[2024-11-18 14:20:20] Overlap: 5,6,7,8
+[2024-11-18 14:20:20] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:20:20] Params: 1, 2024-12-20, 2024-12-22
+[2024-11-18 14:20:20] Result rows: 1
+[2024-11-18 14:20:20] Is booked: Yes
+[2024-11-18 14:20:20] Hall ID: 1
+[2024-11-18 14:20:20] Start Date: 2024-12-20
+[2024-11-18 14:20:20] End Date: 2024-12-22
+[2024-11-18 14:20:20] Booking Type: session
+[2024-11-18 14:20:20] Slots to Check: 5,6,7,8
+[2024-11-18 14:20:20] Availability Result: booked
+[2024-11-18 14:20:31] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-18 14:20:31] Requested slots: 5,6,7,8
+[2024-11-18 14:20:31] Overlap: 5,6,7,8
+[2024-11-18 14:20:31] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:20:31] Params: 1, 2024-12-18, 2024-12-22
+[2024-11-18 14:20:31] Result rows: 1
+[2024-11-18 14:20:31] Is booked: Yes
+[2024-11-18 14:20:31] Hall ID: 1
+[2024-11-18 14:20:31] Start Date: 2024-12-18
+[2024-11-18 14:20:31] End Date: 2024-12-22
+[2024-11-18 14:20:31] Booking Type: session
+[2024-11-18 14:20:31] Slots to Check: 5,6,7,8
+[2024-11-18 14:20:31] Availability Result: booked
+[2024-11-18 14:20:36] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-18 14:20:36] Requested slots: 5,6,7,8
+[2024-11-18 14:20:36] Overlap: 5,6,7,8
+[2024-11-18 14:20:36] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:20:36] Params: 1, 2024-12-18, 2024-12-20
+[2024-11-18 14:20:36] Result rows: 1
+[2024-11-18 14:20:36] Is booked: Yes
+[2024-11-18 14:20:36] Hall ID: 1
+[2024-11-18 14:20:36] Start Date: 2024-12-18
+[2024-11-18 14:20:36] End Date: 2024-12-20
+[2024-11-18 14:20:36] Booking Type: session
+[2024-11-18 14:20:36] Slots to Check: 5,6,7,8
+[2024-11-18 14:20:36] Availability Result: booked
+[2024-11-18 14:20:37] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-18 14:20:37] Requested slots: 5,6,7,8
+[2024-11-18 14:20:37] Overlap: 5,6,7,8
+[2024-11-18 14:20:37] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:20:37] Params: 1, 2024-12-18, 2024-12-20
+[2024-11-18 14:20:37] Result rows: 1
+[2024-11-18 14:20:37] Is booked: Yes
+[2024-11-18 14:20:37] Hall ID: 1
+[2024-11-18 14:20:37] Start Date: 2024-12-18
+[2024-11-18 14:20:37] End Date: 2024-12-20
+[2024-11-18 14:20:37] Booking Type: session
+[2024-11-18 14:20:37] Slots to Check: 5,6,7,8
+[2024-11-18 14:20:37] Availability Result: booked
+[2024-11-18 14:20:37] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-18 14:20:37] Requested slots: 5,6,7,8
+[2024-11-18 14:20:37] Overlap: 5,6,7,8
+[2024-11-18 14:20:37] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:20:37] Params: 1, 2024-12-18, 2024-12-20
+[2024-11-18 14:20:37] Result rows: 1
+[2024-11-18 14:20:37] Is booked: Yes
+[2024-11-18 14:20:37] Hall ID: 1
+[2024-11-18 14:20:37] Start Date: 2024-12-18
+[2024-11-18 14:20:37] End Date: 2024-12-20
+[2024-11-18 14:20:37] Booking Type: session
+[2024-11-18 14:20:37] Slots to Check: 5,6,7,8
+[2024-11-18 14:20:37] Availability Result: booked
+[2024-11-18 14:20:37] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-18 14:20:37] Requested slots: 5,6,7,8
+[2024-11-18 14:20:37] Overlap: 5,6,7,8
+[2024-11-18 14:20:37] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:20:37] Params: 1, 2024-12-18, 2024-12-20
+[2024-11-18 14:20:37] Result rows: 1
+[2024-11-18 14:20:37] Is booked: Yes
+[2024-11-18 14:20:37] Hall ID: 1
+[2024-11-18 14:20:37] Start Date: 2024-12-18
+[2024-11-18 14:20:37] End Date: 2024-12-20
+[2024-11-18 14:20:37] Booking Type: session
+[2024-11-18 14:20:37] Slots to Check: 5,6,7,8
+[2024-11-18 14:20:37] Availability Result: booked
+[2024-11-18 14:20:40] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-18 14:20:40] Requested slots: 5,6,7,8
+[2024-11-18 14:20:40] Overlap: 5,6,7,8
+[2024-11-18 14:20:40] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:20:40] Params: 1, 2024-12-18, 2024-12-20
+[2024-11-18 14:20:40] Result rows: 1
+[2024-11-18 14:20:40] Is booked: Yes
+[2024-11-18 14:20:40] Hall ID: 1
+[2024-11-18 14:20:40] Start Date: 2024-12-18
+[2024-11-18 14:20:40] End Date: 2024-12-20
+[2024-11-18 14:20:40] Booking Type: session
+[2024-11-18 14:20:40] Slots to Check: 5,6,7,8
+[2024-11-18 14:20:40] Availability Result: booked
+[2024-11-18 14:21:01] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND ((start_date BETWEEN ? AND ?) OR (end_date BETWEEN ? AND ?))
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:21:01] Params: 1, 2024-12-11, 2024-12-11
+[2024-11-18 14:21:01] Result rows: 0
+[2024-11-18 14:21:01] Is booked: No
+[2024-11-18 14:21:01] Hall ID: 1
+[2024-11-18 14:21:01] Start Date: 2024-12-11
+[2024-11-18 14:21:01] End Date: 2024-12-11
+[2024-11-18 14:21:01] Booking Type: session
+[2024-11-18 14:21:01] Slots to Check: 5,6,7,8
+[2024-11-18 14:21:01] Availability Result: available
+[2024-11-18 14:33:51] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:33:51] Params: 1, 2024-12-29, 2024-12-29
+[2024-11-18 14:33:51] Result rows: 0
+[2024-11-18 14:33:51] Is booked: No
+[2024-11-18 14:33:51] Hall ID: 1
+[2024-11-18 14:33:51] Start Date: 2024-12-29
+[2024-11-18 14:33:51] End Date: 2024-12-29
+[2024-11-18 14:33:51] Booking Type: session
+[2024-11-18 14:33:51] Slots to Check: 5,6,7,8
+[2024-11-18 14:33:51] Availability Result: available
+[2024-11-18 14:33:57] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-18 14:33:57] Requested slots: 5,6,7,8
+[2024-11-18 14:33:57] Overlap: 5,6,7,8
+[2024-11-18 14:33:57] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:33:57] Params: 1, 2024-12-12, 2024-12-29
+[2024-11-18 14:33:57] Result rows: 1
+[2024-11-18 14:33:57] Is booked: Yes
+[2024-11-18 14:33:57] Hall ID: 1
+[2024-11-18 14:33:57] Start Date: 2024-12-12
+[2024-11-18 14:33:57] End Date: 2024-12-29
+[2024-11-18 14:33:57] Booking Type: session
+[2024-11-18 14:33:57] Slots to Check: 5,6,7,8
+[2024-11-18 14:33:57] Availability Result: booked
+[2024-11-18 14:34:02] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:34:02] Params: 1, 2024-12-25, 2024-12-29
+[2024-11-18 14:34:02] Result rows: 0
+[2024-11-18 14:34:02] Is booked: No
+[2024-11-18 14:34:02] Hall ID: 1
+[2024-11-18 14:34:02] Start Date: 2024-12-25
+[2024-11-18 14:34:02] End Date: 2024-12-29
+[2024-11-18 14:34:02] Booking Type: session
+[2024-11-18 14:34:02] Slots to Check: 5,6,7,8
+[2024-11-18 14:34:02] Availability Result: available
+[2024-11-18 14:34:11] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-18 14:34:11] Requested slots: 5,6,7,8
+[2024-11-18 14:34:11] Overlap: 5,6,7,8
+[2024-11-18 14:34:11] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-11-18 14:34:11] Params: 1, 2024-12-20, 2024-12-29
+[2024-11-18 14:34:11] Result rows: 1
+[2024-11-18 14:34:11] Is booked: Yes
+[2024-11-18 14:34:11] Hall ID: 1
+[2024-11-18 14:34:11] Start Date: 2024-12-20
+[2024-11-18 14:34:11] End Date: 2024-12-29
+[2024-11-18 14:34:11] Booking Type: session
+[2024-11-18 14:34:11] Slots to Check: 5,6,7,8
+[2024-11-18 14:34:11] Availability Result: booked
+[2024-11-18 15:03:34] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-11-18 15:03:34] Params: 1, 2024-12-31, 2024-12-31
+[2024-11-18 15:03:34] Result rows: 0
+[2024-11-18 15:03:34] Is booked: No
+[2024-11-18 15:03:34] Hall ID: 1
+[2024-11-18 15:03:34] Start Date: 2024-12-31
+[2024-11-18 15:03:34] End Date: 2024-12-31
+[2024-11-18 15:03:34] Booking Type: session
+[2024-11-18 15:03:34] Slots to Check: 5,6,7,8
+[2024-11-18 15:03:34] Availability Result: available
+[2024-11-23 08:24:19] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-11-23 08:24:19] Params: 1, 2024-10-10, 2024-10-10
+[2024-11-23 08:24:19] Result rows: 0
+[2024-11-23 08:24:19] Is booked: No
+[2024-11-23 08:24:19] Hall ID: 1
+[2024-11-23 08:24:19] Start Date: 2024-10-10
+[2024-11-23 08:24:19] End Date: 2024-10-10
+[2024-11-23 08:24:19] Booking Type: slot
+[2024-11-23 08:24:19] Slots to Check: 3
+[2024-11-23 08:24:19] Availability Result: available
+[2024-11-23 08:24:24] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-11-23 08:24:24] Params: 1, 2024-10-10, 2024-10-10
+[2024-11-23 08:24:24] Result rows: 0
+[2024-11-23 08:24:24] Is booked: No
+[2024-11-23 08:24:24] Hall ID: 1
+[2024-11-23 08:24:24] Start Date: 2024-10-10
+[2024-11-23 08:24:24] End Date: 2024-10-10
+[2024-11-23 08:24:24] Booking Type: session
+[2024-11-23 08:24:24] Slots to Check: 5,6,7,8
+[2024-11-23 08:24:24] Availability Result: available
+[2024-11-23 12:22:34] Booked slots: 1,2,3,4,5,6,7,8
+[2024-11-23 12:22:34] Requested slots: 1,2,3,4
+[2024-11-23 12:22:34] Overlap: 1,2,3,4
+[2024-11-23 12:22:34] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-11-23 12:22:34] Params: 1, 2024-11-30, 2024-11-30
+[2024-11-23 12:22:34] Result rows: 1
+[2024-11-23 12:22:34] Is booked: Yes
+[2024-11-23 12:22:34] Hall ID: 1
+[2024-11-23 12:22:34] Start Date: 2024-11-30
+[2024-11-23 12:22:34] End Date: 2024-11-30
+[2024-11-23 12:22:34] Booking Type: session
+[2024-11-23 12:22:34] Slots to Check: 1,2,3,4
+[2024-11-23 12:22:34] Availability Result: booked
+[2024-11-23 12:22:42] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-11-23 12:22:42] Params: 2, 2024-11-30, 2024-11-30
+[2024-11-23 12:22:42] Result rows: 0
+[2024-11-23 12:22:42] Is booked: No
+[2024-11-23 12:22:42] Hall ID: 2
+[2024-11-23 12:22:42] Start Date: 2024-11-30
+[2024-11-23 12:22:42] End Date: 2024-11-30
+[2024-11-23 12:22:42] Booking Type: session
+[2024-11-23 12:22:42] Slots to Check: 1,2,3,4
+[2024-11-23 12:22:42] Availability Result: available
+[2024-11-23 17:09:43] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-11-23 17:09:43] Params: 2, 2025-12-11, 2025-12-11
+[2024-11-23 17:09:43] Result rows: 0
+[2024-11-23 17:09:43] Is booked: No
+[2024-11-23 17:09:43] Hall ID: 2
+[2024-11-23 17:09:43] Start Date: 2025-12-11
+[2024-11-23 17:09:43] End Date: 2025-12-11
+[2024-11-23 17:09:43] Booking Type: session
+[2024-11-23 17:09:43] Slots to Check: 5,6,7,8
+[2024-11-23 17:09:43] Availability Result: available
+[2024-11-23 17:53:22] Received POST data: Array
+(
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2024-12-07
+    [end_date] => 2024-12-07
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => 
+)
+
+[2024-11-23 17:55:14] Received POST data: Array
+(
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2024-12-07
+    [end_date] => 2024-12-07
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => 
+)
+
+[2024-11-23 17:58:36] Received POST data: Array
+(
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2024-12-07
+    [end_date] => 2024-12-07
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => 
+)
+
+[2024-11-23 17:58:37] Received POST data: Array
+(
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2024-12-07
+    [end_date] => 2024-12-07
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => fn
+)
+
+[2024-11-23 17:58:38] Received POST data: Array
+(
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2024-12-07
+    [end_date] => 2024-12-07
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => fn
+)
+
+[2024-11-23 18:01:32] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2024-12-07
+    [end_date] => 2024-12-07
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => 
+)
+
+[2024-11-23 18:01:32] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-11-23 18:01:32] Params: 4        , 2024-12-07, 2024-12-07
+[2024-11-23 18:01:32] Result rows: 0
+[2024-11-23 18:01:32] Is booked: No
+[2024-11-23 18:01:32] Hall ID: 4        
+[2024-11-23 18:01:32] Start Date: 2024-12-07
+[2024-11-23 18:01:32] End Date: 2024-12-07
+[2024-11-23 18:01:32] Booking Type: session
+[2024-11-23 18:01:32] Slots to Check: 1,2,3,4
+[2024-11-23 18:01:32] Availability Result: available
+[2024-11-23 18:02:31] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2024-12-29
+    [end_date] => 2024-12-29
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => 
+)
+
+[2024-11-23 18:02:31] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-11-23 18:02:31] Params: 2        , 2024-12-29, 2024-12-29
+[2024-11-23 18:02:31] Result rows: 0
+[2024-11-23 18:02:31] Is booked: No
+[2024-11-23 18:02:31] Hall ID: 2        
+[2024-11-23 18:02:31] Start Date: 2024-12-29
+[2024-11-23 18:02:31] End Date: 2024-12-29
+[2024-11-23 18:02:31] Booking Type: session
+[2024-11-23 18:02:31] Slots to Check: 1,2,3,4
+[2024-11-23 18:02:31] Availability Result: available
+[2024-11-23 19:04:31] Received POST data: Array
+(
+    [hall_id] => 1        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-1        
+    [start_date] => 2020-10-10
+    [end_date] => 2020-10-10
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => 
+)
+
+[2024-11-23 19:04:31] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-11-23 19:04:31] Params: 1        , 2020-10-10, 2020-10-10
+[2024-11-23 19:04:31] Result rows: 0
+[2024-11-23 19:04:31] Is booked: No
+[2024-11-23 19:04:31] Hall ID: 1        
+[2024-11-23 19:04:31] Start Date: 2020-10-10
+[2024-11-23 19:04:31] End Date: 2020-10-10
+[2024-11-23 19:04:31] Booking Type: session
+[2024-11-23 19:04:31] Slots to Check: 5,6,7,8
+[2024-11-23 19:04:31] Availability Result: available

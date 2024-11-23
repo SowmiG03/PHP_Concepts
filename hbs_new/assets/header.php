@@ -55,6 +55,7 @@ if (!isset($_SESSION['email'])) {
 
         <button class="dropdown-btn" onclick="toggleDropdown('bookingDropdown')">Booking Details</button>
 <div class="dropdown-container" id="bookingDropdown">
+    <a href="find_halls.php">Find Halls</a>
     <a href="book_hall.php">Add Booking</a>
    
 
@@ -63,10 +64,8 @@ if (!isset($_SESSION['email'])) {
         <a href="status_update.php">Approve Bookings</a>
     <?php endif; ?>
 
-    <?php if ($user_role == 'admin'): ?>
         <a href="view_modify_booking.php">Manage Bookings</a>
         
-    <?php endif; ?>
 
             <!-- <a href="delete_booking.php">Delete Bookings</a> -->
             

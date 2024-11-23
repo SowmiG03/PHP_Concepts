@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <style>
        
 .booking-details {
-    background-color: #f9f9f9; /* Light background color */
+    background-color: #f9ffce; /* Light background color */
     border: 1px solid #ddd; /* Subtle border */
     border-radius: 8px; /* Rounded corners */
     padding: 20px; /* Padding around the content */
@@ -162,7 +162,6 @@ if ($formatted_start_date === $formatted_end_date): ?>
     </p>
 </div>
 
-<h2>User Details</h2>
 <form id="userDetailsForm" action="confirm_booking.php" method="POST">
     <input type="hidden" name="hall_id" value="<?php echo $hall_id; ?>">
     <input type="hidden" name="start_date" value="<?php echo htmlspecialchars($start_date); ?>">
@@ -219,7 +218,7 @@ if ($formatted_start_date === $formatted_end_date): ?>
             </div>
 
             <div class="text-center mt-4">
-                <button type="submit" class="btn btn-success btn-lg">Book Now</button>
+                <button type="submit" id="submitBtn" class="btn btn-success btn-lg">Book Now</button>
             </div>
         </form>
     </fieldset>
@@ -235,7 +234,106 @@ if ($formatted_start_date === $formatted_end_date): ?>
 </body>
 </html>
 <script>
-    
+   
+    document.addEventListener("DOMContentLoaded", function() {
+        const submitBtn = document.getElementById('submitBtn');
+        
+        submitBtn.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent the form from submitting by default
+
+            let isValid = true;
+
+            // Validate Number of Students
+            const studentsCount = document.getElementById('students_count').value;
+            if (!studentsCount || studentsCount <= 0) {
+                alert('Please enter a valid number of students.');
+                isValid = false;
+            }
+
+            // Validate Organiser's Name (must not contain numbers or special characters)
+            const organiserName = document.getElementById('organiser_name').value;
+            const namePattern = /^[A-Za-z\s]+$/;  // Only allows alphabets and spaces
+            if (!organiserName) {
+                alert('Organiser name is required.');
+                isValid = false;
+            } else if (!namePattern.test(organiserName)) {
+                alert('Organiser name should not contain numbers or special characters.');
+                isValid = false;
+            }
+
+            // Validate Organiser's Department
+            const organiserDepartment = document.getElementById('organiser_department').value;
+            if (!organiserDepartment) {
+                alert('Department is required.');
+                isValid = false;
+            }
+
+            // Validate Organiser's Mobile Number (10-digit)
+            const mobilePattern = /^[0-9]{10}$/;
+            const organiserMobile = document.getElementById('organiser_mobile').value;
+            if (!organiserMobile || !mobilePattern.test(organiserMobile)) {
+                alert('Please enter a valid 10-digit mobile number.');
+                isValid = false;
+            }
+
+            // Validate Organiser's Email
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            const organiserEmail = document.getElementById('organiser_email').value;
+            if (!organiserEmail || !emailPattern.test(organiserEmail)) {
+                alert('Please enter a valid email address.');
+                isValid = false;
+            }
+
+            // If form is valid, show success message, else prevent form submission
+            if (isValid) {
+                document.getElementById("userDetailsForm").submit();
+                
+            }
+        });
+
+        // Department suggestion logic
+        function suggestDepartments(query) {
+            if (query.length === 0) {
+                document.getElementById("suggestions").style.display = "none";
+                return;
+            }
+
+            fetch('get_departments.php?query=' + encodeURIComponent(query))
+                .then(response => response.json())
+                .then(data => {
+                    const suggestionsDiv = document.getElementById("suggestions");
+                    suggestionsDiv.innerHTML = '';
+
+                    if (data.length > 0) {
+                        const fragment = document.createDocumentFragment();
+                        data.forEach(department => {
+                            const suggestion = document.createElement('div');
+                            suggestion.textContent = department;
+                            suggestion.className = 'suggestion-item';
+                            suggestion.onclick = function() {
+                                document.getElementById('organiser_department').value = department;
+                                suggestionsDiv.style.display = 'none';
+                            };
+                            fragment.appendChild(suggestion);
+                        });
+                        suggestionsDiv.appendChild(fragment);
+                        suggestionsDiv.style.display = 'block';
+                    } else {
+                        suggestionsDiv.style.display = 'none';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching department suggestions:', error);
+                });
+        }
+
+        // Attach suggestDepartments function to the input field
+        document.getElementById('organiser_department').addEventListener('input', function() {
+            suggestDepartments(this.value);
+        });
+    });
+
+
 function suggestDepartments(query) {
     if (query.length === 0) {
         document.getElementById("suggestions").style.display = "none";
