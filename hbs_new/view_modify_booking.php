@@ -1,25 +1,40 @@
 <?php
 include('assets/conn.php'); // Include your database connection
+include 'assets/header.php';
+$id = $_SESSION['user_id']; // Logged-in user's ID
+$role = $_SESSION['role']; // User role from session
 
-// Modify the query to fetch only the bookings for the logged-in user
-// Query to fetch all bookings with hall_details and department details
+// Base query to fetch booking details
 $query = "
-  SELECT 
-    b.*,        -- Booking details
-    r.*,        -- hall_details details
-    d.department_name,  -- Department name
-    ht.type_name  -- Hall type name
-  FROM 
-    bookings b
-  JOIN 
-    hall_details r ON b.hall_id = r.hall_id
-  LEFT JOIN 
-    departments d ON r.department_id = d.department_id
-  LEFT JOIN 
-    hall_type ht ON r.type_id = ht.type_id  -- Join with hall_type to get type_name
-ORDER BY 
-    b.booking_id DESC  -- Display most recent bookings first
+SELECT 
+  b.*,        -- Booking details
+  r.*,        -- Hall details
+  d.department_name,  -- Department name
+  ht.type_name  -- Hall type name
+FROM 
+  bookings b
+JOIN 
+  hall_details r ON b.hall_id = r.hall_id
+LEFT JOIN 
+  departments d ON r.department_id = d.department_id
+LEFT JOIN 
+  hall_type ht ON r.type_id = ht.type_id
 ";
+
+// Apply different conditions based on the user role
+if ($role == 'admin') {
+    // Admin: Fetch all bookings
+    $query .= " 
+    ORDER BY 
+      b.booking_id DESC"; // Most recent bookings first
+} else {
+    // Other users: Fetch only their own bookings
+    $query .= "
+    WHERE 
+      b.user_id = $id
+    ORDER BY 
+      b.booking_id DESC"; // Most recent bookings first
+}
 
 // Prepare the statement
 $stmt = $conn->prepare($query);
@@ -116,29 +131,31 @@ $conn->close();
             text-decoration: none;
             cursor: pointer;
         }
+        h3{
+            font-family: 'Times New Roman', Times, serif;
+        }
     </style>
     </style>
 </head>
 
 <body>
-<?php include 'assets/header.php' ?>   
 
     <div class="container1-fluid">
         <div class="container1 mt-5">
             <div class="table-wrapper">
            <div class="card">
-                    <div class="card-body"> <center><h3 style="color:#170098; ">Manage Bookings</h3>
+                    <div class="card-body"> <center><h3 style="color:#170098; ">Manage Bookings</h3><br>
                     <center> 
                     <table class="table table-bordered">
                     <tr>
         <th style="width: 150px;"><center>Booked Date</center></th>
-        <th style="width: 200px;"><center>Hall Type & <br>Name of the Hall</center></th>
+        <th style="width: 300px;"><center>Hall Details</center></th>
         <th style="width: 150px;"><center>Purpose</center></th>
-        <th style="width: 200px;"><center>Date & Slot/Session</center></th>
-        <th style="width: 250px;"><center>Booked By</center></th>
+        <th style="width: 200px;"><center>Date & Time</center></th>
+        <th style="width: 350px;"><center>Booked By</center></th>
         <th style="width: 100px;"><center>Status</center></th>
-        <th style="width: 100px;"><center>Actions</center></th>
-        <th style="width: 100px;"><center>Admin Actions</center></th>
+        <th colspan="2" style="width: 100px; text-align: center;">Actions</th>
+
     </tr>
 
                     <?php while ($row = $result->fetch_assoc()): ?>
@@ -148,10 +165,10 @@ $conn->close();
                                 echo date("d-m-Y", strtotime($row['booking_date'])) . "  <br>";
                                 ?>
                             </td>
-                            <td>   
+                        <td><span style="color:blue;"><?php echo strtoupper($row['hall_name']);?></span> <br>
+
                                 <b><?php echo ucwords($row['type_name']);?></b><br>  
                                 <?php echo $row['department_name'];?>   <br>  
-                                <?php echo strtoupper($row['hall_name']);?> 
                             </td>
                             <td>
                                 <b><?php echo ucwords($row['purpose']);?></b><br>
@@ -209,8 +226,8 @@ $conn->close();
                                 ?>
                             </center></td>
                             <td>
-                                <b><?php echo $row['organiser_department'];?></b><br>
-                                <?php echo $row['organiser_name'];?><br>
+                            <b><?php echo $row['organiser_name'];?></b><br>
+                                <?php echo $row['organiser_department'];?><br>
                                 <?php echo $row['organiser_mobile'];?><br>
                                 <?php echo $row['organiser_email'];?>
                             </td>
@@ -218,8 +235,11 @@ $conn->close();
                             <td class="actions" border="0">
                                 <button class="btn btn-outline-success" onclick="window.location.href='edit_booking.php?id=<?php echo $row['booking_id']; ?>'">Modify</button>
                                 <button style="padding:5px 14px; margin-top:15px;" class="btn btn-outline-secondary" onclick="openCancelModal(<?php echo $row['booking_id']; ?>)">Cancel</button></td>
-                            <td><button class="btn btn-outline-danger" onclick="window.location.href='delete_booking.php?id=<?php echo $row['booking_id']; ?>'">Delete</button>
-                            </td>
+                                <?php if ($role === 'admin'): ?>
+        <td>
+            <button class="btn btn-outline-danger" onclick="window.location.href='delete_booking.php?id=<?php echo $row['booking_id']; ?>'">Delete</button>
+        </td>
+    <?php endif; ?>                            </td>
                         </td>
                     <?php endwhile; ?>
                 </table>

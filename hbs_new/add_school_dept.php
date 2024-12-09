@@ -33,22 +33,19 @@ include 'assets/conn.php';
 
     <div class="main-content mt-3">
     
-    <!-- <h2 style="text-align: center;">Add School or Department</h2> -->
 
 <!-- Radio buttons to choose between School or Department -->
-            <form id="myForm" style="margin:20px 150px; background-color:white; padding: 50px; border-radius:15px;">
-            <h2 style="text-align: center; color:blue">Add School or Department</h2>
-            <!-- <h4 class="form-section-title">Add School or Department</h4> -->
-                <label for="type" style="margin:40px 0 10px 0; font-size: 20px; font-weight: 600;">Choose Type:</label><br>
-                <div class="btn-group" role="group" aria-label="Room Type">
-                    <input type="radio" class="btn-check" name="type" id="School" value="school" onclick="toggleForm()" checked>
-                    <label class="btn btn-outline-primary" for="School">School</label>
-                        
-                    <input type="radio" class="btn-check"  name="type" id="Department" value="department" onclick="toggleForm()">
-                    <label class="btn btn-outline-primary" for="Department">Department</label>
-                    
-                </div>
-                
+            <form style="margin:30px 100px; background-color:white; padding: 50px; border-radius:15px;">
+            <h3 style="color:#170098; margin: 0 auto; text-align: center; width: fit-content;">Add School or Department</h3>
+
+
+                <label for="type" style="margin:0 0 10px 0; font-size: 20px; font-weight: 600;">Choose Type:</label><br>
+                <label style="margin-left: 50px;">
+                    <input type="radio" name="type" value="school" onclick="toggleForm()" checked>
+                    School
+                    <input type="radio" style="margin-left: 25px;" name="type" value="department" onclick="toggleForm()">
+                    Department
+                </label>
                 <!-- <label>
                     <input type="radio" name="type" value="department" onclick="toggleForm()">
                     Department
@@ -63,19 +60,19 @@ include 'assets/conn.php';
 
 
                     <label class="form-label" for="dean-name">Dean Name:</label>
-                    <input type="text" class="form-control" id="dean-name" name="dean-name" placeholder="Enter Dean Name">
+                    <input type="text" class="form-control" id="dean-name" name="dean-name">
 
                     <label class="form-label" for="dean-contact">Dean Contact Number:</label>
-                    <input type="text" class="form-control" id="dean-contact" name="dean-contact" placeholder="Enter Dean Contact Number">
+                    <input type="text" class="form-control" id="dean-contact" name="dean-contact">
 
                     <label class="form-label" for="dean-email">Dean Email:</label>
-                    <input type="email" class="form-control" id="dean-email" name="dean-email" placeholder="Enter Dean Email">
+                    <input type="email" class="form-control" id="dean-email" name="dean-email">
 
                     <label class="form-label" for="dean-intercom">Dean Intercom:</label>
-                    <input type="text" class="form-control" id="dean-intercom" name="dean-intercom" placeholder="Enter Dean Intercom">
+                    <input type="text" class="form-control" id="dean-intercom" name="dean-intercom">
 
                     <label class="form-label" for="dean-status">Dean Status:</label>
-                    <input type="text" class="form-control" id="dean-status" name="dean-status" placeholder="Enter Dean Status">
+                    <input type="text" class="form-control" id="dean-status" name="dean-status">
                 </div>
 
                 <!-- Form for Department -->
@@ -105,26 +102,25 @@ include 'assets/conn.php';
                             </select> -->
                         </div>
                     <label class="form-label" for="department-name">Department Name:</label>
-                    <input type="text" class="form-control" id="department-name" name="department-name" placeholder="Enter Department Name">
+                    <input type="text" class="form-control" id="department-name" name="department-name">
 
                     <label class="form-label" for="hod-name">HOD Name:</label>
-                    <input type="text" class="form-control" id="hod-name" name="hod-name" placeholder="Enter HoD name">
+                    <input type="text" class="form-control" id="hod-name" name="hod-name">
 
-                    <label class="form-label" for="hod-contact">HOD Contact Number:</label>
-                    <input type="text" class="form-control" id="hod-contact" name="hod-contact" placeholder="Enter HoD Contact Number">
+                    <label class="form-label" for="hod-contact">HOD Contact Mobile:</label>
+                    <input type="text" class="form-control" id="hod-contact" name="hod-contact">
 
                     <label class="form-label" for="designation">Designation:</label>
-                    <input type="text" class="form-control" id="designation" name="designation" placeholder="Enter Designation">
+                    <input type="text" class="form-control" id="designation" name="designation">
 
-                    <label class="form-label" for="hod-email">HOD Email:</label>
-                    <input type="email" class="form-control" id="hod-email" name="hod-email" placeholder="Enter HoD Email">
+                    <label class="form-label" for="hod-email">HOD Contact Email:</label>
+                    <input type="email" class="form-control" id="hod-email" name="hod-email">
 
                     <label class="form-label" for="hod-intercom">HOD Intercom:</label>
-                    <input type="text" class="form-control" id="hod-intercom" name="hod-intercom" placeholder="Enter HoD Intercome">
+                    <input type="text" class="form-control" id="hod-intercom" name="hod-intercom">
                 </div>
 
-                <input type="submit" style="margin-left: 35%;" class="btn btn-success btn-lg" name="submitroom" value="Submit">
-                <input type="submit" class="btn btn-success btn-lg"  onclick="clearForm()" name="clear" value="Clear">
+                <button class="btn btn-primary" style="width: 30%; padding:10px; margin-left:35%; " type="submit">Submit</button>
             </form>      
         </div>
     <!-- <footer>
@@ -171,13 +167,6 @@ include 'assets/conn.php';
                 }
             });
         });
-    </script>
-
-    <!-- Clear form data  -->
-    <script>
-        function clearForm() {
-            document.getElementById("myForm").reset(); // Reset all form fields
-        }
     </script>
 
 

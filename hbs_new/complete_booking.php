@@ -57,10 +57,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     <style>
        
 .booking-details {
-    background-color: #f9ffce; /* Light background color */
+    background-color: #fffbf3; /* Light background color */
     border: 1px solid #ddd; /* Subtle border */
     border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Padding around the content */
+    padding: 0 20px 0px 20px; /* Padding around the content */
     margin: 20px; /* Margin around the booking details */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
@@ -95,75 +95,137 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 <body>
 <?php include 'assets/header.php' ?>
 
-    <div class="container mt-5">
+<div class="main-content">
     <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card shadow-lg">
                     <div class="card-body">
                     <h2 class="card-title text-center mb-4">Booking Details</h2>
-                    <div class="booking-details">
-                    <h1 class="hall-name"><?php echo htmlspecialchars($hall_name); ?></h1>    
-                    <h2 class="department-name"><?php echo htmlspecialchars($department_name); ?></h2>
-                    <h3 class="school-name"><?php echo htmlspecialchars($school_name); ?></h3>
-                    <?php 
-// Assuming $start_date and $end_date are in a format that can be parsed by DateTime
-$start_date_obj = new DateTime($start_date);
-$end_date_obj = new DateTime($end_date);
+<div class="booking-details" style="display: flex; justify-content: space-between; align-items: flex-start;">
+    <!-- Left Side: Hall Name, Date, and Slot -->
+    <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-start;">
+        <!-- Hall Name at the Top -->
+        <h1 class="hall-name" style="color: #000000; font-size: 1.5rem; margin-bottom: 1rem;">
+            <?php echo htmlspecialchars($hall_name); ?>
+        </h1>
 
-// Format dates as dd mm yyyy
-$formatted_start_date = $start_date_obj->format('d/m/Y');
-$formatted_end_date = $end_date_obj->format('d/m/Y');
+        <!-- Date and Slot Section Below -->
+        <div class="booking-summary" style="display: flex; flex-direction: column; font-weight: bold;">
+            <!-- Date Section -->
+            <?php 
+            // Assuming $start_date and $end_date are in a format that can be parsed by DateTime
+            $start_date_obj = new DateTime($start_date);
+            $end_date_obj = new DateTime($end_date);
 
-if ($formatted_start_date === $formatted_end_date): ?>
-    <p class="date-info">Date: <?php echo htmlspecialchars($formatted_start_date); ?></p>
-<?php else: ?>
-    <p class="date-info">From: <?php echo htmlspecialchars($formatted_start_date); ?> to: <?php echo htmlspecialchars($formatted_end_date); ?></p>
-<?php endif; ?>
+            // Format dates as dd mm yyyy
+            $formatted_start_date = $start_date_obj->format('d/m/Y');
+            $formatted_end_date = $end_date_obj->format('d/m/Y');
+            ?>
+            <p class="date-info" style="margin: 0;">
+                <?php if ($formatted_start_date === $formatted_end_date): ?>
+                    Date: <?php echo htmlspecialchars($formatted_start_date); ?>
+                <?php else: ?>
+                    From: <?php echo htmlspecialchars($formatted_start_date); ?> to: <?php echo htmlspecialchars($formatted_end_date); ?>
+                <?php endif; ?>
+            </p>
 
-
-    <p class="slot-info">
-    <p>Session/Slot: 
+            <!-- Session/Slot Section -->
+            <p class="slot-info" style="margin: 0;">
+  
     <?php 
-        // Define slot timings
+        // Define slot timings (start times)
         $slotTimings = [
-            '1' => '9:30 to 10:30',
-            '2' => '10:30 to 11:30',
-            '3' => '11:30 to 12:30',
-            '4' => '12:30 to 1:30',
-            '5' => '1:30 to 2:30',
-            '6' => '2:30 to 3:30',
-            '7' => '3:30 to 4:30',
-            '8' => '4:30 to 5:30'
+            '1' => '9:30 am',
+            '2' => '10:30 am',
+            '3' => '11:30 am',
+            '4' => '12:30 pm',
+            '5' => '1:30 pm',
+            '6' => '2:30 pm',
+            '7' => '3:30 pm',
+            '8' => '4:30 pm',
+            '9' => '5:30 pm'
         ];
 
-        // Get the timing based on the slot
-        $timing = isset($slotTimings[$slot_or_session]) ? htmlspecialchars($slotTimings[$slot_or_session]) : 'Invalid Slot';
+        // Parse the selected slots or session type
+        $selectedSlots = explode(',', $slot_or_session);
 
-        // Determine the session type based on $slot_or_session
-        if ($slot_or_session === 'fn') {
-            $session = 'Forenoon';
-            $timing = '9:30 to 12:30'; // Combine all Forenoon slots
-        } elseif ($slot_or_session === 'an') {
-            $session = 'Afternoon';
-            $timing = '1:30 to 5:30'; // Combine all Afternoon slots
-        } elseif ($slot_or_session === 'both') {
-            $session = 'Both FN & AN';
-            $timing = '9:30 to 5:30'; // Combine both time slots
+        // Predefined session ranges
+        $predefinedSessions = [
+            'fn' => ['start' => '1', 'end' => '4', 'label' => 'Forenoon'],
+            'an' => ['start' => '5', 'end' => '8', 'label' => 'Afternoon'],
+            'both' => ['start' => '1', 'end' => '8', 'label' => 'Full Day']
+        ];
+
+        if (isset($predefinedSessions[$slot_or_session])) {
+            // Handle predefined sessions
+            $startSlot = $predefinedSessions[$slot_or_session]['start'];
+            $endSlot = $predefinedSessions[$slot_or_session]['end'];
+            $session = $predefinedSessions[$slot_or_session]['label'];
+            $timing = $slotTimings[$startSlot] . " to " . $slotTimings[$endSlot + 1];
+            echo "<ul style='list-style-type: none; padding: 0;'>
+                    <li><strong>Session: </strong>$session</li>
+                    <li><strong>Time: </strong>$timing</li>
+                </ul>";
+        } elseif (count($selectedSlots) > 1) {
+            // Dynamic slot selection for custom ranges
+            $validSlots = array_keys($slotTimings);
+            $allValid = array_reduce($selectedSlots, function($carry, $slot) use ($validSlots) {
+                return $carry && in_array(trim($slot), $validSlots);
+            }, true);
+
+            if ($allValid) {
+                $startSlot = min($selectedSlots);
+                $endSlot = max($selectedSlots);
+
+                // Adjust end time to the next slot
+                $timing = $slotTimings[$startSlot] . " to " . $slotTimings[$endSlot + 1];
+                echo "<ul style='list-style-type: none; padding: 0;'>
+                        <li><strong>Custom Slots:</strong></li>";
+
+                // List each slot one below the other
+                foreach ($selectedSlots as $slot) {
+                    echo "<li>$slotTimings[$slot]</li>";
+                }
+                echo "</ul>";
+            } else {
+                echo "<p>Invalid Slot</p>";
+            }
+        } elseif (count($selectedSlots) === 1 && isset($slotTimings[$selectedSlots[0]])) {
+            // Single slot
+            $timing = $slotTimings[$selectedSlots[0]] . " to " . $slotTimings[$selectedSlots[0] + 1];
+            echo "<ul style='list-style-type: none; padding: 0;'>
+                    <li><strong>Slot:</strong></li>
+                    <li>$timing</li>
+                </ul>";
         } else {
-            $session = 'Invalid Session';
-            $timing = 'Invalid Slot';
+            // Invalid selection
+            echo "<p>Invalid Slot</p>";
         }
-
-        // Output the combined timing and session
-        echo "$timing ($session)";
     ?>
 </p>
 
-    </p>
+        </div>
+    </div>
+
+    <!-- Vertical Line -->
+    <div style="height: 160px; border-left: 2px solid #ccc; margin: 0 30px;"></div>
+
+    <!-- Right Side: School and Department (Center Aligned) -->
+    <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+    <h2 class="department-name" style="color: #6e6e6e; text-align: center; margin-top: 20px; margin-bottom: 10px;">
+        <?php echo htmlspecialchars($department_name); ?>
+    </h2>
+    <h3 class="school-name" style="color: #505050; text-align: center; margin-top: 10px; margin-bottom: 20px;">
+        <?php echo htmlspecialchars($school_name); ?>
+    </h3>
 </div>
+
+</div>
+
 
 <form id="userDetailsForm" action="confirm_booking.php" method="POST">
     <input type="hidden" name="hall_id" value="<?php echo $hall_id; ?>">
+    <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
     <input type="hidden" name="start_date" value="<?php echo htmlspecialchars($start_date); ?>">
     <input type="hidden" name="end_date" value="<?php echo htmlspecialchars($end_date); ?>">
     <input type="hidden" name="slot_or_session" value="<?php echo htmlspecialchars($slot_or_session); ?>">
@@ -171,7 +233,6 @@ if ($formatted_start_date === $formatted_end_date): ?>
     <input type="hidden" name="status" value="pending">
 
     <fieldset class="mt-4">
-        <legend class="form-section-title">Booking Details</legend>
         <form id="bookForm" method="POST" action="confirm_booking.php">
              
             <div class="mb-3">
@@ -252,7 +313,7 @@ if ($formatted_start_date === $formatted_end_date): ?>
 
             // Validate Organiser's Name (must not contain numbers or special characters)
             const organiserName = document.getElementById('organiser_name').value;
-            const namePattern = /^[A-Za-z\s]+$/;  // Only allows alphabets and spaces
+            const namePattern = /^[A-Za-z\s.]+$/;
             if (!organiserName) {
                 alert('Organiser name is required.');
                 isValid = false;

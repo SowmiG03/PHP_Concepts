@@ -37,13 +37,17 @@ if (is_string($selectedSlots)) {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/design.css" />
-
+<style>
+    h3{
+        font-family: 'Times New Roman', Times, serif;
+    }
+</style>
 </head>
 <body>
 <?php include 'assets/header.php' ?>
 
 
-    <div class="container mt-5" style="margin-left: 16%;">
+<div class="main-content">
         <div class="row justify-content-center">
             <div class="col-md-8">
           
@@ -52,7 +56,6 @@ if (is_string($selectedSlots)) {
                     </center>
                         <form id="checkAvailabilityForm">
                         <div class="mb-4">
-    <h4 class="form-section-title">Hall Selection</h4>
     <div class="form-group mb-3">
         <label class="form-label">Hall Type:</label><br>
         <div class="btn-group" role="group" aria-label="Room Type">
@@ -108,7 +111,6 @@ if (!empty($to_date)) {
 
 ?>
                         <div class="mb-4">
-                            <h4 class="form-section-title">Booking Details</h4>
                             <div class="row">
         <div class="col-md-6 mb-3">
             <label for="start_date" class="form-label">From:</label>
@@ -143,15 +145,15 @@ if (!empty($to_date)) {
     <div class="btn-group" role="group" aria-label="Session Choice">
         <input type="radio" class="btn-check" name="session_choice" id="fn" value="fn"
             <?php echo ($session_choice === 'fn') ? 'checked' : ''; ?>>
-        <label class="btn btn-outline-secondary" for="fn">Forenoon</label>
+        <label class="btn btn-outline-primary" for="fn">Forenoon</label>
 
         <input type="radio" class="btn-check" name="session_choice" id="an" value="an"
             <?php echo ($session_choice === 'an') ? 'checked' : ''; ?>>
-        <label class="btn btn-outline-secondary" for="an">Afternoon</label>
+        <label class="btn btn-outline-primary" for="an">Afternoon</label>
 
         <input type="radio" class="btn-check" name="session_choice" id="both" value="both"
             <?php echo ($session_choice === 'both') ? 'checked' : ''; ?>>
-        <label class="btn btn-outline-secondary" for="both">Both</label>
+        <label class="btn btn-outline-primary" for="both">Both</label>
     </div>
 </div>
 
@@ -206,168 +208,188 @@ if (!empty($to_date)) {
         </div>
     </div>
     <?php include 'assets/footer.php' ?>
-
     <script>
-        // Include all JavaScript functions here (showSessionOptions, showSlotOptions, checkAvailability, etc.)
-        function showSessionOptions() {
-            document.getElementById('session_options').style.display = 'block';
-            document.getElementById('slot_options').style.display = 'none';
-        }
-
-        function showSlotOptions() {
-            document.getElementById('session_options').style.display = 'none';
-            document.getElementById('slot_options').style.display = 'block';
-        }
-
-        function checkAvailability() {
-    console.log("Button clicked");
-    
-    // Check if all required fields are filled
-    const hallId = document.getElementById('room').value;
-    const startDate = document.getElementById('start_date').value;
-    const endDate = document.getElementById('end_date').value;
-    const bookingType = document.querySelector('input[name="booking_type"]:checked');
-   
-    if (!hallId || !startDate || !endDate || !bookingType) {
-        alert("Please fill in all required fields before checking availability.");
-        return;
+    function showSessionOptions() {
+        document.getElementById('session_options').style.display = 'block';
+        document.getElementById('slot_options').style.display = 'none';
+        resetAvailability();
     }
 
-    const bookingTypeValue = bookingType.value;
-    
-    if (bookingTypeValue === 'session') {
-        const selectedSession = document.querySelector('input[name="session_choice"]:checked');
-        if (!selectedSession) {
-            alert("Please select a session before checking availability.");
-            return;
-        }
-    } else if (bookingTypeValue === 'slot') {
-        const selectedSlots = document.querySelectorAll('input[name="slots[]"]:checked');
-        if (selectedSlots.length === 0) {
-            alert("Please select at least one time slot before checking availability.");
-            return;
-        }
+    function showSlotOptions() {
+        document.getElementById('session_options').style.display = 'none';
+        document.getElementById('slot_options').style.display = 'block';
+        resetAvailability();
     }
 
-    const formData = new FormData(document.getElementById('checkAvailabilityForm'));
-    
-    // Determine slot_or_session value
-    let slotOrSession = '';
-    if (bookingTypeValue === 'session') {
-        slotOrSession = document.querySelector('input[name="session_choice"]:checked').value;
-    } else {
-        slotOrSession = Array.from(document.querySelectorAll('input[name="slots[]"]:checked'))
-                             .map(input => input.value)
-                             .join(',');
-    }
-    
-    // Set the slot_or_session hidden input
-    document.getElementById('slot_or_session').value = slotOrSession;
-
-
-    fetch('room_availability.php', {
-        method: 'POST',
-       
-        body: formData
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log('Response data:', data);  // Debug response data
-        if (data.error) {
-            throw new Error(data.error);
-        }
+    function resetAvailability() {
         const availabilityStatus = document.getElementById('availabilityStatus');
-        if (data.availability === 'available') {
-            availabilityStatus.innerHTML = "<p class='text-success'>The room is available for booking!</p>";
-            document.getElementById('bookNowContainer').style.display = 'block';  // Show button
+        availabilityStatus.innerHTML = '';
+        document.getElementById('bookNowContainer').style.display = 'none';
+    }
+
+    function checkAvailability() {
+        console.log("Button clicked");
+
+        const hallId = document.getElementById('room').value;
+        const startDate = document.getElementById('start_date').value;
+        const endDate = document.getElementById('end_date').value;
+        const bookingType = document.querySelector('input[name="booking_type"]:checked');
+
+        if (!hallId || !startDate || !endDate || !bookingType) {
+            alert("Please fill in all required fields before checking availability.");
+            return;
+        }
+
+        const bookingTypeValue = bookingType.value;
+
+        if (bookingTypeValue === 'session') {
+            const selectedSession = document.querySelector('input[name="session_choice"]:checked');
+            if (!selectedSession) {
+                alert("Please select a session before checking availability.");
+                return;
+            }
+        } else if (bookingTypeValue === 'slot') {
+            const selectedSlots = document.querySelectorAll('input[name="slots[]"]:checked');
+            if (selectedSlots.length === 0) {
+                alert("Please select at least one time slot before checking availability.");
+                return;
+            }
+        }
+
+        const formData = new FormData(document.getElementById('checkAvailabilityForm'));
+        let slotOrSession = '';
+        if (bookingTypeValue === 'session') {
+            slotOrSession = document.querySelector('input[name="session_choice"]:checked').value;
         } else {
-            availabilityStatus.innerHTML = "<p class='text-danger'>The room is already booked for your selected time.</p>";
-            document.getElementById('bookNowContainer').style.display = 'none';  // Hide button
+            slotOrSession = Array.from(document.querySelectorAll('input[name="slots[]"]:checked'))
+                                .map(input => input.value)
+                                .join(',');
         }
-    })
-    .catch(error => {
-        console.error('Fetch error:', error); // Log the error in the console for debugging
-        const availabilityStatus = document.getElementById('availabilityStatus');
-        availabilityStatus.innerHTML = "<p class='text-danger'>There was an issue with the request: " + error.message + "</p>";
-    });
-}
-        function proceedToBooking() {
-            const form = document.getElementById('checkAvailabilityForm');
-            const formData = new FormData(form);
-            const queryString = new URLSearchParams(formData).toString();
-            window.location.href = 'complete_booking.php?' + queryString;
-        }
+        document.getElementById('slot_or_session').value = slotOrSession;
 
-
-document.getElementById('bookNowButton').addEventListener('click', function() {
-        // Redirect to complete_booking.php with all form details as a query string
-        const hallId = document.querySelector('[name="hall_id"]').value; // Get hall_id from the form
-    const startDate = document.getElementById('start_date').value; // Start date input
-    const endDate = document.getElementById('end_date').value; // End date input
-    const slotOrSession = document.querySelector('[name="slot_or_session"]').value; // Slot or session input
-
-    // Create the query string from the collected data
-    const queryString = new URLSearchParams({
-        hall_id: hallId,
-        start_date: startDate,
-        end_date: endDate,
-        slot_or_session: slotOrSession
-    }).toString();
-
-    // Redirect to complete_booking.php with the query string
-    window.location.href = 'complete_booking.php?' + queryString;
-});
-
-        // Event listeners
-        document.addEventListener('DOMContentLoaded', function() {
-            const checkAvailabilityForm = document.getElementById('checkAvailabilityForm');
-            if (checkAvailabilityForm) {
-        checkAvailabilityForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            checkAvailability();
+        fetch('room_availability.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.json();
+        })
+        .then(data => {
+            console.log('Response data:', data);
+            if (data.error) throw new Error(data.error);
+            const availabilityStatus = document.getElementById('availabilityStatus');
+            if (data.availability === 'available') {
+                availabilityStatus.innerHTML = "<p class='text-success'>The room is available for booking!</p>";
+                document.getElementById('bookNowContainer').style.display = 'block';
+            } else {
+                availabilityStatus.innerHTML = "<p class='text-danger'>The room is already booked for your selected time.</p>";
+                document.getElementById('bookNowContainer').style.display = 'none';
+            }
+        })
+        .catch(error => {
+            console.error('Fetch error:', error);
+            const availabilityStatus = document.getElementById('availabilityStatus');
+            availabilityStatus.innerHTML = "<p class='text-danger'>There was an issue with the request: " + error.message + "</p>";
         });
     }
-    document.addEventListener('click', function(event) {
-        const suggestionsDiv = document.getElementById("suggestions");
-        if (suggestionsDiv && !suggestionsDiv.contains(event.target) && event.target.id !== 'organiser_department') {
-            suggestionsDiv.style.display = 'none';
-        }
-    });
 
+    function autoSelectSlots(checkbox) {
+        const slots = document.querySelectorAll('input[name="slots[]"]');
+        let start = null, end = null;
+
+        slots.forEach((slot, index) => {
+            if (slot.checked) {
+                if (start === null) start = index;
+                end = index;
+            }
+        });
+
+        if (start !== null && end !== null) {
+            for (let i = start; i <= end; i++) {
+                slots[i].checked = true;
+            }
+        }
+        resetAvailability();
+    }
+
+    function proceedToBooking() {
+        const form = document.getElementById('checkAvailabilityForm');
+        const formData = new FormData(form);
+        const queryString = new URLSearchParams(formData).toString();
+        window.location.href = 'complete_booking.php?' + queryString;
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const checkAvailabilityForm = document.getElementById('checkAvailabilityForm');
+        if (checkAvailabilityForm) {
+            checkAvailabilityForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                checkAvailability();
+            });
+        }
+
+        document.querySelectorAll('#room, input[name="booking_type"], input[name="slots[]"], input[name="session_choice"], #start_date, #end_date').forEach(input => {
+            input.addEventListener('change', resetAvailability);
+        });
+
+        document.querySelectorAll('input[name="slots[]"]').forEach(slot => {
+            slot.addEventListener('click', function() {
+                autoSelectSlots(slot);
+            });
+        });
+
+        const startDateInput = document.getElementById("start_date");
+        const endDateInput = document.getElementById("end_date");
+        const today = new Date().toISOString().split('T')[0];
+
+        startDateInput.setAttribute('min', today);
+        endDateInput.setAttribute('min', today);
+
+        startDateInput.addEventListener("input", function() {
+            const startDate = new Date(startDateInput.value);
+            if (!endDateInput.value || new Date(endDateInput.value) < startDate) {
+                endDateInput.value = startDateInput.value;
+            }
+            endDateInput.setAttribute('min', startDateInput.value);
+            resetAvailability();
+        });
+
+        endDateInput.addEventListener("input", function() {
+            if (new Date(endDateInput.value) < new Date(startDateInput.value)) {
+                endDateInput.value = startDateInput.value;
+            }
+            resetAvailability();
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+    const bookNowButton = document.getElementById('bookNowButton');
+    if (bookNowButton) {
+        bookNowButton.addEventListener('click', function () {
+            // Redirect to the booking page
+            const hallId = document.querySelector('[name="hall_id"]').value;
+            const startDate = document.getElementById('start_date').value;
+            const endDate = document.getElementById('end_date').value;
+            const slotOrSession = document.querySelector('[name="slot_or_session"]').value;
+
+            if (!hallId || !startDate || !endDate || !slotOrSession) {
+                alert("All fields must be filled before proceeding to booking.");
+                return;
+            }
+
+            const queryString = new URLSearchParams({
+                hall_id: hallId,
+                start_date: startDate,
+                end_date: endDate,
+                slot_or_session: slotOrSession,
+            }).toString();
+
+            window.location.href = 'complete_booking.php?' + queryString;
+        });
+    }
 });
-document.addEventListener("DOMContentLoaded", function() {
-    const startDateInput = document.getElementById("start_date");
-    const endDateInput = document.getElementById("end_date");
 
-    // Disable past dates
-    const today = new Date().toISOString().split('T')[0];
-    startDateInput.setAttribute('min', today);
-    endDateInput.setAttribute('min', today);
+</script>
 
-    startDateInput.addEventListener("input", function() {
-        // Get the selected start date
-        const startDate = new Date(startDateInput.value);
-        // Set the end date to the start date if it's empty or less than start date
-        if (!endDateInput.value || new Date(endDateInput.value) < startDate) {
-            endDateInput.value = startDateInput.value;
-        }
-        // Update the min attribute of end date to ensure it can't be before the start date
-        endDateInput.setAttribute('min', startDateInput.value);
-    });
-
-    endDateInput.addEventListener("input", function() {
-        // If the selected end date is before the start date, reset it
-        if (new Date(endDateInput.value) < new Date(startDateInput.value)) {
-            endDateInput.value = startDateInput.value;
-        }
-    });
-});
-
-    </script>
 </body>
 </html>

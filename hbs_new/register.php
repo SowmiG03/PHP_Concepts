@@ -95,9 +95,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             margin-bottom: 20px;
             font-size: 28px;
         }
+       
+.navbar {
+  background-color:  #007bff;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
     </style>
 </head>
 <body>
+    
+<nav class="navbar navbar-light" style="position: fixed;">
+        <img src="image/logo/PU_Logo_Full.png" alt="Pondicherry University Logo" style="margin: 10px 50px;" class="logo">
+        <!-- <span class="ml-auto"> -->
+            <h5 style="color: white; margin-right:50px;">UNIVERSITY HALL BOOKING SYSTEM</h5>
+            </nav>
+            <div class="main-content">
+<br>
+<br>
+<br>
     <div class="container d-flex justify-content-center align-items-center">
         <div class="form-container">
             <form action="register.php" method="POST">

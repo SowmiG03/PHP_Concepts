@@ -41,10 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $_SESSION['school_id'] = $school_id;
 
                     // Redirect based on user role
-                    if ($role == 'hod' || $role == 'dean') {
+                    if ($role == 'dean') {
                         header("Location: status_update.php");
                     } else {
-                        header("Location: home.php");
+                        header("Location: find_halls.php");
                     }
                     exit();
                 } else {
@@ -118,9 +118,28 @@ $conn->close();
             margin-top: 10px;
             font-size: 14px;
         }
+        
+.navbar {
+  background-color:  #007bff;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
     </style>
 </head>
 <body>
+    
+<nav class="navbar navbar-light" style="position: fixed;">
+        <img src="image/logo/PU_Logo_Full.png" alt="Pondicherry University Logo" style="margin: 10px 50px;" class="logo">
+        <!-- <span class="ml-auto"> -->
+            <h5 style="color: white; margin-right:50px;">UNIVERSITY HALL BOOKING SYSTEM</h5>
+            </nav>
+            <div class="main-content">
+<br>
+<br>
+<br>
     <div class="login-container">
         <h3>Login</h3>
         <form action="login.php" method="POST">

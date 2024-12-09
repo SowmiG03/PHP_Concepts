@@ -64,6 +64,9 @@ $rooms_result = mysqli_query($conn, $rooms_query);
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="assets/design.css" />
     <style>
+        BODY{
+            background-color: #ffffff;
+        }
         .filter-section {
             background-color: #f8f9fa;
             padding: 20px;
@@ -74,14 +77,34 @@ $rooms_result = mysqli_query($conn, $rooms_query);
             margin-bottom: 20px;
         }
         .main-content {
-  margin-left: 270px;
-  margin-right: 20px;
-  padding-top: 60px;
-  overflow: hidden;
-}
-.card-body{
-    padding:5px;
-}
+            margin-left: 270px;
+            margin-right: 20px;
+            padding-top: 40px;
+            overflow: hidden;
+        }
+        .card-body{
+            padding:5px;
+            background-color: aliceblue;
+        }
+        /* For radio buttons */
+        input[type="radio"], 
+        input[type="checkbox"] {
+            border: 2px solid #000; /* Bold border */
+            border-radius: 50%; /* For radio buttons, make them circular */
+            padding: 5px; /* Add some padding */
+            outline: none; /* Remove the default outline */
+        }
+
+        /* For checkboxes (square outline) */
+        input[type="checkbox"] {
+            border-radius: 4px; /* Square corners for checkboxes */
+        }
+        input[type="radio"]:hover, 
+        input[type="checkbox"]:hover,
+        input[type="radio"]:focus, 
+        input[type="checkbox"]:focus {
+            border-color: #007BFF; /* Change border color on hover/focus */
+        }
 
     </style>
 </head>
@@ -92,22 +115,25 @@ $rooms_result = mysqli_query($conn, $rooms_query);
             <div class="col-md-12">
           
                 <!-- <div class="card shadow-lg"> -->
-    <div class="filter-section">
+    <div class="filter-section shadow-lg">
         <form id="filterForm" method="GET">
         <div class="row">
-    <div class="col-md-5  d-flex align-items-center">
-        <label for="school" class="form-label mb-0 me-2">School:</label>
-        <select name="school_id" id="school" class="form-select">
-    <option value="">Select a School</option>
-    <?php while ($school = mysqli_fetch_assoc($schools_result)): ?>
-        <option value="<?php echo $school['school_id']; ?>" 
-            <?php echo (isset($_POST['school_id']) && $_POST['school_id'] == $school['school_id']) ? 'selected' : ''; ?>>
-            <?php echo $school['school_name']; ?>
+        <div class="col-md-5 d-flex align-items-center">
+    <label for="school" class="form-label mb-0 me-2">School:</label>
+    <select name="school_id" id="school" class="form-select">
+    <option value="">All Schools</option>
+    <?php 
+    while ($school = mysqli_fetch_assoc($schools_result)): 
+        $selected = (isset($_SESSION["school_id"]) && $_SESSION["school_id"] == $school['school_id']) ? 'selected' : '';
+    ?>
+        <option value="<?php echo $school['school_id']; ?>" <?php echo $selected; ?>>
+            <?php echo htmlspecialchars($school['school_name']); ?>
         </option>
     <?php endwhile; ?>
 </select>
 
-    </div>
+</div>
+
     <div class="col-md-1 d-flex align-items-center"></div>
 
     <div class="col-md-6 d-flex align-items-center">
@@ -164,11 +190,11 @@ $rooms_result = mysqli_query($conn, $rooms_query);
                 <div class="col-md-9 mb-3" id="session_options" style="display: <?php echo ($booking_type == 'session') ? 'block' : 'none'; ?>;">
                     <div class="btn-group" role="group">
                         <input type="radio" class="btn-check" name="session_choice" id="fn" value="fn" <?php echo ($session_choice == 'fn') ? 'checked' : ''; ?>>
-                        <label class="btn btn-outline-secondary" for="fn">Forenoon</label>
+                        <label class="btn btn-outline-primary" for="fn">Forenoon</label>
                         <input type="radio" class="btn-check" name="session_choice" id="an" value="an" <?php echo ($session_choice == 'an') ? 'checked' : ''; ?>>
-                        <label class="btn btn-outline-secondary" for="an">Afternoon</label>
-                        <input type="radio" class="btn-check" name="session_choice" id="both" value="both" <?php echo ($session_choice == 'both') ? 'checked' : ''; ?>>
-                        <label class="btn btn-outline-secondary" for="both">Both</label>
+                        <label class="btn btn-outline-primary" for="an">Afternoon</label>
+                        <input type="radio" class="btn-check" name="session_choice" id="both" value="both" <?php echo ($session_choice == 'both') ? 'checked' : 'checked'; ?>>
+                        <label class="btn btn-outline-primary" for="both">Both</label>
                     </div>
                 </div>
                 <div class="col-md-9 mb-3" id="slot_options" style="display: <?php echo ($booking_type == 'slot') ? 'block' : 'none'; ?>;">
@@ -177,7 +203,7 @@ $rooms_result = mysqli_query($conn, $rooms_query);
                         $slot_times = ['09:30am', '10:30am', '11:30am', '12:30pm', '01:30pm', '02:30pm', '03:30pm', '04:30pm'];
                         foreach ($slot_times as $index => $time) {
                             $slot_value = $index + 1;
-                            echo '<input type="checkbox" class="btn-check" name="slots[]" id="slot' . $slot_value . '" value="' . $slot_value . '" ' . (in_array($slot_value, $slots) ? 'checked' : '') . '>';
+                            echo '<input type="checkbox" class="btn-check slot-checkbox" name="slots[]" id="slot' . $slot_value . '" value="' . $slot_value . '" ' . (in_array($slot_value, $slots) ? 'checked' : '') . '>';
                             echo '<label class="btn btn-outline-secondary" for="slot' . $slot_value . '">' . $time . '</label>';
                         }
                         ?>
@@ -189,24 +215,20 @@ $rooms_result = mysqli_query($conn, $rooms_query);
     </div>
     <div class="row">
         <!-- Filter Section -->
-        <div class="col-md-2">
+        <div class="col-md-2 shadow-lg" >
             <form id="hallForm">
                 <h5>Capacity</h5>
                 <div class="form-check">
                     <input type="radio" name="capacity" value="50" id="capacity50" class="form-check-input">
-                    <label for="capacity50" class="form-check-label">Up to 50</label>
+                    <label for="capacity50" class="form-check-label">Less than 50</label>
                 </div>
                 <div class="form-check">
                     <input type="radio" name="capacity" value="100" id="capacity100" class="form-check-input">
-                    <label for="capacity100" class="form-check-label">Up to 100</label>
+                    <label for="capacity100" class="form-check-label">50 to 100</label>
                 </div>
                 <div class="form-check">
-                    <input type="radio" name="capacity" value="150" id="capacity150" class="form-check-input">
-                    <label for="capacity150" class="form-check-label">Up to 150</label>
-                </div>
-                <div class="form-check">
-                    <input type="radio" name="capacity" value="200" id="capacity200" class="form-check-input">
-                    <label for="capacity200" class="form-check-label">200 or More</label>
+                    <input type="radio" name="capacity" value="101" id="capacity101" class="form-check-input">
+                    <label for="capacity101" class="form-check-label">More than 100</label>
                 </div>
 
                 <h5 class="mt-4">Features</h5>
@@ -249,26 +271,9 @@ $rooms_result = mysqli_query($conn, $rooms_query);
         </div>
 
         <!-- Rooms Section -->
-        <div class="col-md-10">
+        <div class="col-md-10 ">
             <div class="row" id="roomsContainer">
-                <!-- Room Cards -->
-                <?php while ($room = mysqli_fetch_assoc($rooms_result)): ?>
-                    <?php if (isRoomAvailable($conn, $room['hall_id'], $date, $booking_type, $session_choice, $slots)): ?>
-                        <div class="col-md-4">
-                            <div class="card mb-4">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?php echo $room['hall_name']; ?></h5>
-                                    <p class="card-text">
-                                        <strong>School:</strong> <?php echo $room['school_name']; ?><br>
-                                        <strong>Department:</strong> <?php echo $room['department_name']; ?><br>
-                                        <strong>Type:</strong> <?php echo $room['type_name']; ?>
-                                    </p>
-                                    <a href="book_room.php?hall_id=<?php echo $room['hall_id']; ?>&date=<?php echo $date; ?>&booking_type=<?php echo $booking_type; ?>&session_choice=<?php echo $session_choice; ?>&slots=<?php echo implode(',', $slots); ?>" class="btn btn-primary">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endif; ?>
-                <?php endwhile; ?>
+               
             </div>
         </div>
     </div>
@@ -286,6 +291,60 @@ $rooms_result = mysqli_query($conn, $rooms_query);
                 $('#slot_options').show();
             }
         });
+
+
+        // Trigger department loading if school is preselected
+    var preselectedSchool = $('#school').val();
+    var type_id = $('input[name="type_id"]:checked').val();
+
+    if (preselectedSchool && type_id) {
+        loadDepartments(preselectedSchool, type_id);
+    }
+
+    // Function to load departments based on school and hall type
+    function loadDepartments(school_id, type_id) {
+        $('#department').html('<option value="">Loading...</option>');
+        $('#room').html('<option value="">Select Room</option>');
+
+        $.ajax({
+            type: 'POST',
+            url: 'fetch_departments.php',
+            data: { school_id: school_id, type_id: type_id },
+            success: function (response) {
+                $('#department').html(response);
+
+                // If a department is already selected, trigger the change event
+                var preselectedDepartment = $('#department').val();
+                if (preselectedDepartment) {
+                    loadRooms(preselectedDepartment, type_id);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error("Error fetching departments:", error);
+                alert("Failed to fetch departments. Please try again.");
+            }
+        });
+    }
+
+    // Function to load rooms based on department and hall type
+    function loadRooms(department_id, type_id) {
+        $('#room').html('<option value="">Loading...</option>');
+
+        $.ajax({
+            type: 'POST',
+            url: 'fetch_rooms.php',
+            data: { department_id: department_id, type_id: type_id },
+            success: function (response) {
+                $('#room').html(response);
+            },
+            error: function (xhr, status, error) {
+                console.error("Error fetching rooms:", error);
+                alert("Failed to fetch rooms. Please try again.");
+            }
+        });
+    }
+
+
 
         // Initialize date picker
         flatpickr("#date", {
@@ -401,4 +460,66 @@ $rooms_result = mysqli_query($conn, $rooms_query);
     // Initial load of rooms
     filterRooms();
 });
+
+$(document).ready(function() {
+    // Existing JavaScript code...
+
+    // Add this new function to handle the school selection switch
+    $('#useSessionSchool').change(function() {
+        if (this.checked) {
+            $('#school').prop('disabled', true);
+            // If you want to reset the school selection when switching to user's school
+            // $('#school').val('');
+        } else {
+            $('#school').prop('disabled', false);
+        }
+        // Trigger the form submission to update the results
+        filterRooms();
+    });
+
+    // Update the filterRooms function to include the new switch
+    function filterRooms() {
+        let filterData = $('#filterForm').serialize();
+        let hallData = $('#hallForm').serialize();
+        let useSessionSchool = $('#useSessionSchool').is(':checked') ? '1' : '0';
+        let formData = filterData + '&' + hallData + '&use_session_school=' + useSessionSchool;
+
+        // Send AJAX request
+        $.ajax({
+            url: 'filter_rooms.php',
+            method: 'GET',
+            data: formData,
+            success: function (response) {
+                $('#roomsContainer').html(response);
+            },
+            error: function () {
+                alert('Failed to fetch room data. Please try again.');
+            }
+        });
+    }
+});
+
+
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const checkboxes = document.querySelectorAll('.slot-checkbox');
+        
+        checkboxes.forEach((checkbox, index) => {
+            checkbox.addEventListener('change', () => {
+                const checkedIndices = Array.from(checkboxes)
+                    .map((cb, idx) => (cb.checked ? idx : -1))
+                    .filter(idx => idx !== -1);
+                
+                if (checkedIndices.length > 1) {
+                    const minIndex = Math.min(...checkedIndices);
+                    const maxIndex = Math.max(...checkedIndices);
+
+                    for (let i = minIndex; i <= maxIndex; i++) {
+                        checkboxes[i].checked = true;
+                    }
+                }
+            });
+        });
+    });
 </script>

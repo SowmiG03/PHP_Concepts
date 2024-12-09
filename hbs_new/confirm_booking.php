@@ -2,6 +2,7 @@
 include('assets/conn.php'); // Include database connection file
 
 // Retrieve form data
+$user_id = $_POST['user_id'];
 $hall_id = $_POST['hall_id'];
 $start_date = $_POST['start_date'];
 $end_date = $_POST['end_date'];
@@ -60,21 +61,38 @@ if ($result->num_rows > 0) {
 
 // Insert booking into the database
 $status = 'pending'; // Set booking status
+$insertQuery = "INSERT INTO bookings (
+    user_id, hall_id, start_date, end_date, purpose, purpose_name, 
+    students_count, organiser_name, organiser_department, 
+    organiser_mobile, organiser_email, slot_or_session, booking_date, status
+) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-$insertQuery = "INSERT INTO bookings (hall_id, start_date, end_date, purpose, purpose_name, 
-                    students_count, organiser_name, organiser_department, 
-                    organiser_mobile, organiser_email, slot_or_session, booking_date, status) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
 $insertStmt = $conn->prepare($insertQuery);
-$insertStmt->bind_param("issssisssssss", $hall_id, $start_date, $end_date, $purpose, 
-                        $purpose_name, $students_count, $organiser_name, 
-                        $organiser_department, $organiser_mobile, $organiser_email, 
-                        $slot_or_session, $booking_date, $status);
+
+// Correct parameter order and types
+$insertStmt->bind_param(
+    "iissssisssssss", // i: integer, s: string
+    $user_id, // 1: user_id
+    $hall_id, // 2: hall_id
+    $start_date, // 3: start_date
+    $end_date, // 4: end_date
+    $purpose, // 5: purpose
+    $purpose_name, // 6: purpose_name
+    $students_count, // 7: students_count
+    $organiser_name, // 8: organiser_name
+    $organiser_department, // 9: organiser_department
+    $organiser_mobile, // 10: organiser_mobile
+    $organiser_email, // 11: organiser_email
+    $slot_or_session, // 12: slot_or_session
+    $booking_date, // 13: booking_date
+    $status // 14: status
+);
 
 if ($insertStmt->execute()) {
     echo "<script>
     alert('Booking confirmed successfully!');
-    window.location.href = 'book_hall.php';
+    window.location.href = 'find_halls.php';
 </script>";
 exit();
 

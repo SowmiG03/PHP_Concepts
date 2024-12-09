@@ -1887,20 +1887,20 @@
 [2024-11-23 18:02:31] Booking Type: session
 [2024-11-23 18:02:31] Slots to Check: 1,2,3,4
 [2024-11-23 18:02:31] Availability Result: available
-[2024-11-23 19:04:31] Received POST data: Array
+[2024-11-23 18:26:31] Received POST data: Array
 (
-    [hall_id] => 1        
+    [hall_id] => 2        
     [school_name] => School of Engineering and Technology        
     [department_name] => Centre for Pollution Control and Environmental Engineering        
-    [room] => SH-1        
-    [start_date] => 2020-10-10
-    [end_date] => 2020-10-10
+    [room] => SH-2        
+    [start_date] => 2025-02-12
+    [end_date] => 2025-02-12
     [booking_type] => session
     [session_choice] => an
     [slot_or_session] => 
 )
 
-[2024-11-23 19:04:31] Query: SELECT * FROM bookings 
+[2024-11-23 18:26:31] Query: SELECT * FROM bookings 
               WHERE hall_id = ? 
               AND (
                   (? BETWEEN start_date AND end_date) OR
@@ -1909,12 +1909,5201 @@
                   (end_date BETWEEN ? AND ?)
               )
               AND status IN ('approved', 'booked')
-[2024-11-23 19:04:31] Params: 1        , 2020-10-10, 2020-10-10
-[2024-11-23 19:04:31] Result rows: 0
-[2024-11-23 19:04:31] Is booked: No
-[2024-11-23 19:04:31] Hall ID: 1        
-[2024-11-23 19:04:31] Start Date: 2020-10-10
-[2024-11-23 19:04:31] End Date: 2020-10-10
-[2024-11-23 19:04:31] Booking Type: session
-[2024-11-23 19:04:31] Slots to Check: 5,6,7,8
-[2024-11-23 19:04:31] Availability Result: available
+[2024-11-23 18:26:31] Params: 2        , 2025-02-12, 2025-02-12
+[2024-11-23 18:26:31] Result rows: 0
+[2024-11-23 18:26:31] Is booked: No
+[2024-11-23 18:26:31] Hall ID: 2        
+[2024-11-23 18:26:31] Start Date: 2025-02-12
+[2024-11-23 18:26:31] End Date: 2025-02-12
+[2024-11-23 18:26:31] Booking Type: session
+[2024-11-23 18:26:31] Slots to Check: 5,6,7,8
+[2024-11-23 18:26:31] Availability Result: available
+[2024-11-27 14:08:06] Received POST data: Array
+(
+    [hall_id] => 5        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Computer Science        
+    [room] => SH-1        
+    [start_date] => 2024-11-29
+    [end_date] => 2024-11-29
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => 
+)
+
+[2024-11-27 14:08:06] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-11-27 14:08:06] Params: 5        , 2024-11-29, 2024-11-29
+[2024-11-27 14:08:06] Result rows: 0
+[2024-11-27 14:08:06] Is booked: No
+[2024-11-27 14:08:06] Hall ID: 5        
+[2024-11-27 14:08:06] Start Date: 2024-11-29
+[2024-11-27 14:08:06] End Date: 2024-11-29
+[2024-11-27 14:08:06] Booking Type: session
+[2024-11-27 14:08:06] Slots to Check: 1,2,3,4
+[2024-11-27 14:08:06] Availability Result: available
+[2024-11-27 18:56:26] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2024-12-28
+    [end_date] => 2024-12-28
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => 
+)
+
+[2024-11-27 18:56:26] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-11-27 18:56:26] Params: 2        , 2024-12-28, 2024-12-28
+[2024-11-27 18:56:26] Result rows: 0
+[2024-11-27 18:56:26] Is booked: No
+[2024-11-27 18:56:26] Hall ID: 2        
+[2024-11-27 18:56:26] Start Date: 2024-12-28
+[2024-11-27 18:56:26] End Date: 2024-12-28
+[2024-11-27 18:56:26] Booking Type: session
+[2024-11-27 18:56:26] Slots to Check: 5,6,7,8
+[2024-11-27 18:56:26] Availability Result: available
+[2024-11-28 06:28:29] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2024-11-30
+    [end_date] => 2024-11-30
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => 
+)
+
+[2024-11-28 06:28:29] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-11-28 06:28:29] Params: 2        , 2024-11-30, 2024-11-30
+[2024-11-28 06:28:29] Result rows: 0
+[2024-11-28 06:28:29] Is booked: No
+[2024-11-28 06:28:29] Hall ID: 2        
+[2024-11-28 06:28:29] Start Date: 2024-11-30
+[2024-11-28 06:28:29] End Date: 2024-11-30
+[2024-11-28 06:28:29] Booking Type: session
+[2024-11-28 06:28:29] Slots to Check: 5,6,7,8
+[2024-11-28 06:28:29] Availability Result: available
+[2024-11-28 10:36:21] Received POST data: Array
+(
+    [hall_id] => 7        
+    [school_name] => Ramanujan School of Mathematical Sciences        
+    [department_name] => Department of Statistics        
+    [room] => SH-1        
+    [start_date] => 2024-11-30
+    [end_date] => 2024-11-30
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => 
+)
+
+[2024-11-28 10:36:21] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-11-28 10:36:21] Params: 7        , 2024-11-30, 2024-11-30
+[2024-11-28 10:36:21] Result rows: 0
+[2024-11-28 10:36:21] Is booked: No
+[2024-11-28 10:36:21] Hall ID: 7        
+[2024-11-28 10:36:21] Start Date: 2024-11-30
+[2024-11-28 10:36:21] End Date: 2024-11-30
+[2024-11-28 10:36:21] Booking Type: session
+[2024-11-28 10:36:21] Slots to Check: 5,6,7,8
+[2024-11-28 10:36:21] Availability Result: available
+[2024-11-28 10:58:23] Received POST data: Array
+(
+    [hall_id] => 7        
+    [school_name] => Ramanujan School of Mathematical Sciences        
+    [department_name] => Department of Statistics        
+    [room] => SH-1        
+    [start_date] => 2024-11-30
+    [end_date] => 2024-11-30
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => 
+)
+
+[2024-11-28 10:58:23] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-11-28 10:58:23] Params: 7        , 2024-11-30, 2024-11-30
+[2024-11-28 10:58:23] Result rows: 0
+[2024-11-28 10:58:23] Is booked: No
+[2024-11-28 10:58:23] Hall ID: 7        
+[2024-11-28 10:58:23] Start Date: 2024-11-30
+[2024-11-28 10:58:23] End Date: 2024-11-30
+[2024-11-28 10:58:23] Booking Type: session
+[2024-11-28 10:58:23] Slots to Check: 5,6,7,8
+[2024-11-28 10:58:23] Availability Result: available
+[2024-11-28 14:09:59] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-11-28 14:09:59] Params: 7, 2024-12-30, 2024-12-30
+[2024-11-28 14:09:59] Result rows: 0
+[2024-11-28 14:09:59] Is booked: No
+[2024-11-28 14:09:59] Hall ID: 7
+[2024-11-28 14:09:59] Start Date: 2024-12-30
+[2024-11-28 14:09:59] End Date: 2024-12-30
+[2024-11-28 14:09:59] Booking Type: session
+[2024-11-28 14:09:59] Slots to Check: 5,6,7,8
+[2024-11-28 14:09:59] Availability Result: available
+[2024-11-28 14:12:24] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-11-28 14:12:24] Params: 7, 2024-12-12, 2024-12-12
+[2024-11-28 14:12:24] Result rows: 0
+[2024-11-28 14:12:24] Is booked: No
+[2024-11-28 14:12:24] Hall ID: 7
+[2024-11-28 14:12:24] Start Date: 2024-12-12
+[2024-11-28 14:12:24] End Date: 2024-12-12
+[2024-11-28 14:12:24] Booking Type: session
+[2024-11-28 14:12:24] Slots to Check: 1,2,3,4
+[2024-11-28 14:12:24] Availability Result: available
+[2024-11-28 14:16:41] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-11-28 14:16:41] Params: 7, 2024-12-12, 2024-12-12
+[2024-11-28 14:16:41] Result rows: 0
+[2024-11-28 14:16:41] Is booked: No
+[2024-11-28 14:16:41] Hall ID: 7
+[2024-11-28 14:16:41] Start Date: 2024-12-12
+[2024-11-28 14:16:41] End Date: 2024-12-12
+[2024-11-28 14:16:41] Booking Type: session
+[2024-11-28 14:16:41] Slots to Check: 5,6,7,8
+[2024-11-28 14:16:41] Availability Result: available
+[2024-11-28 14:24:49] Received POST data: Array
+(
+    [hall_id] => 3        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-1        
+    [start_date] => 2024-12-07
+    [end_date] => 2024-12-07
+    [booking_type] => session
+    [session_choice] => both
+    [slot_or_session] => 
+)
+
+[2024-11-28 14:24:49] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-11-28 14:24:49] Params: 3        , 2024-12-07, 2024-12-07
+[2024-11-28 14:24:49] Result rows: 0
+[2024-11-28 14:24:49] Is booked: No
+[2024-11-28 14:24:49] Hall ID: 3        
+[2024-11-28 14:24:49] Start Date: 2024-12-07
+[2024-11-28 14:24:49] End Date: 2024-12-07
+[2024-11-28 14:24:49] Booking Type: session
+[2024-11-28 14:24:49] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-11-28 14:24:49] Availability Result: available
+[2024-11-28 15:09:13] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-11-28 15:09:13] Params: 3, 2024-12-25, 2024-12-25
+[2024-11-28 15:09:13] Result rows: 0
+[2024-11-28 15:09:13] Is booked: No
+[2024-11-28 15:09:13] Hall ID: 3
+[2024-11-28 15:09:13] Start Date: 2024-12-25
+[2024-11-28 15:09:13] End Date: 2024-12-25
+[2024-11-28 15:09:13] Booking Type: session
+[2024-11-28 15:09:13] Slots to Check: 1,2,3,4
+[2024-11-28 15:09:13] Availability Result: available
+[2024-11-28 15:24:36] Received POST data: Array
+(
+    [hall_id] => 8        
+    [school_name] => Ramanujan School of Mathematical Sciences        
+    [department_name] => Department of Statistics        
+    [room] => SH-2        
+    [start_date] => 2024-11-30
+    [end_date] => 2024-11-30
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => 
+)
+
+[2024-11-28 15:24:36] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-11-28 15:24:36] Params: 8        , 2024-11-30, 2024-11-30
+[2024-11-28 15:24:36] Result rows: 0
+[2024-11-28 15:24:36] Is booked: No
+[2024-11-28 15:24:36] Hall ID: 8        
+[2024-11-28 15:24:36] Start Date: 2024-11-30
+[2024-11-28 15:24:36] End Date: 2024-11-30
+[2024-11-28 15:24:36] Booking Type: session
+[2024-11-28 15:24:36] Slots to Check: 1,2,3,4
+[2024-11-28 15:24:36] Availability Result: available
+[2024-11-28 15:25:44] Received POST data: Array
+(
+    [hall_id] => 8        
+    [school_name] => Ramanujan School of Mathematical Sciences        
+    [department_name] => Department of Statistics        
+    [room] => SH-2        
+    [start_date] => 2024-11-30
+    [end_date] => 2024-11-30
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => 
+)
+
+[2024-11-28 15:25:44] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-11-28 15:25:44] Params: 8        , 2024-11-30, 2024-11-30
+[2024-11-28 15:25:44] Result rows: 0
+[2024-11-28 15:25:44] Is booked: No
+[2024-11-28 15:25:44] Hall ID: 8        
+[2024-11-28 15:25:44] Start Date: 2024-11-30
+[2024-11-28 15:25:44] End Date: 2024-11-30
+[2024-11-28 15:25:44] Booking Type: session
+[2024-11-28 15:25:44] Slots to Check: 1,2,3,4
+[2024-11-28 15:25:44] Availability Result: available
+[2024-11-28 19:45:55] Received POST data: Array
+(
+    [hall_id] => 3        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-1        
+    [start_date] => 2024-11-30
+    [end_date] => 2024-11-30
+    [booking_type] => session
+    [session_choice] => both
+    [slot_or_session] => 
+)
+
+[2024-11-28 19:45:55] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-11-28 19:45:55] Params: 3        , 2024-11-30, 2024-11-30
+[2024-11-28 19:45:55] Result rows: 0
+[2024-11-28 19:45:55] Is booked: No
+[2024-11-28 19:45:55] Hall ID: 3        
+[2024-11-28 19:45:55] Start Date: 2024-11-30
+[2024-11-28 19:45:55] End Date: 2024-11-30
+[2024-11-28 19:45:55] Booking Type: session
+[2024-11-28 19:45:55] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-11-28 19:45:55] Availability Result: available
+[2024-12-03 14:43:58] Received POST data: Array
+(
+    [hall_id] => 1        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-01
+    [end_date] => 2025-01-04
+    [booking_type] => session
+    [session_choice] => both
+    [slot_or_session] => 
+)
+
+[2024-12-03 14:43:58] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 14:43:58] Params: 1        , 2025-01-01, 2025-01-04
+[2024-12-03 14:43:58] Result rows: 0
+[2024-12-03 14:43:58] Is booked: No
+[2024-12-03 14:43:58] Hall ID: 1        
+[2024-12-03 14:43:58] Start Date: 2025-01-01
+[2024-12-03 14:43:58] End Date: 2025-01-04
+[2024-12-03 14:43:58] Booking Type: session
+[2024-12-03 14:43:58] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-12-03 14:43:58] Availability Result: available
+[2024-12-03 14:46:35] Received POST data: Array
+(
+    [hall_id] => 1        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-06
+    [end_date] => 2025-01-11
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => 
+)
+
+[2024-12-03 14:46:35] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 14:46:35] Params: 1        , 2025-01-06, 2025-01-11
+[2024-12-03 14:46:35] Result rows: 0
+[2024-12-03 14:46:35] Is booked: No
+[2024-12-03 14:46:35] Hall ID: 1        
+[2024-12-03 14:46:35] Start Date: 2025-01-06
+[2024-12-03 14:46:35] End Date: 2025-01-11
+[2024-12-03 14:46:35] Booking Type: session
+[2024-12-03 14:46:35] Slots to Check: 1,2,3,4
+[2024-12-03 14:46:35] Availability Result: available
+[2024-12-03 14:52:23] Received POST data: Array
+(
+    [hall_id] => 1        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-13
+    [end_date] => 2025-01-18
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => 
+)
+
+[2024-12-03 14:52:23] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 14:52:23] Params: 1        , 2025-01-13, 2025-01-18
+[2024-12-03 14:52:23] Result rows: 0
+[2024-12-03 14:52:23] Is booked: No
+[2024-12-03 14:52:23] Hall ID: 1        
+[2024-12-03 14:52:23] Start Date: 2025-01-13
+[2024-12-03 14:52:23] End Date: 2025-01-18
+[2024-12-03 14:52:23] Booking Type: session
+[2024-12-03 14:52:23] Slots to Check: 5,6,7,8
+[2024-12-03 14:52:23] Availability Result: available
+[2024-12-03 15:03:23] Received POST data: Array
+(
+    [hall_id] => 1        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-20
+    [end_date] => 2025-01-20
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 1
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 15:03:23] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 15:03:23] Params: 1        , 2025-01-20, 2025-01-20
+[2024-12-03 15:03:23] Result rows: 0
+[2024-12-03 15:03:23] Is booked: No
+[2024-12-03 15:03:23] Hall ID: 1        
+[2024-12-03 15:03:23] Start Date: 2025-01-20
+[2024-12-03 15:03:23] End Date: 2025-01-20
+[2024-12-03 15:03:23] Booking Type: slot
+[2024-12-03 15:03:23] Slots to Check: 1
+[2024-12-03 15:03:23] Availability Result: available
+[2024-12-03 15:05:50] Received POST data: Array
+(
+    [hall_id] => 1        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-21
+    [end_date] => 2025-01-21
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 2
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 15:05:50] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 15:05:50] Params: 1        , 2025-01-21, 2025-01-21
+[2024-12-03 15:05:50] Result rows: 0
+[2024-12-03 15:05:50] Is booked: No
+[2024-12-03 15:05:50] Hall ID: 1        
+[2024-12-03 15:05:50] Start Date: 2025-01-21
+[2024-12-03 15:05:50] End Date: 2025-01-21
+[2024-12-03 15:05:50] Booking Type: slot
+[2024-12-03 15:05:50] Slots to Check: 2
+[2024-12-03 15:05:50] Availability Result: available
+[2024-12-03 15:14:23] Received POST data: Array
+(
+    [hall_id] => 1        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-22
+    [end_date] => 2025-01-22
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 3
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 15:14:23] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 15:14:23] Params: 1        , 2025-01-22, 2025-01-22
+[2024-12-03 15:14:23] Result rows: 0
+[2024-12-03 15:14:23] Is booked: No
+[2024-12-03 15:14:23] Hall ID: 1        
+[2024-12-03 15:14:23] Start Date: 2025-01-22
+[2024-12-03 15:14:23] End Date: 2025-01-22
+[2024-12-03 15:14:23] Booking Type: slot
+[2024-12-03 15:14:23] Slots to Check: 3
+[2024-12-03 15:14:23] Availability Result: available
+[2024-12-03 15:15:17] Received POST data: Array
+(
+    [hall_id] => 1        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-23
+    [end_date] => 2025-01-23
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 4
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 15:15:17] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 15:15:17] Params: 1        , 2025-01-23, 2025-01-23
+[2024-12-03 15:15:17] Result rows: 0
+[2024-12-03 15:15:17] Is booked: No
+[2024-12-03 15:15:17] Hall ID: 1        
+[2024-12-03 15:15:17] Start Date: 2025-01-23
+[2024-12-03 15:15:17] End Date: 2025-01-23
+[2024-12-03 15:15:17] Booking Type: slot
+[2024-12-03 15:15:17] Slots to Check: 4
+[2024-12-03 15:15:17] Availability Result: available
+[2024-12-03 15:17:19] Received POST data: Array
+(
+    [hall_id] => 1        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-24
+    [end_date] => 2025-01-24
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 5
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 15:17:19] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 15:17:19] Params: 1        , 2025-01-24, 2025-01-24
+[2024-12-03 15:17:19] Result rows: 0
+[2024-12-03 15:17:19] Is booked: No
+[2024-12-03 15:17:19] Hall ID: 1        
+[2024-12-03 15:17:19] Start Date: 2025-01-24
+[2024-12-03 15:17:19] End Date: 2025-01-24
+[2024-12-03 15:17:19] Booking Type: slot
+[2024-12-03 15:17:19] Slots to Check: 5
+[2024-12-03 15:17:19] Availability Result: available
+[2024-12-03 15:19:45] Received POST data: Array
+(
+    [hall_id] => 1        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-25
+    [end_date] => 2025-01-25
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 6
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 15:19:45] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 15:19:45] Params: 1        , 2025-01-25, 2025-01-25
+[2024-12-03 15:19:45] Result rows: 0
+[2024-12-03 15:19:45] Is booked: No
+[2024-12-03 15:19:45] Hall ID: 1        
+[2024-12-03 15:19:45] Start Date: 2025-01-25
+[2024-12-03 15:19:45] End Date: 2025-01-25
+[2024-12-03 15:19:45] Booking Type: slot
+[2024-12-03 15:19:45] Slots to Check: 6
+[2024-12-03 15:19:45] Availability Result: available
+[2024-12-03 15:25:17] Received POST data: Array
+(
+    [hall_id] => 1        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-27
+    [end_date] => 2025-01-27
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 7
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 15:25:17] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 15:25:17] Params: 1        , 2025-01-27, 2025-01-27
+[2024-12-03 15:25:17] Result rows: 0
+[2024-12-03 15:25:17] Is booked: No
+[2024-12-03 15:25:17] Hall ID: 1        
+[2024-12-03 15:25:17] Start Date: 2025-01-27
+[2024-12-03 15:25:17] End Date: 2025-01-27
+[2024-12-03 15:25:17] Booking Type: slot
+[2024-12-03 15:25:17] Slots to Check: 7
+[2024-12-03 15:25:17] Availability Result: available
+[2024-12-03 15:25:18] Received POST data: Array
+(
+    [hall_id] => 1        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-27
+    [end_date] => 2025-01-27
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 7
+        )
+
+    [slot_or_session] => 7
+)
+
+[2024-12-03 15:25:18] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 15:25:18] Params: 1        , 2025-01-27, 2025-01-27
+[2024-12-03 15:25:18] Result rows: 0
+[2024-12-03 15:25:18] Is booked: No
+[2024-12-03 15:25:18] Hall ID: 1        
+[2024-12-03 15:25:18] Start Date: 2025-01-27
+[2024-12-03 15:25:18] End Date: 2025-01-27
+[2024-12-03 15:25:18] Booking Type: slot
+[2024-12-03 15:25:18] Slots to Check: 7
+[2024-12-03 15:25:18] Availability Result: available
+[2024-12-03 15:26:53] Received POST data: Array
+(
+    [hall_id] => 1        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-27
+    [end_date] => 2025-01-27
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 7
+        )
+
+    [slot_or_session] => 7
+)
+
+[2024-12-03 15:26:53] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 15:26:53] Params: 1        , 2025-01-27, 2025-01-27
+[2024-12-03 15:26:53] Result rows: 0
+[2024-12-03 15:26:53] Is booked: No
+[2024-12-03 15:26:53] Hall ID: 1        
+[2024-12-03 15:26:53] Start Date: 2025-01-27
+[2024-12-03 15:26:53] End Date: 2025-01-27
+[2024-12-03 15:26:53] Booking Type: slot
+[2024-12-03 15:26:53] Slots to Check: 7
+[2024-12-03 15:26:53] Availability Result: available
+[2024-12-03 15:33:31] Received POST data: Array
+(
+    [hall_id] => 1        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-28
+    [end_date] => 2025-01-28
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 8
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 15:33:31] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 15:33:31] Params: 1        , 2025-01-28, 2025-01-28
+[2024-12-03 15:33:31] Result rows: 0
+[2024-12-03 15:33:31] Is booked: No
+[2024-12-03 15:33:31] Hall ID: 1        
+[2024-12-03 15:33:31] Start Date: 2025-01-28
+[2024-12-03 15:33:31] End Date: 2025-01-28
+[2024-12-03 15:33:31] Booking Type: slot
+[2024-12-03 15:33:31] Slots to Check: 8
+[2024-12-03 15:33:31] Availability Result: available
+[2024-12-03 15:34:57] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-01
+    [end_date] => 2025-01-01
+    [booking_type] => session
+    [session_choice] => both
+    [slot_or_session] => 
+)
+
+[2024-12-03 15:34:57] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 15:34:57] Params: 2        , 2025-01-01, 2025-01-01
+[2024-12-03 15:34:57] Result rows: 0
+[2024-12-03 15:34:57] Is booked: No
+[2024-12-03 15:34:57] Hall ID: 2        
+[2024-12-03 15:34:57] Start Date: 2025-01-01
+[2024-12-03 15:34:57] End Date: 2025-01-01
+[2024-12-03 15:34:57] Booking Type: session
+[2024-12-03 15:34:57] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-12-03 15:34:57] Availability Result: available
+[2024-12-03 15:36:19] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-02
+    [end_date] => 2025-01-02
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 1
+            [1] => 2
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 15:36:19] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 15:36:19] Params: 2        , 2025-01-02, 2025-01-02
+[2024-12-03 15:36:19] Result rows: 0
+[2024-12-03 15:36:19] Is booked: No
+[2024-12-03 15:36:19] Hall ID: 2        
+[2024-12-03 15:36:19] Start Date: 2025-01-02
+[2024-12-03 15:36:19] End Date: 2025-01-02
+[2024-12-03 15:36:19] Booking Type: slot
+[2024-12-03 15:36:19] Slots to Check: 1,2
+[2024-12-03 15:36:19] Availability Result: available
+[2024-12-03 15:45:16] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-03
+    [end_date] => 2025-01-03
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 3
+            [1] => 4
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 15:45:16] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 15:45:16] Params: 2        , 2025-01-03, 2025-01-03
+[2024-12-03 15:45:16] Result rows: 0
+[2024-12-03 15:45:16] Is booked: No
+[2024-12-03 15:45:16] Hall ID: 2        
+[2024-12-03 15:45:16] Start Date: 2025-01-03
+[2024-12-03 15:45:16] End Date: 2025-01-03
+[2024-12-03 15:45:16] Booking Type: slot
+[2024-12-03 15:45:16] Slots to Check: 3,4
+[2024-12-03 15:45:16] Availability Result: available
+[2024-12-03 15:45:34] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-03
+    [end_date] => 2025-01-03
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 3
+            [1] => 4
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 15:45:34] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 15:45:34] Params: 2        , 2025-01-03, 2025-01-03
+[2024-12-03 15:45:34] Result rows: 0
+[2024-12-03 15:45:34] Is booked: No
+[2024-12-03 15:45:34] Hall ID: 2        
+[2024-12-03 15:45:34] Start Date: 2025-01-03
+[2024-12-03 15:45:34] End Date: 2025-01-03
+[2024-12-03 15:45:34] Booking Type: slot
+[2024-12-03 15:45:34] Slots to Check: 3,4
+[2024-12-03 15:45:34] Availability Result: available
+[2024-12-03 15:51:13] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-04
+    [end_date] => 2025-01-04
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 5
+            [1] => 6
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 15:51:13] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 15:51:13] Params: 2        , 2025-01-04, 2025-01-04
+[2024-12-03 15:51:13] Result rows: 0
+[2024-12-03 15:51:13] Is booked: No
+[2024-12-03 15:51:13] Hall ID: 2        
+[2024-12-03 15:51:13] Start Date: 2025-01-04
+[2024-12-03 15:51:13] End Date: 2025-01-04
+[2024-12-03 15:51:13] Booking Type: slot
+[2024-12-03 15:51:13] Slots to Check: 5,6
+[2024-12-03 15:51:13] Availability Result: available
+[2024-12-03 15:56:27] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-06
+    [end_date] => 2025-01-06
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 7
+            [1] => 8
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 15:56:27] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 15:56:27] Params: 2        , 2025-01-06, 2025-01-06
+[2024-12-03 15:56:27] Result rows: 0
+[2024-12-03 15:56:27] Is booked: No
+[2024-12-03 15:56:27] Hall ID: 2        
+[2024-12-03 15:56:27] Start Date: 2025-01-06
+[2024-12-03 15:56:27] End Date: 2025-01-06
+[2024-12-03 15:56:27] Booking Type: slot
+[2024-12-03 15:56:27] Slots to Check: 7,8
+[2024-12-03 15:56:27] Availability Result: available
+[2024-12-03 15:59:29] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-07
+    [end_date] => 202252-01-07
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 3
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 15:59:29] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 15:59:29] Params: 2        , 2025-01-07, 202252-01-07
+[2024-12-03 15:59:29] Result rows: 0
+[2024-12-03 15:59:29] Is booked: No
+[2024-12-03 15:59:29] Hall ID: 2        
+[2024-12-03 15:59:29] Start Date: 2025-01-07
+[2024-12-03 15:59:29] End Date: 202252-01-07
+[2024-12-03 15:59:29] Booking Type: slot
+[2024-12-03 15:59:29] Slots to Check: 1,2,3
+[2024-12-03 15:59:29] Availability Result: available
+[2024-12-03 16:02:06] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-08
+    [end_date] => 2025-01-08
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 4
+            [1] => 5
+            [2] => 6
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:02:06] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:02:06] Params: 2        , 2025-01-08, 2025-01-08
+[2024-12-03 16:02:06] Result rows: 0
+[2024-12-03 16:02:06] Is booked: No
+[2024-12-03 16:02:06] Hall ID: 2        
+[2024-12-03 16:02:06] Start Date: 2025-01-08
+[2024-12-03 16:02:06] End Date: 2025-01-08
+[2024-12-03 16:02:06] Booking Type: slot
+[2024-12-03 16:02:06] Slots to Check: 4,5,6
+[2024-12-03 16:02:06] Availability Result: available
+[2024-12-03 16:02:39] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-09
+    [end_date] => 2025-01-09
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 6
+            [1] => 7
+            [2] => 8
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:02:39] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:02:39] Params: 2        , 2025-01-09, 2025-01-09
+[2024-12-03 16:02:39] Result rows: 0
+[2024-12-03 16:02:39] Is booked: No
+[2024-12-03 16:02:39] Hall ID: 2        
+[2024-12-03 16:02:39] Start Date: 2025-01-09
+[2024-12-03 16:02:39] End Date: 2025-01-09
+[2024-12-03 16:02:39] Booking Type: slot
+[2024-12-03 16:02:39] Slots to Check: 6,7,8
+[2024-12-03 16:02:39] Availability Result: available
+[2024-12-03 16:03:50] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-10
+    [end_date] => 2025-01-10
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:03:50] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:03:50] Params: 2        , 2025-01-10, 2025-01-10
+[2024-12-03 16:03:50] Result rows: 0
+[2024-12-03 16:03:50] Is booked: No
+[2024-12-03 16:03:50] Hall ID: 2        
+[2024-12-03 16:03:50] Start Date: 2025-01-10
+[2024-12-03 16:03:50] End Date: 2025-01-10
+[2024-12-03 16:03:50] Booking Type: session
+[2024-12-03 16:03:50] Slots to Check: 1,2,3,4
+[2024-12-03 16:03:50] Availability Result: available
+[2024-12-03 16:04:20] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-11
+    [end_date] => 2025-01-11
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:04:20] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:04:20] Params: 2        , 2025-01-11, 2025-01-11
+[2024-12-03 16:04:20] Result rows: 0
+[2024-12-03 16:04:20] Is booked: No
+[2024-12-03 16:04:20] Hall ID: 2        
+[2024-12-03 16:04:20] Start Date: 2025-01-11
+[2024-12-03 16:04:20] End Date: 2025-01-11
+[2024-12-03 16:04:20] Booking Type: session
+[2024-12-03 16:04:20] Slots to Check: 5,6,7,8
+[2024-12-03 16:04:20] Availability Result: available
+[2024-12-03 16:04:38] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-11
+    [end_date] => 2025-01-11
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:04:38] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:04:38] Params: 2        , 2025-01-11, 2025-01-11
+[2024-12-03 16:04:38] Result rows: 0
+[2024-12-03 16:04:38] Is booked: No
+[2024-12-03 16:04:38] Hall ID: 2        
+[2024-12-03 16:04:38] Start Date: 2025-01-11
+[2024-12-03 16:04:38] End Date: 2025-01-11
+[2024-12-03 16:04:38] Booking Type: session
+[2024-12-03 16:04:38] Slots to Check: 5,6,7,8
+[2024-12-03 16:04:38] Availability Result: available
+[2024-12-03 16:04:39] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-11
+    [end_date] => 2025-01-11
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => an
+)
+
+[2024-12-03 16:04:39] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:04:39] Params: 2        , 2025-01-11, 2025-01-11
+[2024-12-03 16:04:39] Result rows: 0
+[2024-12-03 16:04:39] Is booked: No
+[2024-12-03 16:04:39] Hall ID: 2        
+[2024-12-03 16:04:39] Start Date: 2025-01-11
+[2024-12-03 16:04:39] End Date: 2025-01-11
+[2024-12-03 16:04:39] Booking Type: session
+[2024-12-03 16:04:39] Slots to Check: 5,6,7,8
+[2024-12-03 16:04:39] Availability Result: available
+[2024-12-03 16:06:43] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-13
+    [end_date] => 2025-01-14
+    [booking_type] => session
+    [session_choice] => both
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:06:43] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:06:43] Params: 2        , 2025-01-13, 2025-01-14
+[2024-12-03 16:06:43] Result rows: 0
+[2024-12-03 16:06:43] Is booked: No
+[2024-12-03 16:06:43] Hall ID: 2        
+[2024-12-03 16:06:43] Start Date: 2025-01-13
+[2024-12-03 16:06:43] End Date: 2025-01-14
+[2024-12-03 16:06:43] Booking Type: session
+[2024-12-03 16:06:43] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-12-03 16:06:43] Availability Result: available
+[2024-12-03 16:18:43] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-15
+    [end_date] => 2025-01-16
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 2
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:18:43] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:18:43] Params: 2        , 2025-01-15, 2025-01-16
+[2024-12-03 16:18:43] Result rows: 0
+[2024-12-03 16:18:43] Is booked: No
+[2024-12-03 16:18:43] Hall ID: 2        
+[2024-12-03 16:18:43] Start Date: 2025-01-15
+[2024-12-03 16:18:43] End Date: 2025-01-16
+[2024-12-03 16:18:43] Booking Type: slot
+[2024-12-03 16:18:43] Slots to Check: 2
+[2024-12-03 16:18:43] Availability Result: available
+[2024-12-03 16:19:18] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-17
+    [end_date] => 2025-01-18
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 2
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:19:18] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:19:18] Params: 2        , 2025-01-17, 2025-01-18
+[2024-12-03 16:19:18] Result rows: 0
+[2024-12-03 16:19:18] Is booked: No
+[2024-12-03 16:19:18] Hall ID: 2        
+[2024-12-03 16:19:18] Start Date: 2025-01-17
+[2024-12-03 16:19:18] End Date: 2025-01-18
+[2024-12-03 16:19:18] Booking Type: slot
+[2024-12-03 16:19:18] Slots to Check: 2
+[2024-12-03 16:19:18] Availability Result: available
+[2024-12-03 16:20:47] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-20
+    [end_date] => 2025-01-21
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 3
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:20:47] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:20:47] Params: 2        , 2025-01-20, 2025-01-21
+[2024-12-03 16:20:47] Result rows: 0
+[2024-12-03 16:20:47] Is booked: No
+[2024-12-03 16:20:47] Hall ID: 2        
+[2024-12-03 16:20:47] Start Date: 2025-01-20
+[2024-12-03 16:20:47] End Date: 2025-01-21
+[2024-12-03 16:20:47] Booking Type: slot
+[2024-12-03 16:20:47] Slots to Check: 3
+[2024-12-03 16:20:47] Availability Result: available
+[2024-12-03 16:31:26] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-22
+    [end_date] => 2025-01-22
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 4
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:31:26] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:31:26] Params: 2        , 2025-01-22, 2025-01-22
+[2024-12-03 16:31:26] Result rows: 0
+[2024-12-03 16:31:26] Is booked: No
+[2024-12-03 16:31:26] Hall ID: 2        
+[2024-12-03 16:31:26] Start Date: 2025-01-22
+[2024-12-03 16:31:26] End Date: 2025-01-22
+[2024-12-03 16:31:26] Booking Type: slot
+[2024-12-03 16:31:26] Slots to Check: 4
+[2024-12-03 16:31:26] Availability Result: available
+[2024-12-03 16:33:14] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-24
+    [end_date] => 2025-01-25
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 5
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:33:14] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:33:14] Params: 2        , 2025-01-24, 2025-01-25
+[2024-12-03 16:33:14] Result rows: 0
+[2024-12-03 16:33:14] Is booked: No
+[2024-12-03 16:33:14] Hall ID: 2        
+[2024-12-03 16:33:14] Start Date: 2025-01-24
+[2024-12-03 16:33:14] End Date: 2025-01-25
+[2024-12-03 16:33:14] Booking Type: slot
+[2024-12-03 16:33:14] Slots to Check: 5
+[2024-12-03 16:33:14] Availability Result: available
+[2024-12-03 16:34:05] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-27
+    [end_date] => 2025-01-28
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 6
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:34:05] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:34:05] Params: 2        , 2025-01-27, 2025-01-28
+[2024-12-03 16:34:05] Result rows: 0
+[2024-12-03 16:34:05] Is booked: No
+[2024-12-03 16:34:05] Hall ID: 2        
+[2024-12-03 16:34:05] Start Date: 2025-01-27
+[2024-12-03 16:34:05] End Date: 2025-01-28
+[2024-12-03 16:34:05] Booking Type: slot
+[2024-12-03 16:34:05] Slots to Check: 6
+[2024-12-03 16:34:05] Availability Result: available
+[2024-12-03 16:35:58] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-29
+    [end_date] => 2025-01-30
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 7
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:35:58] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:35:58] Params: 2        , 2025-01-29, 2025-01-30
+[2024-12-03 16:35:58] Result rows: 0
+[2024-12-03 16:35:58] Is booked: No
+[2024-12-03 16:35:58] Hall ID: 2        
+[2024-12-03 16:35:58] Start Date: 2025-01-29
+[2024-12-03 16:35:58] End Date: 2025-01-30
+[2024-12-03 16:35:58] Booking Type: slot
+[2024-12-03 16:35:58] Slots to Check: 7
+[2024-12-03 16:35:58] Availability Result: available
+[2024-12-03 16:39:38] Received POST data: Array
+(
+    [hall_id] => 3        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-01
+    [end_date] => 2025-01-01
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:39:38] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:39:38] Params: 3        , 2025-01-01, 2025-01-01
+[2024-12-03 16:39:38] Result rows: 0
+[2024-12-03 16:39:38] Is booked: No
+[2024-12-03 16:39:38] Hall ID: 3        
+[2024-12-03 16:39:38] Start Date: 2025-01-01
+[2024-12-03 16:39:38] End Date: 2025-01-01
+[2024-12-03 16:39:38] Booking Type: session
+[2024-12-03 16:39:38] Slots to Check: 1,2,3,4
+[2024-12-03 16:39:38] Availability Result: available
+[2024-12-03 16:40:24] Received POST data: Array
+(
+    [hall_id] => 3        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-03
+    [end_date] => 2025-01-04
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:40:24] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:40:24] Params: 3        , 2025-01-03, 2025-01-04
+[2024-12-03 16:40:24] Result rows: 0
+[2024-12-03 16:40:24] Is booked: No
+[2024-12-03 16:40:24] Hall ID: 3        
+[2024-12-03 16:40:24] Start Date: 2025-01-03
+[2024-12-03 16:40:24] End Date: 2025-01-04
+[2024-12-03 16:40:24] Booking Type: session
+[2024-12-03 16:40:24] Slots to Check: 5,6,7,8
+[2024-12-03 16:40:24] Availability Result: available
+[2024-12-03 16:41:28] Received POST data: Array
+(
+    [hall_id] => 3        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-06
+    [end_date] => 2025-01-08
+    [booking_type] => session
+    [session_choice] => both
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:41:28] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:41:28] Params: 3        , 2025-01-06, 2025-01-08
+[2024-12-03 16:41:28] Result rows: 0
+[2024-12-03 16:41:28] Is booked: No
+[2024-12-03 16:41:28] Hall ID: 3        
+[2024-12-03 16:41:28] Start Date: 2025-01-06
+[2024-12-03 16:41:28] End Date: 2025-01-08
+[2024-12-03 16:41:28] Booking Type: session
+[2024-12-03 16:41:28] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-12-03 16:41:28] Availability Result: available
+[2024-12-03 16:42:11] Received POST data: Array
+(
+    [hall_id] => 3        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-09
+    [end_date] => 2025-01-11
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:42:11] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:42:11] Params: 3        , 2025-01-09, 2025-01-11
+[2024-12-03 16:42:11] Result rows: 0
+[2024-12-03 16:42:11] Is booked: No
+[2024-12-03 16:42:11] Hall ID: 3        
+[2024-12-03 16:42:11] Start Date: 2025-01-09
+[2024-12-03 16:42:11] End Date: 2025-01-11
+[2024-12-03 16:42:11] Booking Type: session
+[2024-12-03 16:42:11] Slots to Check: 1,2,3,4
+[2024-12-03 16:42:11] Availability Result: available
+[2024-12-03 16:43:43] Received POST data: Array
+(
+    [hall_id] => 3        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-13
+    [end_date] => 2025-01-15
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:43:43] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:43:43] Params: 3        , 2025-01-13, 2025-01-15
+[2024-12-03 16:43:43] Result rows: 0
+[2024-12-03 16:43:43] Is booked: No
+[2024-12-03 16:43:43] Hall ID: 3        
+[2024-12-03 16:43:43] Start Date: 2025-01-13
+[2024-12-03 16:43:43] End Date: 2025-01-15
+[2024-12-03 16:43:43] Booking Type: session
+[2024-12-03 16:43:43] Slots to Check: 5,6,7,8
+[2024-12-03 16:43:43] Availability Result: available
+[2024-12-03 16:44:52] Received POST data: Array
+(
+    [hall_id] => 3        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-16
+    [end_date] => 2025-01-18
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 1
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:44:52] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:44:52] Params: 3        , 2025-01-16, 2025-01-18
+[2024-12-03 16:44:52] Result rows: 0
+[2024-12-03 16:44:52] Is booked: No
+[2024-12-03 16:44:52] Hall ID: 3        
+[2024-12-03 16:44:52] Start Date: 2025-01-16
+[2024-12-03 16:44:52] End Date: 2025-01-18
+[2024-12-03 16:44:52] Booking Type: slot
+[2024-12-03 16:44:52] Slots to Check: 1
+[2024-12-03 16:44:52] Availability Result: available
+[2024-12-03 16:45:20] Received POST data: Array
+(
+    [hall_id] => 3        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-20
+    [end_date] => 2025-01-22
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 2
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:45:20] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:45:20] Params: 3        , 2025-01-20, 2025-01-22
+[2024-12-03 16:45:20] Result rows: 0
+[2024-12-03 16:45:20] Is booked: No
+[2024-12-03 16:45:20] Hall ID: 3        
+[2024-12-03 16:45:20] Start Date: 2025-01-20
+[2024-12-03 16:45:20] End Date: 2025-01-22
+[2024-12-03 16:45:20] Booking Type: slot
+[2024-12-03 16:45:20] Slots to Check: 2
+[2024-12-03 16:45:20] Availability Result: available
+[2024-12-03 16:46:12] Received POST data: Array
+(
+    [hall_id] => 3        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-23
+    [end_date] => 2025-01-25
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 3
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:46:12] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:46:12] Params: 3        , 2025-01-23, 2025-01-25
+[2024-12-03 16:46:12] Result rows: 0
+[2024-12-03 16:46:12] Is booked: No
+[2024-12-03 16:46:12] Hall ID: 3        
+[2024-12-03 16:46:12] Start Date: 2025-01-23
+[2024-12-03 16:46:12] End Date: 2025-01-25
+[2024-12-03 16:46:12] Booking Type: slot
+[2024-12-03 16:46:12] Slots to Check: 3
+[2024-12-03 16:46:12] Availability Result: available
+[2024-12-03 16:47:30] Received POST data: Array
+(
+    [hall_id] => 3        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-27
+    [end_date] => 2025-01-29
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 4
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:47:30] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:47:30] Params: 3        , 2025-01-27, 2025-01-29
+[2024-12-03 16:47:30] Result rows: 0
+[2024-12-03 16:47:30] Is booked: No
+[2024-12-03 16:47:30] Hall ID: 3        
+[2024-12-03 16:47:30] Start Date: 2025-01-27
+[2024-12-03 16:47:30] End Date: 2025-01-29
+[2024-12-03 16:47:30] Booking Type: slot
+[2024-12-03 16:47:30] Slots to Check: 4
+[2024-12-03 16:47:30] Availability Result: available
+[2024-12-03 16:49:17] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-01
+    [end_date] => 2025-01-03
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 5
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:49:17] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:49:17] Params: 4        , 2025-01-01, 2025-01-03
+[2024-12-03 16:49:17] Result rows: 0
+[2024-12-03 16:49:17] Is booked: No
+[2024-12-03 16:49:17] Hall ID: 4        
+[2024-12-03 16:49:17] Start Date: 2025-01-01
+[2024-12-03 16:49:17] End Date: 2025-01-03
+[2024-12-03 16:49:17] Booking Type: slot
+[2024-12-03 16:49:17] Slots to Check: 5
+[2024-12-03 16:49:17] Availability Result: available
+[2024-12-03 16:50:34] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-06
+    [end_date] => 2025-01-08
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 6
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:50:34] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:50:34] Params: 4        , 2025-01-06, 2025-01-08
+[2024-12-03 16:50:34] Result rows: 0
+[2024-12-03 16:50:34] Is booked: No
+[2024-12-03 16:50:34] Hall ID: 4        
+[2024-12-03 16:50:34] Start Date: 2025-01-06
+[2024-12-03 16:50:34] End Date: 2025-01-08
+[2024-12-03 16:50:34] Booking Type: slot
+[2024-12-03 16:50:34] Slots to Check: 6
+[2024-12-03 16:50:34] Availability Result: available
+[2024-12-03 16:51:41] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-09
+    [end_date] => 2025-01-11
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 7
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:51:41] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:51:41] Params: 4        , 2025-01-09, 2025-01-11
+[2024-12-03 16:51:41] Result rows: 0
+[2024-12-03 16:51:41] Is booked: No
+[2024-12-03 16:51:41] Hall ID: 4        
+[2024-12-03 16:51:41] Start Date: 2025-01-09
+[2024-12-03 16:51:41] End Date: 2025-01-11
+[2024-12-03 16:51:41] Booking Type: slot
+[2024-12-03 16:51:41] Slots to Check: 7
+[2024-12-03 16:51:41] Availability Result: available
+[2024-12-03 16:52:29] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-13
+    [end_date] => 2025-01-15
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 8
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:52:29] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:52:29] Params: 4        , 2025-01-13, 2025-01-15
+[2024-12-03 16:52:29] Result rows: 0
+[2024-12-03 16:52:29] Is booked: No
+[2024-12-03 16:52:29] Hall ID: 4        
+[2024-12-03 16:52:29] Start Date: 2025-01-13
+[2024-12-03 16:52:29] End Date: 2025-01-15
+[2024-12-03 16:52:29] Booking Type: slot
+[2024-12-03 16:52:29] Slots to Check: 8
+[2024-12-03 16:52:29] Availability Result: available
+[2024-12-03 16:54:25] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-20
+    [end_date] => 2025-01-25
+    [booking_type] => session
+    [session_choice] => both
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:54:25] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:54:25] Params: 4        , 2025-01-20, 2025-01-25
+[2024-12-03 16:54:25] Result rows: 0
+[2024-12-03 16:54:25] Is booked: No
+[2024-12-03 16:54:25] Hall ID: 4        
+[2024-12-03 16:54:25] Start Date: 2025-01-20
+[2024-12-03 16:54:25] End Date: 2025-01-25
+[2024-12-03 16:54:25] Booking Type: session
+[2024-12-03 16:54:25] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-12-03 16:54:25] Availability Result: available
+[2024-12-03 16:55:36] Received POST data: Array
+(
+    [hall_id] => 5        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Computer Science        
+    [room] => SH-1        
+    [start_date] => 2025-01-06
+    [end_date] => 2025-01-11
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:55:36] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:55:36] Params: 5        , 2025-01-06, 2025-01-11
+[2024-12-03 16:55:36] Result rows: 0
+[2024-12-03 16:55:36] Is booked: No
+[2024-12-03 16:55:36] Hall ID: 5        
+[2024-12-03 16:55:36] Start Date: 2025-01-06
+[2024-12-03 16:55:36] End Date: 2025-01-11
+[2024-12-03 16:55:36] Booking Type: session
+[2024-12-03 16:55:36] Slots to Check: 1,2,3,4
+[2024-12-03 16:55:36] Availability Result: available
+[2024-12-03 16:56:08] Received POST data: Array
+(
+    [hall_id] => 5        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Computer Science        
+    [room] => SH-1        
+    [start_date] => 2025-01-13
+    [end_date] => 2025-01-18
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:56:08] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:56:08] Params: 5        , 2025-01-13, 2025-01-18
+[2024-12-03 16:56:08] Result rows: 0
+[2024-12-03 16:56:08] Is booked: No
+[2024-12-03 16:56:08] Hall ID: 5        
+[2024-12-03 16:56:08] Start Date: 2025-01-13
+[2024-12-03 16:56:08] End Date: 2025-01-18
+[2024-12-03 16:56:08] Booking Type: session
+[2024-12-03 16:56:08] Slots to Check: 5,6,7,8
+[2024-12-03 16:56:08] Availability Result: available
+[2024-12-03 16:56:35] Received POST data: Array
+(
+    [hall_id] => 5        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Computer Science        
+    [room] => SH-1        
+    [start_date] => 2025-01-20
+    [end_date] => 2025-01-25
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 1
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:56:35] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:56:35] Params: 5        , 2025-01-20, 2025-01-25
+[2024-12-03 16:56:35] Result rows: 0
+[2024-12-03 16:56:35] Is booked: No
+[2024-12-03 16:56:35] Hall ID: 5        
+[2024-12-03 16:56:35] Start Date: 2025-01-20
+[2024-12-03 16:56:35] End Date: 2025-01-25
+[2024-12-03 16:56:35] Booking Type: slot
+[2024-12-03 16:56:35] Slots to Check: 1
+[2024-12-03 16:56:35] Availability Result: available
+[2024-12-03 16:57:19] Received POST data: Array
+(
+    [hall_id] => 6        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Computer Science        
+    [room] => SH-2        
+    [start_date] => 2025-01-01
+    [end_date] => 2025-01-04
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 2
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:57:19] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:57:19] Params: 6        , 2025-01-01, 2025-01-04
+[2024-12-03 16:57:19] Result rows: 0
+[2024-12-03 16:57:19] Is booked: No
+[2024-12-03 16:57:19] Hall ID: 6        
+[2024-12-03 16:57:19] Start Date: 2025-01-01
+[2024-12-03 16:57:19] End Date: 2025-01-04
+[2024-12-03 16:57:19] Booking Type: slot
+[2024-12-03 16:57:19] Slots to Check: 2
+[2024-12-03 16:57:19] Availability Result: available
+[2024-12-03 16:57:55] Received POST data: Array
+(
+    [hall_id] => 5        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Computer Science        
+    [room] => SH-1        
+    [start_date] => 2025-01-06
+    [end_date] => 2025-01-11
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 3
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:57:55] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:57:55] Params: 5        , 2025-01-06, 2025-01-11
+[2024-12-03 16:57:55] Result rows: 0
+[2024-12-03 16:57:55] Is booked: No
+[2024-12-03 16:57:55] Hall ID: 5        
+[2024-12-03 16:57:55] Start Date: 2025-01-06
+[2024-12-03 16:57:55] End Date: 2025-01-11
+[2024-12-03 16:57:55] Booking Type: slot
+[2024-12-03 16:57:55] Slots to Check: 3
+[2024-12-03 16:57:55] Availability Result: available
+[2024-12-03 16:58:35] Received POST data: Array
+(
+    [hall_id] => 6        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Computer Science        
+    [room] => SH-2        
+    [start_date] => 2025-01-13
+    [end_date] => 2025-01-18
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 4
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:58:35] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:58:35] Params: 6        , 2025-01-13, 2025-01-18
+[2024-12-03 16:58:35] Result rows: 0
+[2024-12-03 16:58:35] Is booked: No
+[2024-12-03 16:58:35] Hall ID: 6        
+[2024-12-03 16:58:35] Start Date: 2025-01-13
+[2024-12-03 16:58:35] End Date: 2025-01-18
+[2024-12-03 16:58:35] Booking Type: slot
+[2024-12-03 16:58:35] Slots to Check: 4
+[2024-12-03 16:58:35] Availability Result: available
+[2024-12-03 16:59:12] Received POST data: Array
+(
+    [hall_id] => 6        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Computer Science        
+    [room] => SH-2        
+    [start_date] => 2025-01-20
+    [end_date] => 2025-01-25
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 5
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 16:59:12] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 16:59:12] Params: 6        , 2025-01-20, 2025-01-25
+[2024-12-03 16:59:12] Result rows: 0
+[2024-12-03 16:59:12] Is booked: No
+[2024-12-03 16:59:12] Hall ID: 6        
+[2024-12-03 16:59:12] Start Date: 2025-01-20
+[2024-12-03 16:59:12] End Date: 2025-01-25
+[2024-12-03 16:59:12] Booking Type: slot
+[2024-12-03 16:59:12] Slots to Check: 5
+[2024-12-03 16:59:12] Availability Result: available
+[2024-12-03 17:02:08] Received POST data: Array
+(
+    [hall_id] => 6        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Computer Science        
+    [room] => SH-2        
+    [start_date] => 0205-01-27
+    [end_date] => 0205-01-31
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 6
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 17:02:08] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 17:02:08] Params: 6        , 0205-01-27, 0205-01-31
+[2024-12-03 17:02:08] Result rows: 0
+[2024-12-03 17:02:08] Is booked: No
+[2024-12-03 17:02:08] Hall ID: 6        
+[2024-12-03 17:02:08] Start Date: 0205-01-27
+[2024-12-03 17:02:08] End Date: 0205-01-31
+[2024-12-03 17:02:08] Booking Type: slot
+[2024-12-03 17:02:08] Slots to Check: 6
+[2024-12-03 17:02:08] Availability Result: available
+[2024-12-03 17:13:39] Received POST data: Array
+(
+    [hall_id] => 7        
+    [school_name] => Ramanujan School of Mathematical Sciences        
+    [department_name] => Department of Statistics        
+    [room] => SH-1        
+    [start_date] => 2025-01-01
+    [end_date] => 2025-01-04
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 7
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 17:13:39] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 17:13:39] Params: 7        , 2025-01-01, 2025-01-04
+[2024-12-03 17:13:39] Result rows: 0
+[2024-12-03 17:13:39] Is booked: No
+[2024-12-03 17:13:39] Hall ID: 7        
+[2024-12-03 17:13:39] Start Date: 2025-01-01
+[2024-12-03 17:13:39] End Date: 2025-01-04
+[2024-12-03 17:13:39] Booking Type: slot
+[2024-12-03 17:13:39] Slots to Check: 7
+[2024-12-03 17:13:39] Availability Result: available
+[2024-12-03 17:15:00] Received POST data: Array
+(
+    [hall_id] => 7        
+    [school_name] => Ramanujan School of Mathematical Sciences        
+    [department_name] => Department of Statistics        
+    [room] => SH-1        
+    [start_date] => 2025-01-06
+    [end_date] => 2025-01-11
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 8
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 17:15:00] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 17:15:00] Params: 7        , 2025-01-06, 2025-01-11
+[2024-12-03 17:15:00] Result rows: 0
+[2024-12-03 17:15:00] Is booked: No
+[2024-12-03 17:15:00] Hall ID: 7        
+[2024-12-03 17:15:00] Start Date: 2025-01-06
+[2024-12-03 17:15:00] End Date: 2025-01-11
+[2024-12-03 17:15:00] Booking Type: slot
+[2024-12-03 17:15:00] Slots to Check: 8
+[2024-12-03 17:15:00] Availability Result: available
+[2024-12-03 17:15:57] Received POST data: Array
+(
+    [hall_id] => 7        
+    [school_name] => Ramanujan School of Mathematical Sciences        
+    [department_name] => Department of Statistics        
+    [room] => SH-1        
+    [start_date] => 2025-01-13
+    [end_date] => 2025-01-18
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 3
+            [3] => 4
+            [4] => 5
+            [5] => 6
+            [6] => 7
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 17:15:57] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 17:15:57] Params: 7        , 2025-01-13, 2025-01-18
+[2024-12-03 17:15:57] Result rows: 0
+[2024-12-03 17:15:57] Is booked: No
+[2024-12-03 17:15:57] Hall ID: 7        
+[2024-12-03 17:15:57] Start Date: 2025-01-13
+[2024-12-03 17:15:57] End Date: 2025-01-18
+[2024-12-03 17:15:57] Booking Type: slot
+[2024-12-03 17:15:57] Slots to Check: 1,2,3,4,5,6,7
+[2024-12-03 17:15:57] Availability Result: available
+[2024-12-03 17:17:40] Received POST data: Array
+(
+    [hall_id] => 7        
+    [school_name] => Ramanujan School of Mathematical Sciences        
+    [department_name] => Department of Statistics        
+    [room] => SH-1        
+    [start_date] => 2025-01-20
+    [end_date] => 2025-01-22
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 3
+            [1] => 4
+            [2] => 5
+            [3] => 6
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 17:17:40] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 17:17:40] Params: 7        , 2025-01-20, 2025-01-22
+[2024-12-03 17:17:40] Result rows: 0
+[2024-12-03 17:17:40] Is booked: No
+[2024-12-03 17:17:40] Hall ID: 7        
+[2024-12-03 17:17:40] Start Date: 2025-01-20
+[2024-12-03 17:17:40] End Date: 2025-01-22
+[2024-12-03 17:17:40] Booking Type: slot
+[2024-12-03 17:17:40] Slots to Check: 3,4,5,6
+[2024-12-03 17:17:40] Availability Result: available
+[2024-12-03 18:00:47] Received POST data: Array
+(
+    [hall_id] => 7        
+    [school_name] => Ramanujan School of Mathematical Sciences        
+    [department_name] => Department of Statistics        
+    [room] => SH-1        
+    [start_date] => 2025-01-23
+    [end_date] => 2025-01-25
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => 
+)
+
+[2024-12-03 18:00:47] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 18:00:47] Params: 7        , 2025-01-23, 2025-01-25
+[2024-12-03 18:00:47] Result rows: 0
+[2024-12-03 18:00:47] Is booked: No
+[2024-12-03 18:00:47] Hall ID: 7        
+[2024-12-03 18:00:47] Start Date: 2025-01-23
+[2024-12-03 18:00:47] End Date: 2025-01-25
+[2024-12-03 18:00:47] Booking Type: session
+[2024-12-03 18:00:47] Slots to Check: 1,2,3,4
+[2024-12-03 18:00:47] Availability Result: available
+[2024-12-03 18:01:20] Received POST data: Array
+(
+    [hall_id] => 7        
+    [school_name] => Ramanujan School of Mathematical Sciences        
+    [department_name] => Department of Statistics        
+    [room] => SH-1        
+    [start_date] => 2025-01-27
+    [end_date] => 2025-01-28
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 6
+            [1] => 7
+            [2] => 8
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 18:01:20] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 18:01:20] Params: 7        , 2025-01-27, 2025-01-28
+[2024-12-03 18:01:20] Result rows: 0
+[2024-12-03 18:01:20] Is booked: No
+[2024-12-03 18:01:20] Hall ID: 7        
+[2024-12-03 18:01:20] Start Date: 2025-01-27
+[2024-12-03 18:01:20] End Date: 2025-01-28
+[2024-12-03 18:01:20] Booking Type: slot
+[2024-12-03 18:01:20] Slots to Check: 6,7,8
+[2024-12-03 18:01:20] Availability Result: available
+[2024-12-03 18:02:29] Received POST data: Array
+(
+    [hall_id] => 7        
+    [school_name] => Ramanujan School of Mathematical Sciences        
+    [department_name] => Department of Statistics        
+    [room] => SH-1        
+    [start_date] => 2025-01-29
+    [end_date] => 2025-01-30
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 2
+            [1] => 3
+            [2] => 4
+            [3] => 5
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 18:02:29] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 18:02:29] Params: 7        , 2025-01-29, 2025-01-30
+[2024-12-03 18:02:29] Result rows: 0
+[2024-12-03 18:02:29] Is booked: No
+[2024-12-03 18:02:29] Hall ID: 7        
+[2024-12-03 18:02:29] Start Date: 2025-01-29
+[2024-12-03 18:02:29] End Date: 2025-01-30
+[2024-12-03 18:02:29] Booking Type: slot
+[2024-12-03 18:02:29] Slots to Check: 2,3,4,5
+[2024-12-03 18:02:29] Availability Result: available
+[2024-12-03 18:03:33] Received POST data: Array
+(
+    [hall_id] => 8        
+    [school_name] => Ramanujan School of Mathematical Sciences        
+    [department_name] => Department of Statistics        
+    [room] => SH-2        
+    [start_date] => 2025-01-01
+    [end_date] => 2025-01-31
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => 
+)
+
+[2024-12-03 18:03:33] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 18:03:33] Params: 8        , 2025-01-01, 2025-01-31
+[2024-12-03 18:03:33] Result rows: 0
+[2024-12-03 18:03:33] Is booked: No
+[2024-12-03 18:03:33] Hall ID: 8        
+[2024-12-03 18:03:33] Start Date: 2025-01-01
+[2024-12-03 18:03:33] End Date: 2025-01-31
+[2024-12-03 18:03:33] Booking Type: session
+[2024-12-03 18:03:33] Slots to Check: 1,2,3,4
+[2024-12-03 18:03:33] Availability Result: available
+[2024-12-03 18:05:24] Received POST data: Array
+(
+    [hall_id] => 11        
+    [school_name] => Subramania Bharathi School of Tamil Language & Literature        
+    [department_name] => Department of Tamil        
+    [room] => SH-1        
+    [start_date] => 2025-01-01
+    [end_date] => 2025-01-31
+    [booking_type] => session
+    [session_choice] => both
+    [slot_or_session] => 
+)
+
+[2024-12-03 18:05:24] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 18:05:24] Params: 11        , 2025-01-01, 2025-01-31
+[2024-12-03 18:05:24] Result rows: 0
+[2024-12-03 18:05:24] Is booked: No
+[2024-12-03 18:05:24] Hall ID: 11        
+[2024-12-03 18:05:24] Start Date: 2025-01-01
+[2024-12-03 18:05:24] End Date: 2025-01-31
+[2024-12-03 18:05:24] Booking Type: session
+[2024-12-03 18:05:24] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-12-03 18:05:24] Availability Result: available
+[2024-12-03 18:07:01] Received POST data: Array
+(
+    [hall_id] => 12        
+    [school_name] => Subramania Bharathi School of Tamil Language & Literature        
+    [department_name] => Subramania Bharathi School of Tamil Language & Literature        
+    [room] => SH-2        
+    [start_date] => 2025-01-01
+    [end_date] => 2025-01-31
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 1
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-03 18:07:01] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-03 18:07:01] Params: 12        , 2025-01-01, 2025-01-31
+[2024-12-03 18:07:01] Result rows: 0
+[2024-12-03 18:07:01] Is booked: No
+[2024-12-03 18:07:01] Hall ID: 12        
+[2024-12-03 18:07:01] Start Date: 2025-01-01
+[2024-12-03 18:07:01] End Date: 2025-01-31
+[2024-12-03 18:07:01] Booking Type: slot
+[2024-12-03 18:07:01] Slots to Check: 1
+[2024-12-03 18:07:01] Availability Result: available
+[2024-12-04 11:11:01] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-22
+    [end_date] => 2025-01-22
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => 
+)
+
+[2024-12-04 11:11:01] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:11:01] Requested slots: 1,2,3,4
+[2024-12-04 11:11:01] Overlap: 1,2,3,4
+[2024-12-04 11:11:01] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:11:01] Params: 4        , 2025-01-22, 2025-01-22
+[2024-12-04 11:11:01] Result rows: 1
+[2024-12-04 11:11:01] Is booked: Yes
+[2024-12-04 11:11:01] Hall ID: 4        
+[2024-12-04 11:11:01] Start Date: 2025-01-22
+[2024-12-04 11:11:01] End Date: 2025-01-22
+[2024-12-04 11:11:01] Booking Type: session
+[2024-12-04 11:11:01] Slots to Check: 1,2,3,4
+[2024-12-04 11:11:01] Availability Result: booked
+[2024-12-04 11:11:04] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-22
+    [end_date] => 2025-01-22
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => fn
+)
+
+[2024-12-04 11:11:04] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:11:04] Requested slots: 5,6,7,8
+[2024-12-04 11:11:04] Overlap: 5,6,7,8
+[2024-12-04 11:11:04] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:11:04] Params: 4        , 2025-01-22, 2025-01-22
+[2024-12-04 11:11:04] Result rows: 1
+[2024-12-04 11:11:04] Is booked: Yes
+[2024-12-04 11:11:04] Hall ID: 4        
+[2024-12-04 11:11:04] Start Date: 2025-01-22
+[2024-12-04 11:11:04] End Date: 2025-01-22
+[2024-12-04 11:11:04] Booking Type: session
+[2024-12-04 11:11:04] Slots to Check: 5,6,7,8
+[2024-12-04 11:11:04] Availability Result: booked
+[2024-12-04 11:11:06] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-22
+    [end_date] => 2025-01-22
+    [booking_type] => session
+    [session_choice] => both
+    [slot_or_session] => an
+)
+
+[2024-12-04 11:11:06] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:11:06] Requested slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:11:06] Overlap: 1,2,3,4,5,6,7,8
+[2024-12-04 11:11:06] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:11:06] Params: 4        , 2025-01-22, 2025-01-22
+[2024-12-04 11:11:06] Result rows: 1
+[2024-12-04 11:11:06] Is booked: Yes
+[2024-12-04 11:11:06] Hall ID: 4        
+[2024-12-04 11:11:06] Start Date: 2025-01-22
+[2024-12-04 11:11:06] End Date: 2025-01-22
+[2024-12-04 11:11:06] Booking Type: session
+[2024-12-04 11:11:06] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-12-04 11:11:06] Availability Result: booked
+[2024-12-04 11:11:11] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-29
+    [end_date] => 2025-01-29
+    [booking_type] => session
+    [session_choice] => both
+    [slot_or_session] => both
+)
+
+[2024-12-04 11:11:11] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:11:11] Params: 4        , 2025-01-29, 2025-01-29
+[2024-12-04 11:11:11] Result rows: 0
+[2024-12-04 11:11:11] Is booked: No
+[2024-12-04 11:11:11] Hall ID: 4        
+[2024-12-04 11:11:11] Start Date: 2025-01-29
+[2024-12-04 11:11:11] End Date: 2025-01-29
+[2024-12-04 11:11:11] Booking Type: session
+[2024-12-04 11:11:11] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-12-04 11:11:11] Availability Result: available
+[2024-12-04 11:11:14] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-29
+    [end_date] => 2025-01-29
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => both
+)
+
+[2024-12-04 11:11:14] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:11:14] Params: 4        , 2025-01-29, 2025-01-29
+[2024-12-04 11:11:14] Result rows: 0
+[2024-12-04 11:11:14] Is booked: No
+[2024-12-04 11:11:14] Hall ID: 4        
+[2024-12-04 11:11:14] Start Date: 2025-01-29
+[2024-12-04 11:11:14] End Date: 2025-01-29
+[2024-12-04 11:11:14] Booking Type: session
+[2024-12-04 11:11:14] Slots to Check: 5,6,7,8
+[2024-12-04 11:11:14] Availability Result: available
+[2024-12-04 11:11:15] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-29
+    [end_date] => 2025-01-29
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => an
+)
+
+[2024-12-04 11:11:15] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:11:15] Params: 4        , 2025-01-29, 2025-01-29
+[2024-12-04 11:11:15] Result rows: 0
+[2024-12-04 11:11:15] Is booked: No
+[2024-12-04 11:11:15] Hall ID: 4        
+[2024-12-04 11:11:15] Start Date: 2025-01-29
+[2024-12-04 11:11:15] End Date: 2025-01-29
+[2024-12-04 11:11:15] Booking Type: session
+[2024-12-04 11:11:15] Slots to Check: 5,6,7,8
+[2024-12-04 11:11:15] Availability Result: available
+[2024-12-04 11:11:22] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-22
+    [end_date] => 2025-01-29
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => an
+)
+
+[2024-12-04 11:11:22] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:11:22] Requested slots: 5,6,7,8
+[2024-12-04 11:11:22] Overlap: 5,6,7,8
+[2024-12-04 11:11:22] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:11:22] Params: 4        , 2025-01-22, 2025-01-29
+[2024-12-04 11:11:22] Result rows: 1
+[2024-12-04 11:11:22] Is booked: Yes
+[2024-12-04 11:11:22] Hall ID: 4        
+[2024-12-04 11:11:22] Start Date: 2025-01-22
+[2024-12-04 11:11:22] End Date: 2025-01-29
+[2024-12-04 11:11:22] Booking Type: session
+[2024-12-04 11:11:22] Slots to Check: 5,6,7,8
+[2024-12-04 11:11:22] Availability Result: booked
+[2024-12-04 11:11:24] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-22
+    [end_date] => 2025-01-29
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => an
+)
+
+[2024-12-04 11:11:24] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:11:24] Requested slots: 1,2,3,4
+[2024-12-04 11:11:24] Overlap: 1,2,3,4
+[2024-12-04 11:11:24] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:11:24] Params: 4        , 2025-01-22, 2025-01-29
+[2024-12-04 11:11:24] Result rows: 1
+[2024-12-04 11:11:24] Is booked: Yes
+[2024-12-04 11:11:24] Hall ID: 4        
+[2024-12-04 11:11:24] Start Date: 2025-01-22
+[2024-12-04 11:11:24] End Date: 2025-01-29
+[2024-12-04 11:11:24] Booking Type: session
+[2024-12-04 11:11:24] Slots to Check: 1,2,3,4
+[2024-12-04 11:11:24] Availability Result: booked
+[2024-12-04 11:11:32] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-29
+    [end_date] => 2025-01-29
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => fn
+)
+
+[2024-12-04 11:11:32] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:11:32] Params: 4        , 2025-01-29, 2025-01-29
+[2024-12-04 11:11:32] Result rows: 0
+[2024-12-04 11:11:32] Is booked: No
+[2024-12-04 11:11:32] Hall ID: 4        
+[2024-12-04 11:11:32] Start Date: 2025-01-29
+[2024-12-04 11:11:32] End Date: 2025-01-29
+[2024-12-04 11:11:32] Booking Type: session
+[2024-12-04 11:11:32] Slots to Check: 1,2,3,4
+[2024-12-04 11:11:32] Availability Result: available
+[2024-12-04 11:26:33] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-02-07
+    [end_date] => 2025-02-07
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 2
+        )
+
+    [slot_or_session] => 2
+)
+
+[2024-12-04 11:26:33] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:26:33] Params: 4        , 2025-02-07, 2025-02-07
+[2024-12-04 11:26:33] Result rows: 0
+[2024-12-04 11:26:33] Is booked: No
+[2024-12-04 11:26:33] Hall ID: 4        
+[2024-12-04 11:26:33] Start Date: 2025-02-07
+[2024-12-04 11:26:33] End Date: 2025-02-07
+[2024-12-04 11:26:33] Booking Type: slot
+[2024-12-04 11:26:33] Slots to Check: 2
+[2024-12-04 11:26:33] Availability Result: available
+[2024-12-04 11:26:40] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-02-07
+    [end_date] => 2025-02-08
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 2
+            [1] => 3
+        )
+
+    [slot_or_session] => 2,3
+)
+
+[2024-12-04 11:26:40] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:26:40] Params: 4        , 2025-02-07, 2025-02-08
+[2024-12-04 11:26:40] Result rows: 0
+[2024-12-04 11:26:40] Is booked: No
+[2024-12-04 11:26:40] Hall ID: 4        
+[2024-12-04 11:26:40] Start Date: 2025-02-07
+[2024-12-04 11:26:40] End Date: 2025-02-08
+[2024-12-04 11:26:40] Booking Type: slot
+[2024-12-04 11:26:40] Slots to Check: 2,3
+[2024-12-04 11:26:40] Availability Result: available
+[2024-12-04 11:28:01] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-17
+    [end_date] => 2025-01-17
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => an
+)
+
+[2024-12-04 11:28:01] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:28:01] Params: 4        , 2025-01-17, 2025-01-17
+[2024-12-04 11:28:01] Result rows: 0
+[2024-12-04 11:28:01] Is booked: No
+[2024-12-04 11:28:01] Hall ID: 4        
+[2024-12-04 11:28:01] Start Date: 2025-01-17
+[2024-12-04 11:28:01] End Date: 2025-01-17
+[2024-12-04 11:28:01] Booking Type: session
+[2024-12-04 11:28:01] Slots to Check: 5,6,7,8
+[2024-12-04 11:28:01] Availability Result: available
+[2024-12-04 11:28:13] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-18
+    [end_date] => 2025-01-18
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => an
+)
+
+[2024-12-04 11:28:13] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:28:13] Params: 4        , 2025-01-18, 2025-01-18
+[2024-12-04 11:28:13] Result rows: 0
+[2024-12-04 11:28:13] Is booked: No
+[2024-12-04 11:28:13] Hall ID: 4        
+[2024-12-04 11:28:13] Start Date: 2025-01-18
+[2024-12-04 11:28:13] End Date: 2025-01-18
+[2024-12-04 11:28:13] Booking Type: session
+[2024-12-04 11:28:13] Slots to Check: 5,6,7,8
+[2024-12-04 11:28:13] Availability Result: available
+[2024-12-04 11:28:17] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-18
+    [end_date] => 2025-01-18
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => fn
+)
+
+[2024-12-04 11:28:17] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:28:17] Params: 4        , 2025-01-18, 2025-01-18
+[2024-12-04 11:28:17] Result rows: 0
+[2024-12-04 11:28:17] Is booked: No
+[2024-12-04 11:28:17] Hall ID: 4        
+[2024-12-04 11:28:17] Start Date: 2025-01-18
+[2024-12-04 11:28:17] End Date: 2025-01-18
+[2024-12-04 11:28:17] Booking Type: session
+[2024-12-04 11:28:17] Slots to Check: 1,2,3,4
+[2024-12-04 11:28:17] Availability Result: available
+[2024-12-04 11:28:25] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-16
+    [end_date] => 2025-01-18
+    [booking_type] => session
+    [session_choice] => both
+    [slot_or_session] => both
+)
+
+[2024-12-04 11:28:25] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:28:25] Params: 4        , 2025-01-16, 2025-01-18
+[2024-12-04 11:28:25] Result rows: 0
+[2024-12-04 11:28:25] Is booked: No
+[2024-12-04 11:28:25] Hall ID: 4        
+[2024-12-04 11:28:25] Start Date: 2025-01-16
+[2024-12-04 11:28:25] End Date: 2025-01-18
+[2024-12-04 11:28:25] Booking Type: session
+[2024-12-04 11:28:25] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-12-04 11:28:25] Availability Result: available
+[2024-12-04 11:31:32] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-19
+    [end_date] => 2025-01-19
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => fn
+)
+
+[2024-12-04 11:31:32] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:31:32] Params: 4        , 2025-01-19, 2025-01-19
+[2024-12-04 11:31:32] Result rows: 0
+[2024-12-04 11:31:32] Is booked: No
+[2024-12-04 11:31:32] Hall ID: 4        
+[2024-12-04 11:31:32] Start Date: 2025-01-19
+[2024-12-04 11:31:32] End Date: 2025-01-19
+[2024-12-04 11:31:32] Booking Type: session
+[2024-12-04 11:31:32] Slots to Check: 1,2,3,4
+[2024-12-04 11:31:32] Availability Result: available
+[2024-12-04 11:31:51] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-20
+    [end_date] => 2025-01-20
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 3
+        )
+
+    [slot_or_session] => 3
+)
+
+[2024-12-04 11:31:51] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:31:51] Requested slots: 3
+[2024-12-04 11:31:51] Overlap: 3
+[2024-12-04 11:31:51] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:31:51] Params: 4        , 2025-01-20, 2025-01-20
+[2024-12-04 11:31:51] Result rows: 1
+[2024-12-04 11:31:51] Is booked: Yes
+[2024-12-04 11:31:51] Hall ID: 4        
+[2024-12-04 11:31:51] Start Date: 2025-01-20
+[2024-12-04 11:31:51] End Date: 2025-01-20
+[2024-12-04 11:31:51] Booking Type: slot
+[2024-12-04 11:31:51] Slots to Check: 3
+[2024-12-04 11:31:51] Availability Result: booked
+[2024-12-04 11:31:55] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-20
+    [end_date] => 2025-01-20
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 2
+        )
+
+    [slot_or_session] => 2
+)
+
+[2024-12-04 11:31:55] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:31:55] Requested slots: 2
+[2024-12-04 11:31:55] Overlap: 2
+[2024-12-04 11:31:55] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:31:55] Params: 4        , 2025-01-20, 2025-01-20
+[2024-12-04 11:31:55] Result rows: 1
+[2024-12-04 11:31:55] Is booked: Yes
+[2024-12-04 11:31:55] Hall ID: 4        
+[2024-12-04 11:31:55] Start Date: 2025-01-20
+[2024-12-04 11:31:55] End Date: 2025-01-20
+[2024-12-04 11:31:55] Booking Type: slot
+[2024-12-04 11:31:55] Slots to Check: 2
+[2024-12-04 11:31:55] Availability Result: booked
+[2024-12-04 11:32:21] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-28
+    [end_date] => 2025-01-28
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 4
+        )
+
+    [slot_or_session] => 4
+)
+
+[2024-12-04 11:32:21] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:32:21] Params: 4        , 2025-01-28, 2025-01-28
+[2024-12-04 11:32:21] Result rows: 0
+[2024-12-04 11:32:21] Is booked: No
+[2024-12-04 11:32:21] Hall ID: 4        
+[2024-12-04 11:32:21] Start Date: 2025-01-28
+[2024-12-04 11:32:21] End Date: 2025-01-28
+[2024-12-04 11:32:21] Booking Type: slot
+[2024-12-04 11:32:21] Slots to Check: 4
+[2024-12-04 11:32:21] Availability Result: available
+[2024-12-04 11:32:36] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-28
+    [end_date] => 2025-01-28
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 4
+        )
+
+    [slot_or_session] => 4
+)
+
+[2024-12-04 11:32:36] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:32:36] Params: 4        , 2025-01-28, 2025-01-28
+[2024-12-04 11:32:36] Result rows: 0
+[2024-12-04 11:32:36] Is booked: No
+[2024-12-04 11:32:36] Hall ID: 4        
+[2024-12-04 11:32:36] Start Date: 2025-01-28
+[2024-12-04 11:32:36] End Date: 2025-01-28
+[2024-12-04 11:32:36] Booking Type: slot
+[2024-12-04 11:32:36] Slots to Check: 4
+[2024-12-04 11:32:36] Availability Result: available
+[2024-12-04 11:32:42] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-30
+    [end_date] => 2025-01-30
+    [booking_type] => session
+    [session_choice] => an
+    [slots] => Array
+        (
+            [0] => 4
+        )
+
+    [slot_or_session] => an
+)
+
+[2024-12-04 11:32:42] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:32:42] Params: 4        , 2025-01-30, 2025-01-30
+[2024-12-04 11:32:42] Result rows: 0
+[2024-12-04 11:32:42] Is booked: No
+[2024-12-04 11:32:42] Hall ID: 4        
+[2024-12-04 11:32:42] Start Date: 2025-01-30
+[2024-12-04 11:32:42] End Date: 2025-01-30
+[2024-12-04 11:32:42] Booking Type: session
+[2024-12-04 11:32:42] Slots to Check: 5,6,7,8
+[2024-12-04 11:32:42] Availability Result: available
+[2024-12-04 11:32:47] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-30
+    [end_date] => 2025-01-30
+    [booking_type] => slot
+    [session_choice] => an
+    [slots] => Array
+        (
+            [0] => 2
+            [1] => 4
+        )
+
+    [slot_or_session] => 2,4
+)
+
+[2024-12-04 11:32:47] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:32:47] Params: 4        , 2025-01-30, 2025-01-30
+[2024-12-04 11:32:47] Result rows: 0
+[2024-12-04 11:32:47] Is booked: No
+[2024-12-04 11:32:47] Hall ID: 4        
+[2024-12-04 11:32:47] Start Date: 2025-01-30
+[2024-12-04 11:32:47] End Date: 2025-01-30
+[2024-12-04 11:32:47] Booking Type: slot
+[2024-12-04 11:32:47] Slots to Check: 2,4
+[2024-12-04 11:32:47] Availability Result: available
+[2024-12-04 11:35:19] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-17
+    [end_date] => 2025-01-17
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 2
+        )
+
+    [slot_or_session] => 2
+)
+
+[2024-12-04 11:35:19] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:35:19] Params: 4        , 2025-01-17, 2025-01-17
+[2024-12-04 11:35:19] Result rows: 0
+[2024-12-04 11:35:19] Is booked: No
+[2024-12-04 11:35:19] Hall ID: 4        
+[2024-12-04 11:35:19] Start Date: 2025-01-17
+[2024-12-04 11:35:19] End Date: 2025-01-17
+[2024-12-04 11:35:19] Booking Type: slot
+[2024-12-04 11:35:19] Slots to Check: 2
+[2024-12-04 11:35:19] Availability Result: available
+[2024-12-04 11:35:31] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-17
+    [end_date] => 2025-01-17
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 1
+        )
+
+    [slot_or_session] => 1
+)
+
+[2024-12-04 11:35:31] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:35:31] Params: 4        , 2025-01-17, 2025-01-17
+[2024-12-04 11:35:31] Result rows: 0
+[2024-12-04 11:35:31] Is booked: No
+[2024-12-04 11:35:31] Hall ID: 4        
+[2024-12-04 11:35:31] Start Date: 2025-01-17
+[2024-12-04 11:35:31] End Date: 2025-01-17
+[2024-12-04 11:35:31] Booking Type: slot
+[2024-12-04 11:35:31] Slots to Check: 1
+[2024-12-04 11:35:31] Availability Result: available
+[2024-12-04 11:35:35] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-17
+    [end_date] => 2025-01-17
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 3
+        )
+
+    [slot_or_session] => 1,2,3
+)
+
+[2024-12-04 11:35:35] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:35:35] Params: 4        , 2025-01-17, 2025-01-17
+[2024-12-04 11:35:35] Result rows: 0
+[2024-12-04 11:35:35] Is booked: No
+[2024-12-04 11:35:35] Hall ID: 4        
+[2024-12-04 11:35:35] Start Date: 2025-01-17
+[2024-12-04 11:35:35] End Date: 2025-01-17
+[2024-12-04 11:35:35] Booking Type: slot
+[2024-12-04 11:35:35] Slots to Check: 1,2,3
+[2024-12-04 11:35:35] Availability Result: available
+[2024-12-04 11:35:43] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-20
+    [end_date] => 2025-01-20
+    [booking_type] => session
+    [session_choice] => an
+    [slots] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 3
+        )
+
+    [slot_or_session] => an
+)
+
+[2024-12-04 11:35:43] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:35:43] Requested slots: 5,6,7,8
+[2024-12-04 11:35:43] Overlap: 5,6,7,8
+[2024-12-04 11:35:43] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:35:43] Params: 4        , 2025-01-20, 2025-01-20
+[2024-12-04 11:35:43] Result rows: 1
+[2024-12-04 11:35:43] Is booked: Yes
+[2024-12-04 11:35:43] Hall ID: 4        
+[2024-12-04 11:35:43] Start Date: 2025-01-20
+[2024-12-04 11:35:43] End Date: 2025-01-20
+[2024-12-04 11:35:43] Booking Type: session
+[2024-12-04 11:35:43] Slots to Check: 5,6,7,8
+[2024-12-04 11:35:43] Availability Result: booked
+[2024-12-04 11:35:45] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-20
+    [end_date] => 2025-01-20
+    [booking_type] => session
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 3
+        )
+
+    [slot_or_session] => fn
+)
+
+[2024-12-04 11:35:45] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:35:45] Requested slots: 1,2,3,4
+[2024-12-04 11:35:45] Overlap: 1,2,3,4
+[2024-12-04 11:35:45] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:35:45] Params: 4        , 2025-01-20, 2025-01-20
+[2024-12-04 11:35:45] Result rows: 1
+[2024-12-04 11:35:45] Is booked: Yes
+[2024-12-04 11:35:45] Hall ID: 4        
+[2024-12-04 11:35:45] Start Date: 2025-01-20
+[2024-12-04 11:35:45] End Date: 2025-01-20
+[2024-12-04 11:35:45] Booking Type: session
+[2024-12-04 11:35:45] Slots to Check: 1,2,3,4
+[2024-12-04 11:35:45] Availability Result: booked
+[2024-12-04 11:35:50] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-20
+    [end_date] => 2025-01-20
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 1
+            [1] => 3
+        )
+
+    [slot_or_session] => 1,3
+)
+
+[2024-12-04 11:35:50] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:35:50] Requested slots: 1,3
+[2024-12-04 11:35:50] Overlap: 1,3
+[2024-12-04 11:35:50] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:35:50] Params: 4        , 2025-01-20, 2025-01-20
+[2024-12-04 11:35:50] Result rows: 1
+[2024-12-04 11:35:50] Is booked: Yes
+[2024-12-04 11:35:50] Hall ID: 4        
+[2024-12-04 11:35:50] Start Date: 2025-01-20
+[2024-12-04 11:35:50] End Date: 2025-01-20
+[2024-12-04 11:35:50] Booking Type: slot
+[2024-12-04 11:35:50] Slots to Check: 1,3
+[2024-12-04 11:35:50] Availability Result: booked
+[2024-12-04 11:42:58] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-20
+    [end_date] => 2025-01-20
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => an
+)
+
+[2024-12-04 11:42:58] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:42:58] Requested slots: 5,6,7,8
+[2024-12-04 11:42:58] Overlap: 5,6,7,8
+[2024-12-04 11:42:58] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:42:58] Params: 4        , 2025-01-20, 2025-01-20
+[2024-12-04 11:42:58] Result rows: 1
+[2024-12-04 11:42:58] Is booked: Yes
+[2024-12-04 11:42:58] Hall ID: 4        
+[2024-12-04 11:42:58] Start Date: 2025-01-20
+[2024-12-04 11:42:58] End Date: 2025-01-20
+[2024-12-04 11:42:58] Booking Type: session
+[2024-12-04 11:42:58] Slots to Check: 5,6,7,8
+[2024-12-04 11:42:58] Availability Result: booked
+[2024-12-04 11:43:05] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-22
+    [end_date] => 2025-01-22
+    [booking_type] => slot
+    [session_choice] => an
+    [slots] => Array
+        (
+            [0] => 2
+        )
+
+    [slot_or_session] => 2
+)
+
+[2024-12-04 11:43:05] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:43:05] Requested slots: 2
+[2024-12-04 11:43:05] Overlap: 2
+[2024-12-04 11:43:05] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:43:05] Params: 4        , 2025-01-22, 2025-01-22
+[2024-12-04 11:43:05] Result rows: 1
+[2024-12-04 11:43:05] Is booked: Yes
+[2024-12-04 11:43:05] Hall ID: 4        
+[2024-12-04 11:43:05] Start Date: 2025-01-22
+[2024-12-04 11:43:05] End Date: 2025-01-22
+[2024-12-04 11:43:05] Booking Type: slot
+[2024-12-04 11:43:05] Slots to Check: 2
+[2024-12-04 11:43:05] Availability Result: booked
+[2024-12-04 11:43:10] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-22
+    [end_date] => 2025-01-22
+    [booking_type] => slot
+    [session_choice] => an
+    [slots] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 3
+        )
+
+    [slot_or_session] => 1,2,3
+)
+
+[2024-12-04 11:43:10] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:43:10] Requested slots: 1,2,3
+[2024-12-04 11:43:10] Overlap: 1,2,3
+[2024-12-04 11:43:10] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:43:10] Params: 4        , 2025-01-22, 2025-01-22
+[2024-12-04 11:43:10] Result rows: 1
+[2024-12-04 11:43:10] Is booked: Yes
+[2024-12-04 11:43:10] Hall ID: 4        
+[2024-12-04 11:43:10] Start Date: 2025-01-22
+[2024-12-04 11:43:10] End Date: 2025-01-22
+[2024-12-04 11:43:10] Booking Type: slot
+[2024-12-04 11:43:10] Slots to Check: 1,2,3
+[2024-12-04 11:43:10] Availability Result: booked
+[2024-12-04 11:43:48] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-22
+    [end_date] => 2025-01-22
+    [booking_type] => slot
+    [session_choice] => an
+    [slots] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 3
+        )
+
+    [slot_or_session] => 1,2,3
+)
+
+[2024-12-04 11:43:48] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:43:48] Requested slots: 1,2,3
+[2024-12-04 11:43:48] Overlap: 1,2,3
+[2024-12-04 11:43:48] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:43:48] Params: 4        , 2025-01-22, 2025-01-22
+[2024-12-04 11:43:48] Result rows: 1
+[2024-12-04 11:43:48] Is booked: Yes
+[2024-12-04 11:43:48] Hall ID: 4        
+[2024-12-04 11:43:48] Start Date: 2025-01-22
+[2024-12-04 11:43:48] End Date: 2025-01-22
+[2024-12-04 11:43:48] Booking Type: slot
+[2024-12-04 11:43:48] Slots to Check: 1,2,3
+[2024-12-04 11:43:48] Availability Result: booked
+[2024-12-04 11:47:10] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-20
+    [end_date] => 2025-01-20
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => an
+)
+
+[2024-12-04 11:47:10] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:47:10] Requested slots: 5,6,7,8
+[2024-12-04 11:47:10] Overlap: 5,6,7,8
+[2024-12-04 11:47:10] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:47:10] Params: 4        , 2025-01-20, 2025-01-20
+[2024-12-04 11:47:10] Result rows: 1
+[2024-12-04 11:47:10] Is booked: Yes
+[2024-12-04 11:47:10] Hall ID: 4        
+[2024-12-04 11:47:10] Start Date: 2025-01-20
+[2024-12-04 11:47:10] End Date: 2025-01-20
+[2024-12-04 11:47:10] Booking Type: session
+[2024-12-04 11:47:10] Slots to Check: 5,6,7,8
+[2024-12-04 11:47:10] Availability Result: booked
+[2024-12-04 11:47:12] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-20
+    [end_date] => 2025-01-20
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => fn
+)
+
+[2024-12-04 11:47:12] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:47:12] Requested slots: 1,2,3,4
+[2024-12-04 11:47:12] Overlap: 1,2,3,4
+[2024-12-04 11:47:12] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:47:12] Params: 4        , 2025-01-20, 2025-01-20
+[2024-12-04 11:47:12] Result rows: 1
+[2024-12-04 11:47:12] Is booked: Yes
+[2024-12-04 11:47:12] Hall ID: 4        
+[2024-12-04 11:47:12] Start Date: 2025-01-20
+[2024-12-04 11:47:12] End Date: 2025-01-20
+[2024-12-04 11:47:12] Booking Type: session
+[2024-12-04 11:47:12] Slots to Check: 1,2,3,4
+[2024-12-04 11:47:12] Availability Result: booked
+[2024-12-04 11:47:20] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-20
+    [end_date] => 2025-01-20
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 2
+        )
+
+    [slot_or_session] => 2
+)
+
+[2024-12-04 11:47:20] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:47:20] Requested slots: 2
+[2024-12-04 11:47:20] Overlap: 2
+[2024-12-04 11:47:20] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:47:20] Params: 4        , 2025-01-20, 2025-01-20
+[2024-12-04 11:47:20] Result rows: 1
+[2024-12-04 11:47:20] Is booked: Yes
+[2024-12-04 11:47:20] Hall ID: 4        
+[2024-12-04 11:47:20] Start Date: 2025-01-20
+[2024-12-04 11:47:20] End Date: 2025-01-20
+[2024-12-04 11:47:20] Booking Type: slot
+[2024-12-04 11:47:20] Slots to Check: 2
+[2024-12-04 11:47:20] Availability Result: booked
+[2024-12-04 11:47:30] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-01
+    [end_date] => 2025-01-20
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 2
+            [1] => 3
+        )
+
+    [slot_or_session] => 2,3
+)
+
+[2024-12-04 11:47:30] Booked slots: 5
+[2024-12-04 11:47:30] Requested slots: 2,3
+[2024-12-04 11:47:30] Overlap: 
+[2024-12-04 11:47:30] Booked slots: 6
+[2024-12-04 11:47:30] Requested slots: 2,3
+[2024-12-04 11:47:30] Overlap: 
+[2024-12-04 11:47:30] Booked slots: 7
+[2024-12-04 11:47:30] Requested slots: 2,3
+[2024-12-04 11:47:30] Overlap: 
+[2024-12-04 11:47:30] Booked slots: 8
+[2024-12-04 11:47:30] Requested slots: 2,3
+[2024-12-04 11:47:30] Overlap: 
+[2024-12-04 11:47:30] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:47:30] Requested slots: 2,3
+[2024-12-04 11:47:30] Overlap: 2,3
+[2024-12-04 11:47:30] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:47:30] Params: 4        , 2025-01-01, 2025-01-20
+[2024-12-04 11:47:30] Result rows: 5
+[2024-12-04 11:47:30] Is booked: Yes
+[2024-12-04 11:47:30] Hall ID: 4        
+[2024-12-04 11:47:30] Start Date: 2025-01-01
+[2024-12-04 11:47:30] End Date: 2025-01-20
+[2024-12-04 11:47:30] Booking Type: slot
+[2024-12-04 11:47:30] Slots to Check: 2,3
+[2024-12-04 11:47:30] Availability Result: booked
+[2024-12-04 11:47:36] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-30
+    [end_date] => 2025-01-30
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 2
+            [1] => 3
+        )
+
+    [slot_or_session] => 2,3
+)
+
+[2024-12-04 11:47:36] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:47:36] Params: 4        , 2025-01-30, 2025-01-30
+[2024-12-04 11:47:36] Result rows: 0
+[2024-12-04 11:47:36] Is booked: No
+[2024-12-04 11:47:36] Hall ID: 4        
+[2024-12-04 11:47:36] Start Date: 2025-01-30
+[2024-12-04 11:47:36] End Date: 2025-01-30
+[2024-12-04 11:47:36] Booking Type: slot
+[2024-12-04 11:47:36] Slots to Check: 2,3
+[2024-12-04 11:47:36] Availability Result: available
+[2024-12-04 11:47:43] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-30
+    [end_date] => 2025-01-30
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 7
+            [1] => 8
+        )
+
+    [slot_or_session] => 7,8
+)
+
+[2024-12-04 11:47:43] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:47:43] Params: 4        , 2025-01-30, 2025-01-30
+[2024-12-04 11:47:43] Result rows: 0
+[2024-12-04 11:47:43] Is booked: No
+[2024-12-04 11:47:43] Hall ID: 4        
+[2024-12-04 11:47:43] Start Date: 2025-01-30
+[2024-12-04 11:47:43] End Date: 2025-01-30
+[2024-12-04 11:47:43] Booking Type: slot
+[2024-12-04 11:47:43] Slots to Check: 7,8
+[2024-12-04 11:47:43] Availability Result: available
+[2024-12-04 11:51:49] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-17
+    [end_date] => 2025-01-17
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => 
+)
+
+[2024-12-04 11:51:49] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:51:49] Params: 4        , 2025-01-17, 2025-01-17
+[2024-12-04 11:51:49] Result rows: 0
+[2024-12-04 11:51:49] Is booked: No
+[2024-12-04 11:51:49] Hall ID: 4        
+[2024-12-04 11:51:49] Start Date: 2025-01-17
+[2024-12-04 11:51:49] End Date: 2025-01-17
+[2024-12-04 11:51:49] Booking Type: session
+[2024-12-04 11:51:49] Slots to Check: 1,2,3,4
+[2024-12-04 11:51:49] Availability Result: available
+[2024-12-04 11:51:54] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-20
+    [end_date] => 2025-01-20
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => fn
+)
+
+[2024-12-04 11:51:54] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:51:54] Requested slots: 1,2,3,4
+[2024-12-04 11:51:54] Overlap: 1,2,3,4
+[2024-12-04 11:51:54] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:51:54] Params: 4        , 2025-01-20, 2025-01-20
+[2024-12-04 11:51:54] Result rows: 1
+[2024-12-04 11:51:54] Is booked: Yes
+[2024-12-04 11:51:54] Hall ID: 4        
+[2024-12-04 11:51:54] Start Date: 2025-01-20
+[2024-12-04 11:51:54] End Date: 2025-01-20
+[2024-12-04 11:51:54] Booking Type: session
+[2024-12-04 11:51:54] Slots to Check: 1,2,3,4
+[2024-12-04 11:51:54] Availability Result: booked
+[2024-12-04 11:51:56] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-20
+    [end_date] => 2025-01-20
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => fn
+)
+
+[2024-12-04 11:51:56] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:51:56] Requested slots: 5,6,7,8
+[2024-12-04 11:51:56] Overlap: 5,6,7,8
+[2024-12-04 11:51:56] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:51:56] Params: 4        , 2025-01-20, 2025-01-20
+[2024-12-04 11:51:56] Result rows: 1
+[2024-12-04 11:51:56] Is booked: Yes
+[2024-12-04 11:51:56] Hall ID: 4        
+[2024-12-04 11:51:56] Start Date: 2025-01-20
+[2024-12-04 11:51:56] End Date: 2025-01-20
+[2024-12-04 11:51:56] Booking Type: session
+[2024-12-04 11:51:56] Slots to Check: 5,6,7,8
+[2024-12-04 11:51:56] Availability Result: booked
+[2024-12-04 11:52:00] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-20
+    [end_date] => 2025-01-20
+    [booking_type] => slot
+    [session_choice] => an
+    [slots] => Array
+        (
+            [0] => 8
+        )
+
+    [slot_or_session] => an
+)
+
+[2024-12-04 11:52:00] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-04 11:52:00] Requested slots: 8
+[2024-12-04 11:52:00] Overlap: 8
+[2024-12-04 11:52:00] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:52:00] Params: 4        , 2025-01-20, 2025-01-20
+[2024-12-04 11:52:00] Result rows: 1
+[2024-12-04 11:52:00] Is booked: Yes
+[2024-12-04 11:52:00] Hall ID: 4        
+[2024-12-04 11:52:00] Start Date: 2025-01-20
+[2024-12-04 11:52:00] End Date: 2025-01-20
+[2024-12-04 11:52:00] Booking Type: slot
+[2024-12-04 11:52:00] Slots to Check: 8
+[2024-12-04 11:52:00] Availability Result: booked
+[2024-12-04 11:52:07] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-12-20
+    [end_date] => 2025-12-20
+    [booking_type] => slot
+    [session_choice] => an
+    [slots] => Array
+        (
+            [0] => 8
+        )
+
+    [slot_or_session] => 8
+)
+
+[2024-12-04 11:52:07] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:52:07] Params: 4        , 2025-12-20, 2025-12-20
+[2024-12-04 11:52:07] Result rows: 0
+[2024-12-04 11:52:07] Is booked: No
+[2024-12-04 11:52:07] Hall ID: 4        
+[2024-12-04 11:52:07] Start Date: 2025-12-20
+[2024-12-04 11:52:07] End Date: 2025-12-20
+[2024-12-04 11:52:07] Booking Type: slot
+[2024-12-04 11:52:07] Slots to Check: 8
+[2024-12-04 11:52:07] Availability Result: available
+[2024-12-04 11:52:23] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-17
+    [end_date] => 2025-01-17
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 3
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-04 11:52:23] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:52:23] Params: 4        , 2025-01-17, 2025-01-17
+[2024-12-04 11:52:23] Result rows: 0
+[2024-12-04 11:52:23] Is booked: No
+[2024-12-04 11:52:23] Hall ID: 4        
+[2024-12-04 11:52:23] Start Date: 2025-01-17
+[2024-12-04 11:52:23] End Date: 2025-01-17
+[2024-12-04 11:52:23] Booking Type: slot
+[2024-12-04 11:52:23] Slots to Check: 1,2,3
+[2024-12-04 11:52:23] Availability Result: available
+[2024-12-04 11:54:40] Received POST data: Array
+(
+    [hall_id] => 4        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-2        
+    [start_date] => 2025-01-17
+    [end_date] => 2025-01-17
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 2
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-04 11:54:40] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 11:54:40] Params: 4        , 2025-01-17, 2025-01-17
+[2024-12-04 11:54:40] Result rows: 0
+[2024-12-04 11:54:40] Is booked: No
+[2024-12-04 11:54:40] Hall ID: 4        
+[2024-12-04 11:54:40] Start Date: 2025-01-17
+[2024-12-04 11:54:40] End Date: 2025-01-17
+[2024-12-04 11:54:40] Booking Type: slot
+[2024-12-04 11:54:40] Slots to Check: 2
+[2024-12-04 11:54:40] Availability Result: available
+[2024-12-04 14:03:34] Received POST data: Array
+(
+    [hall_id] => 3        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-24
+    [end_date] => 2025-01-24
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => 
+)
+
+[2024-12-04 14:03:34] Booked slots: 3
+[2024-12-04 14:03:34] Requested slots: 5,6,7,8
+[2024-12-04 14:03:34] Overlap: 
+[2024-12-04 14:03:34] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 14:03:34] Params: 3        , 2025-01-24, 2025-01-24
+[2024-12-04 14:03:34] Result rows: 1
+[2024-12-04 14:03:34] Is booked: No
+[2024-12-04 14:03:34] Hall ID: 3        
+[2024-12-04 14:03:34] Start Date: 2025-01-24
+[2024-12-04 14:03:34] End Date: 2025-01-24
+[2024-12-04 14:03:34] Booking Type: session
+[2024-12-04 14:03:34] Slots to Check: 5,6,7,8
+[2024-12-04 14:03:34] Availability Result: available
+[2024-12-04 14:03:37] Received POST data: Array
+(
+    [hall_id] => 3        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-24
+    [end_date] => 2025-01-24
+    [booking_type] => session
+    [session_choice] => both
+    [slot_or_session] => an
+)
+
+[2024-12-04 14:03:37] Booked slots: 3
+[2024-12-04 14:03:37] Requested slots: 1,2,3,4,5,6,7,8
+[2024-12-04 14:03:37] Overlap: 3
+[2024-12-04 14:03:37] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 14:03:37] Params: 3        , 2025-01-24, 2025-01-24
+[2024-12-04 14:03:37] Result rows: 1
+[2024-12-04 14:03:37] Is booked: Yes
+[2024-12-04 14:03:37] Hall ID: 3        
+[2024-12-04 14:03:37] Start Date: 2025-01-24
+[2024-12-04 14:03:37] End Date: 2025-01-24
+[2024-12-04 14:03:37] Booking Type: session
+[2024-12-04 14:03:37] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-12-04 14:03:37] Availability Result: booked
+[2024-12-04 14:03:43] Received POST data: Array
+(
+    [hall_id] => 3        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-29
+    [end_date] => 2025-01-29
+    [booking_type] => session
+    [session_choice] => both
+    [slot_or_session] => both
+)
+
+[2024-12-04 14:03:43] Booked slots: 4
+[2024-12-04 14:03:43] Requested slots: 1,2,3,4,5,6,7,8
+[2024-12-04 14:03:43] Overlap: 4
+[2024-12-04 14:03:43] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 14:03:43] Params: 3        , 2025-01-29, 2025-01-29
+[2024-12-04 14:03:43] Result rows: 1
+[2024-12-04 14:03:43] Is booked: Yes
+[2024-12-04 14:03:43] Hall ID: 3        
+[2024-12-04 14:03:43] Start Date: 2025-01-29
+[2024-12-04 14:03:43] End Date: 2025-01-29
+[2024-12-04 14:03:43] Booking Type: session
+[2024-12-04 14:03:43] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-12-04 14:03:43] Availability Result: booked
+[2024-12-04 14:03:49] Received POST data: Array
+(
+    [hall_id] => 3        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-29
+    [end_date] => 2025-01-29
+    [booking_type] => slot
+    [session_choice] => both
+    [slots] => Array
+        (
+            [0] => 2
+            [1] => 3
+            [2] => 4
+            [3] => 5
+            [4] => 6
+        )
+
+    [slot_or_session] => both
+)
+
+[2024-12-04 14:03:49] Booked slots: 4
+[2024-12-04 14:03:49] Requested slots: 2,3,4,5,6
+[2024-12-04 14:03:49] Overlap: 4
+[2024-12-04 14:03:49] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-04 14:03:49] Params: 3        , 2025-01-29, 2025-01-29
+[2024-12-04 14:03:49] Result rows: 1
+[2024-12-04 14:03:49] Is booked: Yes
+[2024-12-04 14:03:49] Hall ID: 3        
+[2024-12-04 14:03:49] Start Date: 2025-01-29
+[2024-12-04 14:03:49] End Date: 2025-01-29
+[2024-12-04 14:03:49] Booking Type: slot
+[2024-12-04 14:03:49] Slots to Check: 2,3,4,5,6
+[2024-12-04 14:03:49] Availability Result: booked
+[2024-12-05 09:42:09] Received POST data: Array
+(
+    [hall_id] => 2        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-2        
+    [start_date] => 2024-12-31
+    [end_date] => 2024-12-31
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => 
+)
+
+[2024-12-05 09:42:09] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-05 09:42:09] Params: 2        , 2024-12-31, 2024-12-31
+[2024-12-05 09:42:09] Result rows: 0
+[2024-12-05 09:42:09] Is booked: No
+[2024-12-05 09:42:09] Hall ID: 2        
+[2024-12-05 09:42:09] Start Date: 2024-12-31
+[2024-12-05 09:42:09] End Date: 2024-12-31
+[2024-12-05 09:42:09] Booking Type: session
+[2024-12-05 09:42:09] Slots to Check: 5,6,7,8
+[2024-12-05 09:42:09] Availability Result: available
+[2024-12-06 07:24:57] Received POST data: Array
+(
+    [hall_id] => 1    
+    [school_name] => School of Engineering and Technology    
+    [department_name] => Centre for Pollution Control and Environmental Engineering    
+    [room] => SH-1
+    [start_date] => 2025-01-01
+    [end_date] => 2025-01-06
+    [booking_type] => slot
+    [slots] => Array
+        (
+            [0] => 5
+            [1] => 6
+            [2] => 7
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-06 07:24:57] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-06 07:24:57] Requested slots: 5,6,7
+[2024-12-06 07:24:57] Overlap: 5,6,7
+[2024-12-06 07:24:57] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-06 07:24:57] Params: 1    , 2025-01-01, 2025-01-06
+[2024-12-06 07:24:57] Result rows: 2
+[2024-12-06 07:24:57] Is booked: Yes
+[2024-12-06 07:24:57] Hall ID: 1    
+[2024-12-06 07:24:57] Start Date: 2025-01-01
+[2024-12-06 07:24:57] End Date: 2025-01-06
+[2024-12-06 07:24:57] Booking Type: slot
+[2024-12-06 07:24:57] Slots to Check: 5,6,7
+[2024-12-06 07:24:57] Availability Result: booked
+[2024-12-06 07:25:01] Received POST data: Array
+(
+    [hall_id] => 1    
+    [school_name] => School of Engineering and Technology    
+    [department_name] => Centre for Pollution Control and Environmental Engineering    
+    [room] => SH-1
+    [start_date] => 2025-01-01
+    [end_date] => 2025-01-06
+    [booking_type] => session
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 5
+            [1] => 6
+            [2] => 7
+        )
+
+    [slot_or_session] => 5,6,7
+)
+
+[2024-12-06 07:25:01] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-06 07:25:01] Requested slots: 1,2,3,4
+[2024-12-06 07:25:01] Overlap: 1,2,3,4
+[2024-12-06 07:25:01] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-06 07:25:01] Params: 1    , 2025-01-01, 2025-01-06
+[2024-12-06 07:25:01] Result rows: 2
+[2024-12-06 07:25:01] Is booked: Yes
+[2024-12-06 07:25:01] Hall ID: 1    
+[2024-12-06 07:25:01] Start Date: 2025-01-01
+[2024-12-06 07:25:01] End Date: 2025-01-06
+[2024-12-06 07:25:01] Booking Type: session
+[2024-12-06 07:25:01] Slots to Check: 1,2,3,4
+[2024-12-06 07:25:01] Availability Result: booked
+[2024-12-06 07:25:04] Received POST data: Array
+(
+    [hall_id] => 1    
+    [school_name] => School of Engineering and Technology    
+    [department_name] => Centre for Pollution Control and Environmental Engineering    
+    [room] => SH-1
+    [start_date] => 2025-01-01
+    [end_date] => 2025-01-06
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 5
+            [1] => 6
+            [2] => 7
+        )
+
+    [slot_or_session] => fn
+)
+
+[2024-12-06 07:25:04] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-06 07:25:04] Requested slots: 5,6,7
+[2024-12-06 07:25:04] Overlap: 5,6,7
+[2024-12-06 07:25:04] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-06 07:25:04] Params: 1    , 2025-01-01, 2025-01-06
+[2024-12-06 07:25:04] Result rows: 2
+[2024-12-06 07:25:04] Is booked: Yes
+[2024-12-06 07:25:04] Hall ID: 1    
+[2024-12-06 07:25:04] Start Date: 2025-01-01
+[2024-12-06 07:25:04] End Date: 2025-01-06
+[2024-12-06 07:25:04] Booking Type: slot
+[2024-12-06 07:25:04] Slots to Check: 5,6,7
+[2024-12-06 07:25:04] Availability Result: booked
+[2024-12-06 08:11:26] Received POST data: Array
+(
+    [hall_id] => 1    
+    [school_name] => School of Engineering and Technology    
+    [department_name] => Centre for Pollution Control and Environmental Engineering    
+    [room] => SH-1
+    [start_date] => 2024-12-15
+    [end_date] => 2024-12-15
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 5
+            [1] => 6
+            [2] => 7
+        )
+
+    [slot_or_session] => 5,6,7
+)
+
+[2024-12-06 08:11:26] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-06 08:11:26] Params: 1    , 2024-12-15, 2024-12-15
+[2024-12-06 08:11:26] Result rows: 0
+[2024-12-06 08:11:26] Is booked: No
+[2024-12-06 08:11:26] Hall ID: 1    
+[2024-12-06 08:11:26] Start Date: 2024-12-15
+[2024-12-06 08:11:26] End Date: 2024-12-15
+[2024-12-06 08:11:26] Booking Type: slot
+[2024-12-06 08:11:26] Slots to Check: 5,6,7
+[2024-12-06 08:11:26] Availability Result: available
+[2024-12-06 09:00:28] Received POST data: Array
+(
+    [hall_id] => 1        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-03
+    [end_date] => 2025-01-03
+    [booking_type] => session
+    [session_choice] => both
+    [slots] => Array
+        (
+            [0] => 2
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-06 09:00:28] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-06 09:00:28] Requested slots: 1,2,3,4,5,6,7,8
+[2024-12-06 09:00:28] Overlap: 1,2,3,4,5,6,7,8
+[2024-12-06 09:00:28] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-06 09:00:28] Params: 1        , 2025-01-03, 2025-01-03
+[2024-12-06 09:00:28] Result rows: 1
+[2024-12-06 09:00:28] Is booked: Yes
+[2024-12-06 09:00:28] Hall ID: 1        
+[2024-12-06 09:00:28] Start Date: 2025-01-03
+[2024-12-06 09:00:28] End Date: 2025-01-03
+[2024-12-06 09:00:28] Booking Type: session
+[2024-12-06 09:00:28] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-12-06 09:00:28] Availability Result: booked
+[2024-12-06 09:00:31] Received POST data: Array
+(
+    [hall_id] => 1        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-03
+    [end_date] => 2025-01-03
+    [booking_type] => session
+    [session_choice] => an
+    [slots] => Array
+        (
+            [0] => 2
+        )
+
+    [slot_or_session] => both
+)
+
+[2024-12-06 09:00:31] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-06 09:00:31] Requested slots: 5,6,7,8
+[2024-12-06 09:00:31] Overlap: 5,6,7,8
+[2024-12-06 09:00:31] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-06 09:00:31] Params: 1        , 2025-01-03, 2025-01-03
+[2024-12-06 09:00:31] Result rows: 1
+[2024-12-06 09:00:31] Is booked: Yes
+[2024-12-06 09:00:31] Hall ID: 1        
+[2024-12-06 09:00:31] Start Date: 2025-01-03
+[2024-12-06 09:00:31] End Date: 2025-01-03
+[2024-12-06 09:00:31] Booking Type: session
+[2024-12-06 09:00:31] Slots to Check: 5,6,7,8
+[2024-12-06 09:00:31] Availability Result: booked
+[2024-12-06 09:00:34] Received POST data: Array
+(
+    [hall_id] => 1        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-03
+    [end_date] => 2025-01-03
+    [booking_type] => session
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 2
+        )
+
+    [slot_or_session] => an
+)
+
+[2024-12-06 09:00:34] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-06 09:00:34] Requested slots: 1,2,3,4
+[2024-12-06 09:00:34] Overlap: 1,2,3,4
+[2024-12-06 09:00:34] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-06 09:00:34] Params: 1        , 2025-01-03, 2025-01-03
+[2024-12-06 09:00:34] Result rows: 1
+[2024-12-06 09:00:34] Is booked: Yes
+[2024-12-06 09:00:34] Hall ID: 1        
+[2024-12-06 09:00:34] Start Date: 2025-01-03
+[2024-12-06 09:00:34] End Date: 2025-01-03
+[2024-12-06 09:00:34] Booking Type: session
+[2024-12-06 09:00:34] Slots to Check: 1,2,3,4
+[2024-12-06 09:00:34] Availability Result: booked
+[2024-12-06 09:01:53] Received POST data: Array
+(
+    [hall_id] => 3        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-03
+    [end_date] => 2025-01-03
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => 
+)
+
+[2024-12-06 09:01:53] Booked slots: 5,6,7,8
+[2024-12-06 09:01:53] Requested slots: 5,6,7,8
+[2024-12-06 09:01:53] Overlap: 5,6,7,8
+[2024-12-06 09:01:53] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-06 09:01:53] Params: 3        , 2025-01-03, 2025-01-03
+[2024-12-06 09:01:53] Result rows: 1
+[2024-12-06 09:01:53] Is booked: Yes
+[2024-12-06 09:01:53] Hall ID: 3        
+[2024-12-06 09:01:53] Start Date: 2025-01-03
+[2024-12-06 09:01:53] End Date: 2025-01-03
+[2024-12-06 09:01:53] Booking Type: session
+[2024-12-06 09:01:53] Slots to Check: 5,6,7,8
+[2024-12-06 09:01:53] Availability Result: booked
+[2024-12-06 09:01:55] Received POST data: Array
+(
+    [hall_id] => 3        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-03
+    [end_date] => 2025-01-03
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => an
+)
+
+[2024-12-06 09:01:55] Booked slots: 5,6,7,8
+[2024-12-06 09:01:55] Requested slots: 1,2,3,4
+[2024-12-06 09:01:55] Overlap: 
+[2024-12-06 09:01:55] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-06 09:01:55] Params: 3        , 2025-01-03, 2025-01-03
+[2024-12-06 09:01:55] Result rows: 1
+[2024-12-06 09:01:55] Is booked: No
+[2024-12-06 09:01:55] Hall ID: 3        
+[2024-12-06 09:01:55] Start Date: 2025-01-03
+[2024-12-06 09:01:55] End Date: 2025-01-03
+[2024-12-06 09:01:55] Booking Type: session
+[2024-12-06 09:01:55] Slots to Check: 1,2,3,4
+[2024-12-06 09:01:55] Availability Result: available
+[2024-12-06 09:01:59] Received POST data: Array
+(
+    [hall_id] => 3        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Department of Electronics Engineering        
+    [room] => SH-1        
+    [start_date] => 2025-01-03
+    [end_date] => 2025-01-03
+    [booking_type] => session
+    [session_choice] => both
+    [slot_or_session] => fn
+)
+
+[2024-12-06 09:01:59] Booked slots: 5,6,7,8
+[2024-12-06 09:01:59] Requested slots: 1,2,3,4,5,6,7,8
+[2024-12-06 09:01:59] Overlap: 5,6,7,8
+[2024-12-06 09:01:59] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-06 09:01:59] Params: 3        , 2025-01-03, 2025-01-03
+[2024-12-06 09:01:59] Result rows: 1
+[2024-12-06 09:01:59] Is booked: Yes
+[2024-12-06 09:01:59] Hall ID: 3        
+[2024-12-06 09:01:59] Start Date: 2025-01-03
+[2024-12-06 09:01:59] End Date: 2025-01-03
+[2024-12-06 09:01:59] Booking Type: session
+[2024-12-06 09:01:59] Slots to Check: 1,2,3,4,5,6,7,8
+[2024-12-06 09:01:59] Availability Result: booked
+[2024-12-07 05:56:22] Received POST data: Array
+(
+    [hall_id] => 9        
+    [school_name] => Subramania Bharathi School of Tamil Language & Literature        
+    [department_name] => Department of Tamil        
+    [room] => SH-1        
+    [start_date] => 2025-01-10
+    [end_date] => 2025-01-10
+    [booking_type] => session
+    [session_choice] => an
+    [slot_or_session] => 
+)
+
+[2024-12-07 05:56:22] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-07 05:56:22] Requested slots: 5,6,7,8
+[2024-12-07 05:56:22] Overlap: 5,6,7,8
+[2024-12-07 05:56:22] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-07 05:56:22] Params: 9        , 2025-01-10, 2025-01-10
+[2024-12-07 05:56:22] Result rows: 1
+[2024-12-07 05:56:22] Is booked: Yes
+[2024-12-07 05:56:22] Hall ID: 9        
+[2024-12-07 05:56:22] Start Date: 2025-01-10
+[2024-12-07 05:56:22] End Date: 2025-01-10
+[2024-12-07 05:56:22] Booking Type: session
+[2024-12-07 05:56:22] Slots to Check: 5,6,7,8
+[2024-12-07 05:56:22] Availability Result: booked
+[2024-12-07 05:56:25] Received POST data: Array
+(
+    [hall_id] => 9        
+    [school_name] => Subramania Bharathi School of Tamil Language & Literature        
+    [department_name] => Department of Tamil        
+    [room] => SH-1        
+    [start_date] => 2025-01-10
+    [end_date] => 2025-01-10
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => an
+)
+
+[2024-12-07 05:56:25] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-07 05:56:25] Requested slots: 1,2,3,4
+[2024-12-07 05:56:25] Overlap: 1,2,3,4
+[2024-12-07 05:56:25] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-07 05:56:25] Params: 9        , 2025-01-10, 2025-01-10
+[2024-12-07 05:56:25] Result rows: 1
+[2024-12-07 05:56:25] Is booked: Yes
+[2024-12-07 05:56:25] Hall ID: 9        
+[2024-12-07 05:56:25] Start Date: 2025-01-10
+[2024-12-07 05:56:25] End Date: 2025-01-10
+[2024-12-07 05:56:25] Booking Type: session
+[2024-12-07 05:56:25] Slots to Check: 1,2,3,4
+[2024-12-07 05:56:25] Availability Result: booked
+[2024-12-07 06:34:24] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-07 06:34:24] Requested slots: 1
+[2024-12-07 06:34:24] Overlap: 1
+[2024-12-07 06:34:24] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-12-07 06:34:24] Params: 9, 2024-12-07, 2025-03-07
+[2024-12-07 06:34:24] Result rows: 1
+[2024-12-07 06:34:24] Is booked: Yes
+[2024-12-07 06:34:24] Hall ID: 9
+[2024-12-07 06:34:24] Start Date: 2024-12-07
+[2024-12-07 06:34:24] End Date: 2025-03-07
+[2024-12-07 06:34:24] Booking Type: slot
+[2024-12-07 06:34:24] Slots to Check: 1
+[2024-12-07 06:34:24] Availability Result: booked
+[2024-12-07 06:34:28] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-07 06:34:28] Requested slots: 1
+[2024-12-07 06:34:28] Overlap: 1
+[2024-12-07 06:34:28] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-12-07 06:34:28] Params: 9, 2024-12-07, 2025-03-07
+[2024-12-07 06:34:28] Result rows: 1
+[2024-12-07 06:34:28] Is booked: Yes
+[2024-12-07 06:34:28] Hall ID: 9
+[2024-12-07 06:34:28] Start Date: 2024-12-07
+[2024-12-07 06:34:28] End Date: 2025-03-07
+[2024-12-07 06:34:28] Booking Type: slot
+[2024-12-07 06:34:28] Slots to Check: 1
+[2024-12-07 06:34:28] Availability Result: booked
+[2024-12-07 06:34:33] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-07 06:34:33] Requested slots: 1
+[2024-12-07 06:34:33] Overlap: 1
+[2024-12-07 06:34:33] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-12-07 06:34:33] Params: 9, 2024-12-07, 2025-03-07
+[2024-12-07 06:34:33] Result rows: 1
+[2024-12-07 06:34:33] Is booked: Yes
+[2024-12-07 06:34:33] Hall ID: 9
+[2024-12-07 06:34:33] Start Date: 2024-12-07
+[2024-12-07 06:34:33] End Date: 2025-03-07
+[2024-12-07 06:34:33] Booking Type: slot
+[2024-12-07 06:34:33] Slots to Check: 1
+[2024-12-07 06:34:33] Availability Result: booked
+[2024-12-07 06:36:08] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-07 06:36:08] Requested slots: 1
+[2024-12-07 06:36:08] Overlap: 1
+[2024-12-07 06:36:08] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-12-07 06:36:08] Params: 9, 2024-12-07, 2025-03-07
+[2024-12-07 06:36:08] Result rows: 1
+[2024-12-07 06:36:08] Is booked: Yes
+[2024-12-07 06:36:08] Hall ID: 9
+[2024-12-07 06:36:08] Start Date: 2024-12-07
+[2024-12-07 06:36:08] End Date: 2025-03-07
+[2024-12-07 06:36:08] Booking Type: slot
+[2024-12-07 06:36:08] Slots to Check: 1
+[2024-12-07 06:36:08] Availability Result: booked
+[2024-12-07 06:36:18] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-12-07 06:36:18] Params: 9, 2024-12-28, 2024-12-28
+[2024-12-07 06:36:18] Result rows: 0
+[2024-12-07 06:36:18] Is booked: No
+[2024-12-07 06:36:18] Hall ID: 9
+[2024-12-07 06:36:18] Start Date: 2024-12-28
+[2024-12-07 06:36:18] End Date: 2024-12-28
+[2024-12-07 06:36:18] Booking Type: slot
+[2024-12-07 06:36:18] Slots to Check: 1
+[2024-12-07 06:36:18] Availability Result: available
+[2024-12-07 06:36:42] Received POST data: Array
+(
+    [hall_id] => 9        
+    [school_name] => Subramania Bharathi School of Tamil Language & Literature        
+    [department_name] => Department of Tamil        
+    [room] => SH-1        
+    [start_date] => 2025-01-03
+    [end_date] => 2025-01-03
+    [booking_type] => slot
+    [session_choice] => both
+    [slots] => Array
+        (
+            [0] => 3
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-07 06:36:42] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-07 06:36:42] Requested slots: 3
+[2024-12-07 06:36:42] Overlap: 3
+[2024-12-07 06:36:42] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-07 06:36:42] Params: 9        , 2025-01-03, 2025-01-03
+[2024-12-07 06:36:42] Result rows: 1
+[2024-12-07 06:36:42] Is booked: Yes
+[2024-12-07 06:36:42] Hall ID: 9        
+[2024-12-07 06:36:42] Start Date: 2025-01-03
+[2024-12-07 06:36:42] End Date: 2025-01-03
+[2024-12-07 06:36:42] Booking Type: slot
+[2024-12-07 06:36:42] Slots to Check: 3
+[2024-12-07 06:36:42] Availability Result: booked
+[2024-12-07 06:36:48] Received POST data: Array
+(
+    [hall_id] => 9        
+    [school_name] => Subramania Bharathi School of Tamil Language & Literature        
+    [department_name] => Department of Tamil        
+    [room] => SH-1        
+    [start_date] => 2025-01-03
+    [end_date] => 2025-01-03
+    [booking_type] => slot
+    [session_choice] => both
+    [slots] => Array
+        (
+            [0] => 2
+            [1] => 3
+        )
+
+    [slot_or_session] => 3
+)
+
+[2024-12-07 06:36:48] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-07 06:36:48] Requested slots: 2,3
+[2024-12-07 06:36:48] Overlap: 2,3
+[2024-12-07 06:36:48] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-07 06:36:48] Params: 9        , 2025-01-03, 2025-01-03
+[2024-12-07 06:36:48] Result rows: 1
+[2024-12-07 06:36:48] Is booked: Yes
+[2024-12-07 06:36:48] Hall ID: 9        
+[2024-12-07 06:36:48] Start Date: 2025-01-03
+[2024-12-07 06:36:48] End Date: 2025-01-03
+[2024-12-07 06:36:48] Booking Type: slot
+[2024-12-07 06:36:48] Slots to Check: 2,3
+[2024-12-07 06:36:48] Availability Result: booked
+[2024-12-07 06:36:51] Received POST data: Array
+(
+    [hall_id] => 9        
+    [school_name] => Subramania Bharathi School of Tamil Language & Literature        
+    [department_name] => Department of Tamil        
+    [room] => SH-1        
+    [start_date] => 2025-01-03
+    [end_date] => 2025-01-03
+    [booking_type] => session
+    [session_choice] => an
+    [slots] => Array
+        (
+            [0] => 2
+            [1] => 3
+        )
+
+    [slot_or_session] => 2,3
+)
+
+[2024-12-07 06:36:51] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-07 06:36:51] Requested slots: 5,6,7,8
+[2024-12-07 06:36:51] Overlap: 5,6,7,8
+[2024-12-07 06:36:51] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-07 06:36:51] Params: 9        , 2025-01-03, 2025-01-03
+[2024-12-07 06:36:51] Result rows: 1
+[2024-12-07 06:36:51] Is booked: Yes
+[2024-12-07 06:36:51] Hall ID: 9        
+[2024-12-07 06:36:51] Start Date: 2025-01-03
+[2024-12-07 06:36:51] End Date: 2025-01-03
+[2024-12-07 06:36:51] Booking Type: session
+[2024-12-07 06:36:51] Slots to Check: 5,6,7,8
+[2024-12-07 06:36:51] Availability Result: booked
+[2024-12-07 06:36:55] Received POST data: Array
+(
+    [hall_id] => 9        
+    [school_name] => Subramania Bharathi School of Tamil Language & Literature        
+    [department_name] => Department of Tamil        
+    [room] => SH-1        
+    [start_date] => 2025-01-18
+    [end_date] => 2025-01-18
+    [booking_type] => session
+    [session_choice] => an
+    [slots] => Array
+        (
+            [0] => 2
+            [1] => 3
+        )
+
+    [slot_or_session] => an
+)
+
+[2024-12-07 06:36:55] Booked slots: 1,2,3,4,5,6,7,8
+[2024-12-07 06:36:55] Requested slots: 5,6,7,8
+[2024-12-07 06:36:55] Overlap: 5,6,7,8
+[2024-12-07 06:36:55] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-07 06:36:55] Params: 9        , 2025-01-18, 2025-01-18
+[2024-12-07 06:36:55] Result rows: 1
+[2024-12-07 06:36:55] Is booked: Yes
+[2024-12-07 06:36:55] Hall ID: 9        
+[2024-12-07 06:36:55] Start Date: 2025-01-18
+[2024-12-07 06:36:55] End Date: 2025-01-18
+[2024-12-07 06:36:55] Booking Type: session
+[2024-12-07 06:36:55] Slots to Check: 5,6,7,8
+[2024-12-07 06:36:55] Availability Result: booked
+[2024-12-07 06:39:36] Query: SELECT * FROM bookings 
+                  WHERE hall_id = ? 
+                  AND (
+                      (? BETWEEN start_date AND end_date) OR
+                      (? BETWEEN start_date AND end_date) OR
+                      (start_date BETWEEN ? AND ?) OR
+                      (end_date BETWEEN ? AND ?)
+                  )
+                  AND status IN ('approved', 'booked')
+[2024-12-07 06:39:36] Params: 9, 2024-12-21, 2024-12-21
+[2024-12-07 06:39:36] Result rows: 0
+[2024-12-07 06:39:36] Is booked: No
+[2024-12-07 06:39:36] Hall ID: 9
+[2024-12-07 06:39:36] Start Date: 2024-12-21
+[2024-12-07 06:39:36] End Date: 2024-12-21
+[2024-12-07 06:39:36] Booking Type: session
+[2024-12-07 06:39:36] Slots to Check: 5,6,7,8
+[2024-12-07 06:39:36] Availability Result: available
+[2024-12-09 17:10:22] Received POST data: Array
+(
+    [hall_id] => 1        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-1        
+    [start_date] => 2024-10-11
+    [end_date] => 2024-10-11
+    [booking_type] => session
+    [session_choice] => fn
+    [slot_or_session] => 
+)
+
+[2024-12-09 17:10:22] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-09 17:10:22] Params: 1        , 2024-10-11, 2024-10-11
+[2024-12-09 17:10:22] Result rows: 0
+[2024-12-09 17:10:22] Is booked: No
+[2024-12-09 17:10:22] Hall ID: 1        
+[2024-12-09 17:10:22] Start Date: 2024-10-11
+[2024-12-09 17:10:22] End Date: 2024-10-11
+[2024-12-09 17:10:22] Booking Type: session
+[2024-12-09 17:10:22] Slots to Check: 1,2,3,4
+[2024-12-09 17:10:22] Availability Result: available
+[2024-12-09 17:50:39] Received POST data: Array
+(
+    [hall_id] => 1        
+    [school_name] => School of Engineering and Technology        
+    [department_name] => Centre for Pollution Control and Environmental Engineering        
+    [room] => SH-1        
+    [start_date] => 2024-10-11
+    [end_date] => 2024-10-11
+    [booking_type] => slot
+    [session_choice] => fn
+    [slots] => Array
+        (
+            [0] => 2
+        )
+
+    [slot_or_session] => 
+)
+
+[2024-12-09 17:50:39] Query: SELECT * FROM bookings 
+              WHERE hall_id = ? 
+              AND (
+                  (? BETWEEN start_date AND end_date) OR
+                  (? BETWEEN start_date AND end_date) OR
+                  (start_date BETWEEN ? AND ?) OR
+                  (end_date BETWEEN ? AND ?)
+              )
+              AND status IN ('approved', 'booked')
+[2024-12-09 17:50:39] Params: 1        , 2024-10-11, 2024-10-11
+[2024-12-09 17:50:39] Result rows: 0
+[2024-12-09 17:50:39] Is booked: No
+[2024-12-09 17:50:39] Hall ID: 1        
+[2024-12-09 17:50:39] Start Date: 2024-10-11
+[2024-12-09 17:50:39] End Date: 2024-10-11
+[2024-12-09 17:50:39] Booking Type: slot
+[2024-12-09 17:50:39] Slots to Check: 2
+[2024-12-09 17:50:39] Availability Result: available

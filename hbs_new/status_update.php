@@ -94,8 +94,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['booking_id'], $_POST['
             padding: 0 2%;
         }
         .card {
-        border: none;
-    }
+            border: none;
+        }
+        h3{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .btn {
+    width: 100px; /* Set consistent width */
+    margin: 5px; /* Add spacing between buttons */
+    font-size: 16px; /* Ensure consistent font size */
+    text-align: center; /* Center text */
+    line-height: 30px; /* Vertically center text */
+    padding: 3px;
+  }
     </style>
 </head>
 <body>
@@ -122,16 +133,22 @@ if (isset($_GET['status'])) {
 ?>
 
 
-     <table class="table table-bordered">
+     <table width="100%" class="table table-bordered">
         <thead> <center><h3 style="color:#0e00a3">Approve / Reject Bookings</h3><br>
         </center>
             <tr>
-            <th>Hall Type & Hall Name</th>
-                <th>Booking Date</th>
-                <th>Date & Slot/Session</th>
-                <th>Booked By</th>
-                <th>Status</th>
-                <th>Action</th>
+                <!-- <th width="35vh">Hall Type & Hall Name</th>
+                <th width="15vh">Booking Date</th>
+                <th width="20vh">Date & Slot/Session</th>
+                <th width="10vh">Booked By</th>
+                <th width="5vh">Status</th>
+                <th width="5vh">Action</th> -->
+                <th width="20%">Hall Details</th>
+                <th width="10%">Booked On</th>
+                <th width="15%">Date & Time</th>
+                <th width="20%">Booked By</th>
+                <th width="10%">Status</th>
+                <th width="10%">Action</th>
 
             </tr>
         </thead>
@@ -139,9 +156,10 @@ if (isset($_GET['status'])) {
             <?php if ($result->num_rows > 0): ?>
                 <?php while ($row = $result->fetch_assoc()): ?>
                     <tr>
-                        <td><?php echo strtoupper($row['type_name']);?>  <br>
-                        <?php echo $row['department_name'];?> <br>  
-                        <?php echo strtoupper($row['hall_name']);?></td>
+                        <td><span style="color:blue;"><?php echo strtoupper($row['hall_name']);?></span> <br>
+                      <b>  <?php echo ucwords($row['type_name']);?>  </b><br>
+                        <?php echo $row['department_name'];?>  
+                        </td>
                         <td><?php echo date("d-m-Y", strtotime($row['booking_date'])) . "  <br>";?></td>
                        <td>
                 <?php 
@@ -149,7 +167,7 @@ if (isset($_GET['status'])) {
                     if ($row['start_date'] == $row['end_date']) {
                         echo date("d-m-Y", strtotime($row['start_date']))."<br>" ;
                     } else {
-                        echo date("d-m-Y", strtotime($row['start_date'])) . "<br> to <br> " . date("d-m-Y", strtotime($row['end_date'])) . "<br>";
+                        echo date("d-m-Y", strtotime($row['start_date'])) . " to " . date("d-m-Y", strtotime($row['end_date'])) . "<br>";
                     }
                     $booked_slots_string = $row['slot_or_session']; 
 $booked_slots = array_map('intval', explode(',', $booked_slots_string)); // Convert to an array of integers
@@ -192,21 +210,23 @@ if ($booked_slots === $full_day_slots) {
 
 // Output the booking type if it exists
 if (!empty($booking_type)) {
-    echo "<b>" . $booking_type . " </b><br>";
+    echo "(" . $booking_type . ")<br>";
 }
 
 // If there are booked timings (custom slots), display them
 if (!empty($booked_timings)) {
-    echo "<b>" . $booked_timings . " </b>";
+    echo "(" . $booked_timings . ")";
 }
 
                 ?>
-                
+                <br><b><?php echo ucwords($row['purpose_name']);?></b> 
             </td>
-            <td><b><?php echo $row['organiser_department'];?></b><br>
-                <?php echo $row['organiser_name'];?><br>
+            <td><b><?php echo  ucwords($row['organiser_department']);?></b><br>
+                <?php echo  ucwords($row['organiser_name']);?><br>
          <?php echo $row['organiser_mobile'];?><br>
             <?php echo $row['organiser_email'];?>
+
+            
             </td>
 
                         <td><?php echo ucwords(htmlspecialchars($row['status'])); ?></td>

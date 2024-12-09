@@ -54,12 +54,18 @@ if ($type_id) {
 
 // Apply capacity filter (if selected)
 if ($capacity) {
-    if ($capacity == '200') {
-        $query .= " AND h.capacity >= 200";
-    } else {
-        $query .= " AND h.capacity <= " . intval($capacity);
+    if ($capacity == '50') {
+        // Filter for halls with less than 50 capacity
+        $query .= " AND h.capacity < 50";
+    } elseif ($capacity == '100') {
+        // Filter for halls with capacity between 50 and 100 (inclusive)
+        $query .= " AND h.capacity BETWEEN 50 AND 100";
+    } elseif ($capacity == '101') {
+        // Filter for halls with more than 100 capacity
+        $query .= " AND h.capacity > 100";
     }
 }
+
 
 // Apply feature filters (if selected)
 if (!empty($features)) {
@@ -121,29 +127,36 @@ if (mysqli_num_rows($result) > 0):
         <img src="<?php echo $room['image']; ?>" class="card-img-top" alt="Room Image" style="height: 150px; object-fit: cover;">
         
         <div class="card-body d-flex flex-column" style="flex-grow: 1;">
-            <h5 class="card-title text-center" style="text-align: center;font-size: 1.8rem; font-weight: bold; color: #343a40;">
+            <h5 class="card-title text-center" style="text-align: center;font-size: 1.2rem; font-weight: bold; color: #343a40;">
                 <?php echo $room['hall_name']; ?>
+               
+            <span class="text-center" style="text-align: center; font-size: 1rem; color: #6c757d;">
+               (<?php echo $room['type_name'];?>)
+            </span>
             </h5>
-            <h6 class="text-center" style="text-align: center; font-size: 1.2rem; color: #6c757d;">
-                <?php echo $room['type_name']; ?>
-            </h6>
             <!-- <p class="card-text" style="text-align: center; font-size: 1rem; color: #007bff;">
                 <strong><?php echo $room['school_name']; ?></strong>
             </p> -->
-            <p class="card-text" style=" text-align: center;font-size: 1rem; color: #28a745;">
+            <p class="card-text" style=" text-align: center;font-size: 15px; color: #153c1e;">
                 <?php echo $room['department_name']; ?>
-            </p>
-            <p class="card-text" style=" text-align: center;font-size: 1rem; color: #fd7e14;">
+            <br><span class="card-text" style=" text-align: center;font-size: 1rem; color: #fd7e14;">
                 Capacity : <?php echo $room['capacity']; ?>
+            </span>
             </p>
+
             <!-- <p class="card-text" style="font-size: 1rem; color: #17a2b8;">
                 <?php echo $room['features']; ?>
             </p> -->
         </div>
 
         <!-- Book Now Button at Bottom Center -->
-        <div class="card-footer" style="margin-top: auto; text-align: center;">
-            <!-- <a href="book_room.php?hall_id=<?php echo $room['hall_id']; ?>&from_date=<?php echo $from_date; ?>&to_date=<?php echo $to_date; ?>&booking_type=<?php echo $booking_type; ?>&session_choice=<?php echo $session_choice; ?>&slots=<?php echo implode(',', $slots); ?>" class="btn btn-primary" style="width: 60%;">Book Now</a> -->
+        <div class="card-footer" style="margin-top: auto; text-align: center; background-color: aliceblue">
+          
+        <a href="view_cal.php?hall_id=<?php echo $room['hall_id']; ?>" 
+        class="btn btn-secondary" style="width: 45%;">View</a>
+
+
+        <!-- <a href="book_room.php?hall_id=<?php echo $room['hall_id']; ?>&from_date=<?php echo $from_date; ?>&to_date=<?php echo $to_date; ?>&booking_type=<?php echo $booking_type; ?>&session_choice=<?php echo $session_choice; ?>&slots=<?php echo implode(',', $slots); ?>" class="btn btn-primary" style="width: 60%;">Book Now</a> -->
             <a href="book_room.php?hall_id=<?php echo $room['hall_id']; ?>
         &type_id=<?php echo $type_id; ?>
         &school_name=<?php echo urlencode($room['school_name']); ?>
@@ -154,7 +167,7 @@ if (mysqli_num_rows($result) > 0):
         &booking_type=<?php echo isset($booking_type) ? $booking_type : ''; ?>
         &session_choice=<?php echo isset($session_choice) ? $session_choice : ''; ?>
         &slots=<?php echo isset($slots) ? implode(',', $slots) : ''; ?>" 
-        class="btn btn-primary" style="width: 60%;">Book Now</a>
+        class="btn btn-primary" style="width: 45%;">Book </a>
 
 
         </div>
